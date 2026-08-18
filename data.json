@@ -1,0 +1,2601 @@
+{
+  "RAW_DATA": [
+    {
+      "mes": "2026-08",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE (electricidad)",
+      "tipo": "Variable",
+      "monto": 236000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE - cargo del banco",
+      "tipo": "Variable",
+      "monto": 4720,
+      "metodo": "Débito automático"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53174,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Claude",
+      "tipo": "Fijo",
+      "monto": 134420,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE (electricidad)",
+      "tipo": "Variable",
+      "monto": 197880,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 54316,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Claude",
+      "tipo": "Fijo",
+      "monto": 135960,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Oami - seguro médico Jay y Rufina",
+      "tipo": "Fijo",
+      "monto": 559000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Personal - línea Jay",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Internet",
+      "tipo": "Fijo",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Jay",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Taxit (app ingresos/egresos fisco)",
+      "tipo": "Fijo",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Cuota colegio Rufina",
+      "tipo": "Fijo",
+      "monto": 2345000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 50000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Aquamaq - alquiler bidón agua",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Bek - colonia Rufi",
+      "tipo": "Variable",
+      "monto": 1040000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 1/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 2/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 3/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 4/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 5/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 6/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 7/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 8/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 9/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2027-01",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 10/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2027-02",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 11/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2027-03",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "PC - cuota 12/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Migone - seguro médico Guada",
+      "tipo": "Fijo",
+      "monto": 697200,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro auto Guada",
+      "tipo": "Fijo",
+      "monto": 330000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE (electricidad)",
+      "tipo": "Variable",
+      "monto": 447000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE (electricidad)",
+      "tipo": "Variable",
+      "monto": 612000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE (electricidad)",
+      "tipo": "Variable",
+      "monto": 346800,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE (electricidad)",
+      "tipo": "Variable",
+      "monto": 390000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "ANDE (electricidad)",
+      "tipo": "Variable",
+      "monto": 185000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Claude",
+      "tipo": "Fijo",
+      "monto": 135960,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-10",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-11",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-12",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53745,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-08-01",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 246000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-02",
+      "concepto": "Comida afuera - Tatakua",
+      "tipo": "Variable",
+      "monto": 221000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Donaciones",
+      "fecha": "2026-08-02",
+      "concepto": "Donación iglesia (misa)",
+      "tipo": "Variable",
+      "monto": 25000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-08-03",
+      "concepto": "Fútbol",
+      "tipo": "Variable",
+      "monto": 35000,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-08-04",
+      "concepto": "Limpieza",
+      "tipo": "Variable",
+      "monto": 120000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-04",
+      "concepto": "Supermercado - Stock",
+      "tipo": "Variable",
+      "monto": 139750,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-08-04",
+      "concepto": "Limpieza",
+      "tipo": "Variable",
+      "monto": 120000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-04",
+      "concepto": "Comida en oficina",
+      "tipo": "Variable",
+      "monto": 55000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-04",
+      "concepto": "Estacionamiento oficina",
+      "tipo": "Variable",
+      "monto": 30000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-08-04",
+      "concepto": "Delivery",
+      "tipo": "Variable",
+      "monto": 278000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-05",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 138000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-08-05",
+      "concepto": "Pádel (salida)",
+      "tipo": "Variable",
+      "monto": 27000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-05",
+      "concepto": "Comida - salida pádel",
+      "tipo": "Variable",
+      "monto": 68000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-05",
+      "concepto": "Almuerzo oficina",
+      "tipo": "Variable",
+      "monto": 60000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-05",
+      "concepto": "Estacionamiento oficina",
+      "tipo": "Variable",
+      "monto": 10000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-05",
+      "concepto": "Desayuno afuera (invité)",
+      "tipo": "Variable",
+      "monto": 100000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Cuidado personal",
+      "fecha": "2026-08-06",
+      "concepto": "Manicura",
+      "tipo": "Variable",
+      "monto": 138000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-08-06",
+      "concepto": "Limpieza",
+      "tipo": "Variable",
+      "monto": 120000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-06",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 50000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-08-06",
+      "concepto": "Delivery",
+      "tipo": "Variable",
+      "monto": 218000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-08-06",
+      "concepto": "Nafta",
+      "tipo": "Variable",
+      "monto": 333550,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-08-06",
+      "concepto": "Libro",
+      "tipo": "Variable",
+      "monto": 76612,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-06",
+      "concepto": "Comida afuera",
+      "tipo": "Variable",
+      "monto": 120456,
+      "metodo": "Débito Itaú"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Donaciones",
+      "fecha": "2026-08-06",
+      "concepto": "Donación iglesia",
+      "tipo": "Variable",
+      "monto": 25000,
+      "metodo": "Débito Itaú"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-06",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 849170,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Regalos",
+      "fecha": "2026-08-06",
+      "concepto": "Regalo Rufi",
+      "tipo": "Variable",
+      "monto": 2007275,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-10",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 675000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Regalos",
+      "fecha": "2026-08-10",
+      "concepto": "Regalo Rufi",
+      "tipo": "Variable",
+      "monto": 200000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Cumpleaños",
+      "fecha": "2026-08-10",
+      "concepto": "Cumple Rufina",
+      "tipo": "Variable",
+      "monto": 4081750,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-08-12",
+      "concepto": "Delivery",
+      "tipo": "Variable",
+      "monto": 234000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-08-12",
+      "concepto": "Compra de ropa",
+      "tipo": "Variable",
+      "monto": 651980,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-08-12",
+      "concepto": "Limpieza (incl. adelanto 50.000)",
+      "tipo": "Variable",
+      "monto": 170000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Cumpleaños",
+      "fecha": "2026-08-12",
+      "concepto": "Sorpresita regalo Rufi (festejo cumple)",
+      "tipo": "Variable",
+      "monto": 337000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "IPS",
+      "subcategoria": "",
+      "fecha": "2026-08-12",
+      "concepto": "IPS - aporte empleada doméstica (limpieza)",
+      "tipo": "Fijo",
+      "monto": 388110,
+      "metodo": "No especificado"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento auto - cuota 1/2",
+      "tipo": "Fijo",
+      "monto": 794100,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento auto - cuota 2/2",
+      "tipo": "Fijo",
+      "monto": 794100,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-12",
+      "concepto": "Comida afuera en oficina",
+      "tipo": "Variable",
+      "monto": 36000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Regalos",
+      "fecha": "2026-08-13",
+      "concepto": "Reintegro Decathlon (regalo Rufi)",
+      "tipo": "Variable",
+      "monto": -400000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-13",
+      "concepto": "Reintegro supermercado",
+      "tipo": "Variable",
+      "monto": -169834,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-14",
+      "concepto": "Comida afuera en oficina",
+      "tipo": "Variable",
+      "monto": 80000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-14",
+      "concepto": "Estacionamiento oficina",
+      "tipo": "Variable",
+      "monto": 20000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-08-14",
+      "concepto": "Limpieza",
+      "tipo": "Variable",
+      "monto": 70000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-14",
+      "concepto": "Desayuno oficina",
+      "tipo": "Variable",
+      "monto": 42000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Donaciones",
+      "fecha": "2026-08-17",
+      "concepto": "Donación iglesia",
+      "tipo": "Variable",
+      "monto": 25000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-17",
+      "concepto": "Estacionamiento oficina",
+      "tipo": "Variable",
+      "monto": 20000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-17",
+      "concepto": "Almuerzo oficina",
+      "tipo": "Variable",
+      "monto": 45000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-08-17",
+      "concepto": "Pádel",
+      "tipo": "Variable",
+      "monto": 45000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-17",
+      "concepto": "Asado (salida)",
+      "tipo": "Variable",
+      "monto": 91777,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-17",
+      "concepto": "Comida afuera",
+      "tipo": "Variable",
+      "monto": 50000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-08-18",
+      "concepto": "Fútbol",
+      "tipo": "Variable",
+      "monto": 25000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-18",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 23000,
+      "metodo": "Tarjeta de crédito"
+    }
+  ],
+  "INVERSIONES_DATA": {
+    "fecha_actualizacion": "2026-08-18",
+    "fondos": [
+      {
+        "entidad": "Itaú",
+        "concepto": "IAM Low Volatility",
+        "moneda": "USD",
+        "monto": 7173.57,
+        "monto_usd": 7173.57,
+        "tasa": "3,86%"
+      },
+      {
+        "entidad": "Ueno",
+        "concepto": "Fondo Mutuo",
+        "moneda": "USD",
+        "monto": 876.53,
+        "monto_usd": 876.53,
+        "tasa": "4,15%"
+      },
+      {
+        "entidad": "Itaú",
+        "concepto": "Fondo Mutuo",
+        "moneda": "PYG",
+        "monto": 2000000,
+        "monto_usd": 331.4391585422643,
+        "tasa": "6,34%"
+      },
+      {
+        "entidad": "Ueno",
+        "concepto": "Fondo Mutuo",
+        "moneda": "PYG",
+        "monto": 7208376,
+        "monto_usd": 1194.5690379481264,
+        "tasa": "6,50%"
+      },
+      {
+        "entidad": "Investor",
+        "concepto": "Fondo Mutuo",
+        "moneda": "PYG",
+        "monto": 2025000,
+        "monto_usd": 335.5821480240426,
+        "tasa": "9,25%"
+      }
+    ],
+    "acciones": [
+      {
+        "ticker": "QQQ",
+        "empresa": "Invesco QQQ Trust",
+        "rubro": "ETF – Nasdaq 100",
+        "qty": 0.153045088,
+        "precio_compra": 689.27,
+        "invertido": 105.47,
+        "precio_actual": 721.03,
+        "valor_actual": 110.35009980064,
+        "utilidad": 4.8800998006399965,
+        "utilidad_pct": 0.046270027502038465,
+        "titular": "JI"
+      },
+      {
+        "ticker": "URA",
+        "empresa": "Global X Uranium ETF",
+        "rubro": "ETF/Energía Nuclear",
+        "qty": 0.6,
+        "precio_compra": 49.8,
+        "invertido": 29.88,
+        "precio_actual": 44.62,
+        "valor_actual": 26.772,
+        "utilidad": -3.1080000000000005,
+        "utilidad_pct": -0.10401606425702814,
+        "titular": "JI"
+      },
+      {
+        "ticker": "ASML",
+        "empresa": "ASML Holding",
+        "rubro": "Semiconductores/maquinaria",
+        "qty": 0.027,
+        "precio_compra": 1998.15,
+        "invertido": 53.95,
+        "precio_actual": 1817.17,
+        "valor_actual": 49.063590000000005,
+        "utilidad": -4.886409999999998,
+        "utilidad_pct": -0.09057293790546798,
+        "titular": "JI"
+      },
+      {
+        "ticker": "ARM",
+        "empresa": "Arm Holdings",
+        "rubro": "Semiconductores/CPU",
+        "qty": 0.185,
+        "precio_compra": 451.24,
+        "invertido": 83.48,
+        "precio_actual": 256.29,
+        "valor_actual": 47.413650000000004,
+        "utilidad": -36.06635,
+        "utilidad_pct": -0.4320358169621466,
+        "titular": "JI"
+      },
+      {
+        "ticker": "TSM",
+        "empresa": "Taiwan Semiconductor Mfg",
+        "rubro": "Semiconductores/Foundry",
+        "qty": 0.111,
+        "precio_compra": 452.61,
+        "invertido": 50.24,
+        "precio_actual": 418.15,
+        "valor_actual": 46.414649999999995,
+        "utilidad": -3.8253500000000074,
+        "utilidad_pct": -0.07614152070063708,
+        "titular": "JI"
+      },
+      {
+        "ticker": "META",
+        "empresa": "Meta Platforms",
+        "rubro": "Tecnología",
+        "qty": 0.083,
+        "precio_compra": 591.69,
+        "invertido": 49.11,
+        "precio_actual": 550.88,
+        "valor_actual": 45.723040000000005,
+        "utilidad": -3.386959999999995,
+        "utilidad_pct": -0.06896680920382804,
+        "titular": "JI"
+      },
+      {
+        "ticker": "MSFT",
+        "empresa": "Microsoft",
+        "rubro": "Tecnología",
+        "qty": 0.067,
+        "precio_compra": 391.04,
+        "invertido": 26.2,
+        "precio_actual": 482.3,
+        "valor_actual": 32.3141,
+        "utilidad": 6.114100000000004,
+        "utilidad_pct": 0.2333625954198475,
+        "titular": "JI"
+      },
+      {
+        "ticker": "NVDA",
+        "empresa": "Nvidia",
+        "rubro": "Semiconductores/GPU",
+        "qty": 0.167,
+        "precio_compra": 211.68,
+        "invertido": 35.35,
+        "precio_actual": 221.04,
+        "valor_actual": 36.91368,
+        "utilidad": 1.563679999999998,
+        "utilidad_pct": 0.04423422913719938,
+        "titular": "JI"
+      },
+      {
+        "ticker": "GOOGL",
+        "empresa": "Google (Alphabet)",
+        "rubro": "Tecnología",
+        "qty": 0.103,
+        "precio_compra": 376.7,
+        "invertido": 38.8,
+        "precio_actual": 342.18,
+        "valor_actual": 35.24454,
+        "utilidad": -3.5554599999999965,
+        "utilidad_pct": -0.0916355670103092,
+        "titular": "JI"
+      },
+      {
+        "ticker": "SPCX",
+        "empresa": "SpaceX",
+        "rubro": "Aeroespacial (privado)",
+        "qty": 1.84,
+        "precio_compra": 204.17,
+        "invertido": 375.68,
+        "precio_actual": 142.61,
+        "valor_actual": 262.40240000000006,
+        "utilidad": -113.27759999999995,
+        "utilidad_pct": -0.3015268313458261,
+        "titular": "JI"
+      },
+      {
+        "ticker": "YPF",
+        "empresa": "YPF",
+        "rubro": "Energía (petróleo y gas, ARG)",
+        "qty": 4.144,
+        "precio_compra": 50.11,
+        "invertido": 208.24,
+        "precio_actual": 52.41,
+        "valor_actual": 217.18704,
+        "utilidad": 8.947039999999987,
+        "utilidad_pct": 0.04296504033807139,
+        "titular": "JI"
+      },
+      {
+        "ticker": "NEE",
+        "empresa": "NextEra Energy",
+        "rubro": "Utilities (energía renovable)",
+        "qty": 1.148,
+        "precio_compra": 86.71,
+        "invertido": 100.0,
+        "precio_actual": 86.57,
+        "valor_actual": 99.38235999999999,
+        "utilidad": -0.6176400000000086,
+        "utilidad_pct": -0.006176400000000086,
+        "titular": "JI"
+      },
+      {
+        "ticker": "NVO",
+        "empresa": "Novo Nordisk",
+        "rubro": "Salud / farmacéutica",
+        "qty": 1.99,
+        "precio_compra": 50.13,
+        "invertido": 100.23,
+        "precio_actual": 45.4,
+        "valor_actual": 90.346,
+        "utilidad": -9.884,
+        "utilidad_pct": -0.09861318966377332,
+        "titular": "JI"
+      },
+      {
+        "ticker": "SPY",
+        "empresa": "SPDR S&P 500 ETF",
+        "rubro": "ETF – índice S&P 500",
+        "qty": 0.698534701,
+        "precio_compra": 742.25,
+        "invertido": 513.0,
+        "precio_actual": 768.99,
+        "valor_actual": 537.16619972199,
+        "utilidad": 24.166199721989983,
+        "utilidad_pct": 0.04710760179725143,
+        "titular": "Compartido",
+        "split_gr": 0.7,
+        "split_ji": 0.3
+      },
+      {
+        "ticker": "NU",
+        "empresa": "Nu Holdings",
+        "rubro": "Fintech (LatAm)",
+        "qty": 20.58701397,
+        "precio_compra": 13.25,
+        "invertido": 274.0,
+        "precio_actual": 14.91,
+        "valor_actual": 306.9523782927,
+        "utilidad": 32.95237829270002,
+        "utilidad_pct": 0.12026415435291977,
+        "titular": "Compartido",
+        "split_gr": 0.7,
+        "split_ji": 0.3
+      },
+      {
+        "ticker": "XOM",
+        "empresa": "Exxon Mobil",
+        "rubro": "Energía (petróleo y gas)",
+        "qty": 2.001473143,
+        "precio_compra": 136.24,
+        "invertido": 274.0,
+        "precio_actual": 164.57,
+        "valor_actual": 329.38243514351,
+        "utilidad": 55.38243514351001,
+        "utilidad_pct": 0.2021256757062409,
+        "titular": "Compartido",
+        "split_gr": 0.7,
+        "split_ji": 0.3
+      },
+      {
+        "ticker": "VIST",
+        "empresa": "Vista Energy",
+        "rubro": "Energía (Vaca Muerta, ARG)",
+        "qty": 3.13472336,
+        "precio_compra": 65.4,
+        "invertido": 206.0,
+        "precio_actual": 72.03,
+        "valor_actual": 225.7941236208,
+        "utilidad": 19.794123620800008,
+        "utilidad_pct": 0.09608797874174761,
+        "titular": "Compartido",
+        "split_gr": 0.7,
+        "split_ji": 0.3
+      },
+      {
+        "ticker": "LLY",
+        "empresa": "Eli Lilly & Co",
+        "rubro": "Salud / farmacéutica",
+        "qty": 0.284756262,
+        "precio_compra": 1212.62,
+        "invertido": 346.92,
+        "precio_actual": 1206.57,
+        "valor_actual": 343.57836304133997,
+        "utilidad": -3.3416369586600467,
+        "utilidad_pct": -0.009632298393462604,
+        "titular": "Compartido",
+        "split_gr": 0.7,
+        "split_ji": 0.3
+      }
+    ],
+    "crypto": {
+      "activo": "Bitcoin (BTC, Ledger)",
+      "cantidad": 0.02172969,
+      "precio": 64125.8,
+      "valor_usd": 1393.43,
+      "valor_gs": 8408360.7147
+    },
+    "otras": {
+      "entidad": "Sudameris + Ahorro Programado",
+      "concepto": "Acciones Sudameris + Ah. Programado (Itaú+Ueno)",
+      "monto_gs": 3985610,
+      "dividendos_gs": 245773
+    },
+    "resumen": [
+      {
+        "clase": "Fondos Mutuos",
+        "valor_usd": 9911.690344514433
+      },
+      {
+        "clase": "Acciones / ETFs / Cedears",
+        "valor_usd": 2842.4006496209795
+      },
+      {
+        "clase": "Criptomonedas",
+        "valor_usd": 1393.43
+      },
+      {
+        "clase": "Otras (local, Gs.)",
+        "valor_usd": 660.493612338817
+      }
+    ],
+    "total_usd": 14808.01460647423,
+    "total_gs": 89355854.45970137,
+    "fx_usdpyg": 6034.29,
+    "fx_usdars": 1491.24
+  },
+  "INVERSIONES_GR_DATA": {
+    "fecha_actualizacion": "2026-08-12",
+    "items": [
+      {
+        "tipo": "Bienes Raíces",
+        "entidad": "Inmo Paraguay / HJ&Group — Bosque Lago",
+        "concepto": "Terreno Mz. 5, Lote 18 (327,56 m²) — Plan \"Espera 20 años\"",
+        "monto_gs": 490222080,
+        "detalle": "Cuota mensual (original, contrato)",
+        "detalle_valor_gs": 2042592,
+        "fecha_inicio": "Feb/2023",
+        "vencimiento": "240 cuotas (~feb/2043)",
+        "tasa": "Reajuste anual por IPC (BCP)",
+        "notas": "Precio total del lote Gs. 490.222.080. Primera cuota feb/2023; a ago/2026 llevan ~42 de 240 cuotas (17,5% del plazo). Cuota original Gs. 2.042.592, sujeta a reajuste anual por IPC desde 2023 — monto actual exacto no confirmado. Valor mostrado es el precio total contratado, no el capital efectivamente pagado.",
+        "capital_pagado_gs": 85788864
+      },
+      {
+        "tipo": "Bienes Raíces",
+        "entidad": "Fortaleza Inmuebles SAE",
+        "concepto": "Departamento — Plan \"Espera 20 años\"",
+        "monto_gs": 0,
+        "detalle": "Cuota mensual actual",
+        "detalle_valor_gs": 1655000,
+        "fecha_inicio": "Mar/2024",
+        "vencimiento": "240 cuotas (20 años, ~mar/2044)",
+        "tasa": "N/D",
+        "notas": "Cuota jul/2026: Gs. 1.655.000 (aporte Espera 913.103 + gastos administrativos 331.000 + IMP5 410.897). Primera cuota mar/2024; a ago/2026 llevan ~29 de 240 cuotas (12,1% del plazo). Precio total del inmueble no informado — no se incluye en el total sumado.",
+        "capital_pagado_gs": 44660000
+      },
+      {
+        "tipo": "Depósito a plazo",
+        "entidad": "Banco GNB",
+        "concepto": "Plazo fijo digital",
+        "monto_gs": 50000000,
+        "detalle": "Próximo interés a cobrar",
+        "detalle_valor_gs": 3254795,
+        "fecha_inicio": "10/11/2025",
+        "vencimiento": "05/11/2026",
+        "tasa": "6,60% anual",
+        "notas": ""
+      },
+      {
+        "tipo": "Bono",
+        "entidad": "Cadiem / SEN — Tape Ruvicha S.A.E.C.A.",
+        "concepto": "Bono Serie 1 (ISIN TAP01G5)",
+        "monto_gs": 10332700,
+        "detalle": "Valor nominal",
+        "detalle_valor_gs": 10000000,
+        "fecha_inicio": "16/04/2026",
+        "vencimiento": "20/04/2030",
+        "tasa": "12,35% cupón (TIR 12,93%)",
+        "notas": "Total pagado incluye comisión (330.000), arancel CAVAPY-BVA (2.200) y fondo de garantía (500). Pago de intereses trimestral."
+      },
+      {
+        "tipo": "CDA",
+        "entidad": "Ueno Bank",
+        "concepto": "Certificado de Depósito a Plazo",
+        "monto_gs": 5000000,
+        "detalle": "",
+        "detalle_valor_gs": null,
+        "fecha_inicio": "16/04/2026",
+        "vencimiento": "19/04/2027",
+        "tasa": "9,1% promedio",
+        "notas": ""
+      }
+    ]
+  },
+  "PATRIMONIO_DATA": {
+    "fx_usdpyg": 6034.29,
+    "ji_total_usd": 13588.00315659999,
+    "gr_total_usd": 33664.84986499847,
+    "combined_total_usd": 47252.85302159846,
+    "ji_breakdown": {
+      "Fondos Mutuos": 9911.690344514433,
+      "Acciones/ETFs/Cedears (part. JI)": 1622.389199746742,
+      "Criptomonedas": 1393.43,
+      "Otras (Sudameris + Ah.Prog.)": 660.493612338817
+    },
+    "gr_breakdown": {
+      "Bienes Raíces (capital pagado)": 21617.930858477135,
+      "Depósitos a plazo": 9114.576859912268,
+      "Bono Cadiem": 1712.3306967348271,
+      "Acciones/ETFs (part. GR)": 1220.011449874238
+    },
+    "gr_real_estate_detail": {
+      "bosque_lago_paid_gs": 85788864,
+      "fortaleza_paid_gs": 44660000
+    },
+    "fecha_actualizacion": "2026-08-18"
+  },
+  "HISTORIAL_INVERSIONES": [
+    {
+      "fecha": "2026-08-10",
+      "total_usd": 14516
+    },
+    {
+      "fecha": "2026-08-12",
+      "total_usd": 14476
+    },
+    {
+      "fecha": "2026-08-13",
+      "total_usd": 14783,
+      "combinado_usd": 47589
+    },
+    {
+      "fecha": "2026-08-14",
+      "total_usd": 14777,
+      "combinado_usd": 47412
+    },
+    {
+      "fecha": "2026-08-17",
+      "total_usd": 14816,
+      "combinado_usd": 47317
+    },
+    {
+      "fecha": "2026-08-18",
+      "total_usd": 14808,
+      "combinado_usd": 47253
+    }
+  ],
+  "PRESUPUESTOS": {
+    "Servicios": 670000,
+    "Telecomunicaciones": 260000,
+    "Educación": 3385000,
+    "Salud": 1256200,
+    "Seguros": 686000,
+    "Suscripciones": 300000,
+    "Compras adicionales": 1300000,
+    "Día a día": 7500000,
+    "IPS": 390000
+  }
+}
