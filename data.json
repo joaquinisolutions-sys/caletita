@@ -7,7 +7,7 @@
       "fecha": null,
       "concepto": "ANDE (electricidad)",
       "tipo": "Variable",
-      "monto": 236000,
+      "monto": 240720,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -26,16 +26,6 @@
       "subcategoria": "",
       "fecha": null,
       "concepto": "Personal - línea Jay",
-      "tipo": "Fijo",
-      "monto": 130000,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-08",
-      "categoria": "Telecomunicaciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Tigo - línea Guada",
       "tipo": "Fijo",
       "monto": 130000,
       "metodo": "Tarjeta de crédito"
@@ -105,26 +95,6 @@
       "categoria": "Suscripciones",
       "subcategoria": "",
       "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53174,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-08",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Claude",
-      "tipo": "Fijo",
-      "monto": 134420,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-08",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
       "concepto": "Taxit (app ingresos/egresos fisco)",
       "tipo": "Fijo",
       "monto": 149000,
@@ -138,16 +108,6 @@
       "concepto": "ANDE (electricidad)",
       "tipo": "Variable",
       "monto": 197880,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-07",
-      "categoria": "Telecomunicaciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Personal - línea Jay",
-      "tipo": "Fijo",
-      "monto": 130000,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -217,7 +177,7 @@
       "fecha": null,
       "concepto": "Netflix",
       "tipo": "Fijo",
-      "monto": 54316,
+      "monto": 53174,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -227,7 +187,7 @@
       "fecha": null,
       "concepto": "Claude",
       "tipo": "Fijo",
-      "monto": 135960,
+      "monto": 134420,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -557,7 +517,7 @@
       "fecha": null,
       "concepto": "Personal - línea Jay",
       "tipo": "Fijo",
-      "monto": 130000,
+      "monto": 120000,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -567,7 +527,7 @@
       "fecha": null,
       "concepto": "Tigo - línea Guada",
       "tipo": "Fijo",
-      "monto": 130000,
+      "monto": 142000,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -1115,33 +1075,23 @@
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
-      "concepto": "PC - cuota 1/12",
+      "concepto": "PC - cuota 2/12",
       "tipo": "Fijo",
       "monto": 505932,
-      "metodo": "Tarjeta de crédito (débito automático)"
+      "metodo": "Tarjeta de crédito (personal)"
     },
     {
       "mes": "2026-05",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
-      "concepto": "PC - cuota 2/12",
-      "tipo": "Fijo",
-      "monto": 505932,
-      "metodo": "Tarjeta de crédito (débito automático)"
-    },
-    {
-      "mes": "2026-06",
-      "categoria": "Compras adicionales",
-      "subcategoria": "",
-      "fecha": null,
       "concepto": "PC - cuota 3/12",
       "tipo": "Fijo",
       "monto": 505932,
-      "metodo": "Tarjeta de crédito (débito automático)"
+      "metodo": "Tarjeta de crédito (personal)"
     },
     {
-      "mes": "2026-07",
+      "mes": "2026-06",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1151,7 +1101,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2026-08",
+      "mes": "2026-07",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1161,7 +1111,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2026-09",
+      "mes": "2026-08",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1171,7 +1121,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2026-10",
+      "mes": "2026-09",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1181,7 +1131,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2026-11",
+      "mes": "2026-10",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1191,7 +1141,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2026-12",
+      "mes": "2026-11",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1201,7 +1151,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2027-01",
+      "mes": "2026-12",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1211,7 +1161,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2027-02",
+      "mes": "2027-01",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1221,7 +1171,7 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2027-03",
+      "mes": "2027-02",
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": null,
@@ -1517,7 +1467,7 @@
       "fecha": null,
       "concepto": "ANDE (electricidad)",
       "tipo": "Variable",
-      "monto": 185000,
+      "monto": 188700,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -1587,7 +1537,7 @@
       "fecha": null,
       "concepto": "Netflix",
       "tipo": "Fijo",
-      "monto": 53745,
+      "monto": 54316,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -1737,7 +1687,7 @@
       "fecha": "2026-08-05",
       "concepto": "Supermercado",
       "tipo": "Variable",
-      "monto": 138000,
+      "monto": 150600,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -1977,7 +1927,7 @@
       "fecha": null,
       "concepto": "Mantenimiento auto - cuota 1/2",
       "tipo": "Fijo",
-      "monto": 794100,
+      "monto": 812527,
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
@@ -2137,7 +2087,7 @@
       "fecha": "2026-08-18",
       "concepto": "Supermercado",
       "tipo": "Variable",
-      "monto": 23000,
+      "monto": 23050,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -2157,7 +2107,7 @@
       "fecha": "2026-08-18",
       "concepto": "Reintegro supermercado",
       "tipo": "Variable",
-      "monto": -19942,
+      "monto": -14942,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -2191,10 +2141,10 @@
       "metodo": "Tarjeta de crédito"
     },
     {
-      "mes": "2026-08",
+      "mes": "2026-07",
       "categoria": "Suscripciones",
       "subcategoria": "",
-      "fecha": null,
+      "fecha": "2026-07-06",
       "concepto": "Disney+",
       "tipo": "Fijo",
       "monto": 121900,
@@ -2298,6 +2248,1156 @@
       "concepto": "Delivery",
       "tipo": "Variable",
       "monto": 163000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": "2026-03-31",
+      "concepto": "PC - cuota 1/12",
+      "tipo": "Fijo",
+      "monto": 505932,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": "2026-04-15",
+      "concepto": "Descuento PC (Tienda Naranja)",
+      "tipo": "Variable",
+      "monto": -35000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Compras adicionales",
+      "subcategoria": "",
+      "fecha": "2026-08-19",
+      "concepto": "Mantenimiento auto - cuota 2/2",
+      "tipo": "Fijo",
+      "monto": 811390,
+      "metodo": "Tarjeta de crédito (débito automático)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-06-08",
+      "concepto": "Disney+",
+      "tipo": "Fijo",
+      "monto": 122098,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-06-26",
+      "concepto": "Seguro auto Jay (cargo adicional)",
+      "tipo": "Variable",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": "2026-06-01",
+      "concepto": "Culligan (agua)",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-07-20",
+      "concepto": "Airtable (vía TC Itaú)",
+      "tipo": "Fijo",
+      "monto": 161568,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-25",
+      "concepto": "Plaza Oferta",
+      "tipo": "Variable",
+      "monto": 1492000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-02-25",
+      "concepto": "Daylic",
+      "tipo": "Variable",
+      "monto": 30000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-26",
+      "concepto": "Supermercado - Biggie",
+      "tipo": "Variable",
+      "monto": 108850,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-02-26",
+      "concepto": "Monte Líbano",
+      "tipo": "Variable",
+      "monto": 90000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-02-27",
+      "concepto": "Nafta",
+      "tipo": "Variable",
+      "monto": 61000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-02-27",
+      "concepto": "Daylic",
+      "tipo": "Variable",
+      "monto": 20000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-03-18",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 6733,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-06-17",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 134000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-07-01",
+      "concepto": "Casa Rica",
+      "tipo": "Variable",
+      "monto": 519563,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-07-09",
+      "concepto": "El Café de Acá",
+      "tipo": "Variable",
+      "monto": 135000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-07-09",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 269500,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-07-13",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 708266,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-07-13",
+      "concepto": "Reintegro supermercado",
+      "tipo": "Variable",
+      "monto": -141653,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-07-15",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 124699,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Educación",
+      "subcategoria": "",
+      "fecha": "2026-06-17",
+      "concepto": "Pearson (curso online Guada)",
+      "tipo": "Variable",
+      "monto": 4724610,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-06-23",
+      "concepto": "CheapOair (reserva vuelo)",
+      "tipo": "Variable",
+      "monto": 1545000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-06-23",
+      "concepto": "Hotel DLR",
+      "tipo": "Variable",
+      "monto": 2161949,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-06-23",
+      "concepto": "Pasaje LAN Airlines",
+      "tipo": "Variable",
+      "monto": 7869921,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-06-23",
+      "concepto": "Pasaje LAN Airlines",
+      "tipo": "Variable",
+      "monto": 7869921,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-06-16",
+      "concepto": "Nissei Online",
+      "tipo": "Variable",
+      "monto": 171000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-06-23",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 745373,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-06-23",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 136317,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-06-23",
+      "concepto": "Plaza Hogar",
+      "tipo": "Variable",
+      "monto": 167775,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-07-02",
+      "concepto": "Estoy Perseverancia",
+      "tipo": "Variable",
+      "monto": 158000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Cuidado personal",
+      "fecha": "2026-07-08",
+      "concepto": "Farmacia",
+      "tipo": "Variable",
+      "monto": 303784,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-06-23",
+      "concepto": "Reintegro supermercado",
+      "tipo": "Variable",
+      "monto": -223612,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-06-23",
+      "concepto": "Reintegro supermercado",
+      "tipo": "Variable",
+      "monto": -40895,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-13",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 12193,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-14",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 16142,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-14",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 18263,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-15",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 17217,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-15",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 18237,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-16",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 17289,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-16",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 18306,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-01-06",
+      "concepto": "Plaza Hogar",
+      "tipo": "Variable",
+      "monto": 125000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-01-14",
+      "concepto": "Apostol",
+      "tipo": "Variable",
+      "monto": 400000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-01-16",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 10097,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-05-25",
+      "concepto": "Claude.ai (suscripción)",
+      "tipo": "Fijo",
+      "monto": 137500,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-05-29",
+      "concepto": "Anthropic (consola/API)",
+      "tipo": "Fijo",
+      "monto": 33825,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-05-25",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 133900,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-05-27",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 158000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-05-28",
+      "concepto": "Setik Technology",
+      "tipo": "Variable",
+      "monto": 77000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-05-29",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 214000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-06-02",
+      "concepto": "El Cafetero",
+      "tipo": "Variable",
+      "monto": 160000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-06-15",
+      "concepto": "Casa Rica",
+      "tipo": "Variable",
+      "monto": 495727,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-06-15",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 40451,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-06-08",
+      "concepto": "Global Box",
+      "tipo": "Variable",
+      "monto": 338074,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-06-15",
+      "concepto": "Supermercado - Stock Express",
+      "tipo": "Variable",
+      "monto": 53700,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-06-08",
+      "concepto": "Reintegro Global Box",
+      "tipo": "Variable",
+      "monto": -50711,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-04-20",
+      "concepto": "Amazon",
+      "tipo": "Variable",
+      "monto": 147440,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-04-24",
+      "concepto": "Heladería Paris",
+      "tipo": "Variable",
+      "monto": 106000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-27",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 788596,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-04-27",
+      "concepto": "La Cocina de Kzero",
+      "tipo": "Variable",
+      "monto": 171000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-04-29",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 266500,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Regalos",
+      "fecha": "2026-05-06",
+      "concepto": "Swarovski",
+      "tipo": "Variable",
+      "monto": 1260000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-27",
+      "concepto": "Reintegro supermercado",
+      "tipo": "Variable",
+      "monto": -157719,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-05-18",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 28885,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-20",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 16128,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-21",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 20280,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-21",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 18252,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-21",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 17238,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-21",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 18252,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-22",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 16136,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-23",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 26510,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-01-21",
+      "concepto": "Automotor (servicio/combustible)",
+      "tipo": "Variable",
+      "monto": 688000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-01-22",
+      "concepto": "Festa",
+      "tipo": "Variable",
+      "monto": 48000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-01-23",
+      "concepto": "Kaiten",
+      "tipo": "Variable",
+      "monto": 473000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-01-26",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 229200,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-01-28",
+      "concepto": "Heladería Paris",
+      "tipo": "Variable",
+      "monto": 190002,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-02-02",
+      "concepto": "GAP",
+      "tipo": "Variable",
+      "monto": 999056,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-02-02",
+      "concepto": "De la Tolva",
+      "tipo": "Variable",
+      "monto": 195000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-02-02",
+      "concepto": "Daylic",
+      "tipo": "Variable",
+      "monto": 70000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-02-13",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 10381,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-03-25",
+      "concepto": "Delivery - Pedidos Ya",
+      "tipo": "Variable",
+      "monto": 117500,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-03-25",
+      "concepto": "Propina delivery",
+      "tipo": "Variable",
+      "monto": 6000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-26",
+      "concepto": "Heladería Paris",
+      "tipo": "Variable",
+      "monto": 80000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-27",
+      "concepto": "Apostol",
+      "tipo": "Variable",
+      "monto": 280000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-27",
+      "concepto": "El Cafetero",
+      "tipo": "Variable",
+      "monto": 100000,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-30",
+      "concepto": "El Café de Acá",
+      "tipo": "Variable",
+      "monto": 140800,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-04-01",
+      "concepto": "Juan Valdez",
+      "tipo": "Variable",
+      "monto": 51200,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-13",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 564697,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-13",
+      "concepto": "Reintegro supermercado",
+      "tipo": "Variable",
+      "monto": -112939,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-04-17",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 25752,
+      "metodo": "Tarjeta de crédito (personal)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-08-06",
+      "concepto": "Disney+",
+      "tipo": "Fijo",
+      "monto": 119526,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-07",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 25528,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-10",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 23457,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-08-17",
+      "concepto": "Uber",
+      "tipo": "Variable",
+      "monto": 13154,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-07-20",
+      "concepto": "Casa Rica",
+      "tipo": "Variable",
+      "monto": 831231,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-07-22",
+      "concepto": "Supermercado - Biggie",
+      "tipo": "Variable",
+      "monto": 46150,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-07-27",
+      "concepto": "Supermercado - Mundi Mark",
+      "tipo": "Variable",
+      "monto": 265505,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-07-27",
+      "concepto": "Casa Rica",
+      "tipo": "Variable",
+      "monto": 193766,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-07-27",
+      "concepto": "Supermercado - Biggie",
+      "tipo": "Variable",
+      "monto": 48350,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-03",
+      "concepto": "Supermercado - Stock Express",
+      "tipo": "Variable",
+      "monto": 29150,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": "2026-08-03",
+      "concepto": "Culligan (agua)",
+      "tipo": "Fijo",
+      "monto": 250000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-06",
+      "concepto": "Juan Valdez",
+      "tipo": "Variable",
+      "monto": 37600,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-17",
+      "concepto": "Supermercado - Stock Express",
+      "tipo": "Variable",
+      "monto": 74710,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-17",
+      "concepto": "Supermercado - Stock Express",
+      "tipo": "Variable",
+      "monto": 27111,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-07-27",
+      "concepto": "Reintegro supermercado",
+      "tipo": "Variable",
+      "monto": -53101,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-07",
+      "concepto": "Reintegro Juan Valdez",
+      "tipo": "Variable",
+      "monto": -7520,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2026-08-18",
+      "concepto": "Seguro cancelación de deuda (tarjeta Itaú)",
+      "tipo": "Variable",
+      "monto": 79835,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-07-27",
+      "concepto": "Marshalls",
+      "tipo": "Variable",
+      "monto": 771571,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-08-04",
+      "concepto": "Nueva Americana",
+      "tipo": "Variable",
+      "monto": 159800,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-08-04",
+      "concepto": "Copipunto",
+      "tipo": "Variable",
+      "monto": 142500,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-08-05",
+      "concepto": "Veterinaria",
+      "tipo": "Variable",
+      "monto": 60000,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-10",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 95339,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-08-11",
+      "concepto": "Nueva Americana",
+      "tipo": "Variable",
+      "monto": 174680,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-08-11",
+      "concepto": "Springfield",
+      "tipo": "Variable",
+      "monto": 477300,
+      "metodo": "Tarjeta de crédito (Guada)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-20",
+      "concepto": "Supermercado - Mundi Mark",
+      "tipo": "Variable",
+      "monto": 116250,
       "metodo": "Tarjeta de crédito"
     }
   ],
