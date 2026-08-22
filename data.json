@@ -2357,7 +2357,14 @@
         "valor_actual": 109.19,
         "utilidad": 3.72,
         "utilidad_pct": 0.035271,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "ETF diversificado",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral (ETF)",
+          "monto_share": null,
+          "nota": "Distribuye los dividendos acumulados del Nasdaq 100"
+        }
       },
       {
         "ticker": "URA",
@@ -2370,7 +2377,12 @@
         "valor_actual": 27.64,
         "utilidad": -2.24,
         "utilidad_pct": -0.074967,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "ETF sectorial (Energía nuclear)",
+        "dividendo": {
+          "paga": false,
+          "nota": "Distribución irregular, normalmente anual"
+        }
       },
       {
         "ticker": "ASML",
@@ -2383,7 +2395,16 @@
         "valor_actual": 48.33,
         "utilidad": -5.62,
         "utilidad_pct": -0.104171,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Semiconductores",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": 2.14,
+          "ex_dividendo": "2026-07-29",
+          "proximo_pago": "2026-08-05",
+          "nota": "Ya cobrado este ciclo"
+        }
       },
       {
         "ticker": "ARM",
@@ -2396,7 +2417,11 @@
         "valor_actual": 45.01,
         "utilidad": -38.47,
         "utilidad_pct": -0.460829,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Semiconductores",
+        "dividendo": {
+          "paga": false
+        }
       },
       {
         "ticker": "TSM",
@@ -2409,7 +2434,15 @@
         "valor_actual": 46.5,
         "utilidad": -3.74,
         "utilidad_pct": -0.074443,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Semiconductores",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": 1.11,
+          "ex_dividendo": "2026-09-16",
+          "proximo_pago": "2026-10-08"
+        }
       },
       {
         "ticker": "META",
@@ -2422,7 +2455,16 @@
         "valor_actual": 45.81,
         "utilidad": -3.3,
         "utilidad_pct": -0.067196,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Tecnología",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": 0.525,
+          "ex_dividendo": "2026-06-15",
+          "proximo_pago": "2026-06-25",
+          "nota": "Ya cobrado; próximo ciclo estimado sept/2026"
+        }
       },
       {
         "ticker": "MSFT",
@@ -2435,7 +2477,15 @@
         "valor_actual": 32.21,
         "utilidad": 6.01,
         "utilidad_pct": 0.229389,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Tecnología",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": 0.91,
+          "ex_dividendo": "2026-08-20",
+          "proximo_pago": "2026-09-10"
+        }
       },
       {
         "ticker": "NVDA",
@@ -2448,7 +2498,15 @@
         "valor_actual": 35.79,
         "utilidad": 0.44,
         "utilidad_pct": 0.012447,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Semiconductores",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": 0.25,
+          "ex_dividendo": "2026-09-11",
+          "proximo_pago": "2026-10-02"
+        }
       },
       {
         "ticker": "GOOGL",
@@ -2461,7 +2519,16 @@
         "valor_actual": 35.67,
         "utilidad": -3.13,
         "utilidad_pct": -0.08067,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Tecnología",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": null,
+          "ex_dividendo": "2026-09-04",
+          "proximo_pago": null,
+          "nota": "Pago estimado unas semanas después del ex-dividendo"
+        }
       },
       {
         "ticker": "SPCX",
@@ -2474,7 +2541,12 @@
         "valor_actual": 252.02,
         "utilidad": -123.66,
         "utilidad_pct": -0.329163,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Aeroespacial",
+        "dividendo": {
+          "paga": false,
+          "nota": "Empresa privada, no cotiza en bolsa pública"
+        }
       },
       {
         "ticker": "YPF",
@@ -2487,7 +2559,11 @@
         "valor_actual": 212.09,
         "utilidad": 3.85,
         "utilidad_pct": 0.018488,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Energía",
+        "dividendo": {
+          "paga": false
+        }
       },
       {
         "ticker": "SPY",
@@ -2502,7 +2578,14 @@
         "utilidad_pct": 0.042651,
         "titular": "Compartido",
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "sector": "ETF diversificado",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral (ETF)",
+          "monto_share": null,
+          "nota": "Distribuye los dividendos acumulados del S&P 500"
+        }
       },
       {
         "ticker": "NU",
@@ -2517,7 +2600,11 @@
         "utilidad_pct": 0.095474,
         "titular": "Compartido",
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "sector": "Financiero",
+        "dividendo": {
+          "paga": false
+        }
       },
       {
         "ticker": "XOM",
@@ -2532,7 +2619,15 @@
         "utilidad_pct": 0.206058,
         "titular": "Compartido",
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "sector": "Energía",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": 1.03,
+          "ex_dividendo": "2026-08-17",
+          "proximo_pago": "2026-09-10"
+        }
       },
       {
         "ticker": "VIST",
@@ -2547,7 +2642,11 @@
         "utilidad_pct": 0.058786,
         "titular": "Compartido",
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "sector": "Energía",
+        "dividendo": {
+          "paga": false
+        }
       },
       {
         "ticker": "LLY",
@@ -2562,7 +2661,15 @@
         "utilidad_pct": 0.030439,
         "titular": "Compartido",
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "sector": "Salud",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": null,
+          "ex_dividendo": "2026-08-14",
+          "proximo_pago": "2026-09-10"
+        }
       },
       {
         "ticker": "NEE",
@@ -2575,7 +2682,15 @@
         "valor_actual": 96.01,
         "utilidad": -3.99,
         "utilidad_pct": -0.0399,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Utilities",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": 0.6232,
+          "ex_dividendo": "2026-08-28",
+          "proximo_pago": "2026-09-15"
+        }
       },
       {
         "ticker": "NVO",
@@ -2588,7 +2703,15 @@
         "valor_actual": 93.01,
         "utilidad": -7.22,
         "utilidad_pct": -0.072034,
-        "titular": "JI"
+        "titular": "JI",
+        "sector": "Salud",
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Semestral",
+          "monto_share": null,
+          "proximo_pago": "2026-08-25",
+          "nota": "Pago interino agosto; siguiente pago principios de 2027"
+        }
       }
     ],
     "crypto": {
