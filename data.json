@@ -248,7 +248,7 @@
       "concepto": "Seguro auto Jay",
       "tipo": "Fijo",
       "monto": 356000,
-      "metodo": "No especificado"
+      "metodo": "Tarjeta de crédito"
     },
     {
       "mes": "2026-01",
@@ -307,8 +307,8 @@
       "fecha": null,
       "concepto": "Seguro auto Jay",
       "tipo": "Fijo",
-      "monto": 356000,
-      "metodo": "No especificado"
+      "monto": 359000,
+      "metodo": "Tarjeta de crédito"
     },
     {
       "mes": "2026-02",
@@ -368,7 +368,7 @@
       "concepto": "Seguro auto Jay",
       "tipo": "Fijo",
       "monto": 356000,
-      "metodo": "No especificado"
+      "metodo": "Tarjeta de crédito"
     },
     {
       "mes": "2026-03",
@@ -3399,6 +3399,1486 @@
       "tipo": "Variable",
       "monto": 116250,
       "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": "2025-12-30",
+      "concepto": "Seguro auto Jay (cargo de diciembre 2025, incluido en el extracto de enero)",
+      "tipo": "Fijo",
+      "monto": 356000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "IVA s/cargos y comisiones (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 2833,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "IVA s/cargos y comisiones (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 3425,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "IVA s/cargos y comisiones (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 3866,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "IVA s/cargos y comisiones (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 4150,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "IVA s/cargos y comisiones (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 3625,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "IVA s/cargos y comisiones (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 2707,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "IVA s/cargos y comisiones (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 2697,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Viaje Argentina 2025 - cuota final (8/10)",
+      "tipo": "Variable",
+      "monto": 373520,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 60101,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2025-12-30",
+      "concepto": "Casa Rica-Molas Lope",
+      "tipo": "Variable",
+      "monto": 294383,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-01-02",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 168000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Disney+",
+      "tipo": "Fijo",
+      "monto": 134466,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": "2026-01-14",
+      "concepto": "Wepa - pago de servicios (sin detalle)",
+      "tipo": "Variable",
+      "monto": 50982,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-01-14",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 936617,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-01-15",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 207824,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-01-18",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 150000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro cancelación de deuda (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 5603,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento tarjeta Ueno",
+      "tipo": "Fijo",
+      "monto": 22727,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Viaje Argentina 2025 - cuota final (9/10)",
+      "tipo": "Variable",
+      "monto": 373520,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-01-22",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 137000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-01-23",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 395852,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-01-24",
+      "concepto": "Petrobras Insignia",
+      "tipo": "Variable",
+      "monto": 273847,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-01-26",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 195000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-01-27",
+      "concepto": "Biggie-Herrera",
+      "tipo": "Variable",
+      "monto": 134486,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-01-29",
+      "concepto": "Biggie Lillio Brizue",
+      "tipo": "Variable",
+      "monto": 48000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-01-30",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 517066,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-01",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 59589,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-02-01",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 127000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-02-03",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 112000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-02-03",
+      "concepto": "Petrobras Insignia",
+      "tipo": "Variable",
+      "monto": 259730,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-05",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 139453,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Disney+",
+      "tipo": "Fijo",
+      "monto": 132793,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-02-07",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 407000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-10",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 929706,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-02-13",
+      "concepto": "Arandu Import (electro/importados)",
+      "tipo": "Variable",
+      "monto": 878500,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-13",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 328125,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-02-15",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 166000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-02-14",
+      "concepto": "Petrobras Insignia",
+      "tipo": "Variable",
+      "monto": 270622,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro cancelación de deuda (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 11516,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento tarjeta Ueno",
+      "tipo": "Fijo",
+      "monto": 22727,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Viaje Argentina 2025 - cuota final (10/10)",
+      "tipo": "Variable",
+      "monto": 373520,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-02-19",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 181000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-02-20",
+      "concepto": "Shell Select Ciclovi",
+      "tipo": "Variable",
+      "monto": 78400,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-02-21",
+      "concepto": "Disney on Ice - cuota 01/03",
+      "tipo": "Variable",
+      "monto": 440300,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-24",
+      "concepto": "Biggie-Sgto.Gauto",
+      "tipo": "Variable",
+      "monto": 265341,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-24",
+      "concepto": "Biggie-Dominicana",
+      "tipo": "Variable",
+      "monto": 243191,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-02-26",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 239000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-02-26",
+      "concepto": "Petrobras Insignia",
+      "tipo": "Variable",
+      "monto": 261384,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-02",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-02-27",
+      "concepto": "Arete Sausalito",
+      "tipo": "Variable",
+      "monto": 387502,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-03-04",
+      "concepto": "Biggie-Sgto.Gauto",
+      "tipo": "Variable",
+      "monto": 260955,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 57831,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-04",
+      "concepto": "Tio Lucas Pizzas",
+      "tipo": "Variable",
+      "monto": 178000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-04",
+      "concepto": "La Cocina De Kzero",
+      "tipo": "Variable",
+      "monto": 122000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-03-04",
+      "concepto": "Enex Gabana - Artiga",
+      "tipo": "Variable",
+      "monto": 233052,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-03-05",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 535511,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Disney+",
+      "tipo": "Fijo",
+      "monto": 131201,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": "2026-03-06",
+      "concepto": "Farmacenter (farmacia)",
+      "tipo": "Variable",
+      "monto": 41329,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": "2026-03-06",
+      "concepto": "Farmacenter (farmacia)",
+      "tipo": "Variable",
+      "monto": 111000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-03-07",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 183000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-03-07",
+      "concepto": "Petrobras Insignia",
+      "tipo": "Variable",
+      "monto": 274095,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-03-10",
+      "concepto": "Biggie-Sgto.Gauto",
+      "tipo": "Variable",
+      "monto": 67482,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-10",
+      "concepto": "Rest.Shangri-La-Plg",
+      "tipo": "Variable",
+      "monto": 135896,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-03-09",
+      "concepto": "New Balance - cuota 01/02",
+      "tipo": "Variable",
+      "monto": 172000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-03-10",
+      "concepto": "Biggie-Dominicana",
+      "tipo": "Variable",
+      "monto": 216568,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-03-15",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 252000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Cuidado personal",
+      "fecha": "2026-03-14",
+      "concepto": "Invictus (gimnasio/suplementos)",
+      "tipo": "Variable",
+      "monto": 200000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-03-17",
+      "concepto": "Biggie-Sgto.Gauto",
+      "tipo": "Variable",
+      "monto": 307699,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-03-16",
+      "concepto": "Libro (Kindle)",
+      "tipo": "Variable",
+      "monto": 70384,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-03-17",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 815782,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-03-18",
+      "concepto": "Petrobras Insignia",
+      "tipo": "Variable",
+      "monto": 291772,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-03-24",
+      "concepto": "Mc Donalds-Autopista",
+      "tipo": "Variable",
+      "monto": 103000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-03-24",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 175000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento tarjeta Ueno",
+      "tipo": "Fijo",
+      "monto": 22727,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-03-25",
+      "concepto": "Stock Express-Brasil",
+      "tipo": "Variable",
+      "monto": 115276,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro cancelación de deuda (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 15928,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": "2026-03-25",
+      "concepto": "Farmacenter (farmacia)",
+      "tipo": "Variable",
+      "monto": 139920,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-04-21",
+      "concepto": "Disney on Ice - cuota 02/03",
+      "tipo": "Variable",
+      "monto": 440300,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-04-09",
+      "concepto": "New Balance - cuota 02/02",
+      "tipo": "Variable",
+      "monto": 172000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-03-27",
+      "concepto": "Libro (Kindle)",
+      "tipo": "Variable",
+      "monto": 65806,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-03-28",
+      "concepto": "Kindle (reintegro)",
+      "tipo": "Variable",
+      "monto": -65860,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-03-31",
+      "concepto": "Petrobras Centenario",
+      "tipo": "Variable",
+      "monto": 305000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 58534,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-03",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-03-29",
+      "concepto": "Libro (Kindle)",
+      "tipo": "Variable",
+      "monto": 93993,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-02",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 163150,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-04-07",
+      "concepto": "Estoy Perseverancia",
+      "tipo": "Variable",
+      "monto": 360000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-07",
+      "concepto": "Stock Express-Brasil",
+      "tipo": "Variable",
+      "monto": 52150,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-07",
+      "concepto": "Biggie-Trinidad Jade",
+      "tipo": "Variable",
+      "monto": 84900,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-07",
+      "concepto": "Casa Rica Perseveran",
+      "tipo": "Variable",
+      "monto": 648804,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-07",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 781672,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Disney+",
+      "tipo": "Fijo",
+      "monto": 132190,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-04-11",
+      "concepto": "Ticketea Box Office",
+      "tipo": "Variable",
+      "monto": 140000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-04-11",
+      "concepto": "Ticketea Mj",
+      "tipo": "Variable",
+      "monto": 30000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-04-13",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 82000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-04-14",
+      "concepto": "Petrobras Centenario",
+      "tipo": "Variable",
+      "monto": 312133,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-04-14",
+      "concepto": "Feria Asunción",
+      "tipo": "Variable",
+      "monto": 261000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-04-17",
+      "concepto": "Agencia Uela (viaje familiar) - cuota 01/02",
+      "tipo": "Variable",
+      "monto": 2392425,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-04-19",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 143000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-21",
+      "concepto": "Biggie-Sgto.Gauto",
+      "tipo": "Variable",
+      "monto": 364400,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-04-21",
+      "concepto": "Stock Express-Brasil",
+      "tipo": "Variable",
+      "monto": 74761,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento tarjeta Ueno",
+      "tipo": "Fijo",
+      "monto": 22727,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro cancelación de deuda (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 18773,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-05-21",
+      "concepto": "Disney on Ice - cuota 03/03",
+      "tipo": "Variable",
+      "monto": 440300,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-05-17",
+      "concepto": "Agencia Uela (viaje familiar) - cuota 02/02",
+      "tipo": "Variable",
+      "monto": 2392425,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-04-30",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 243000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-04",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 55994,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-05-01",
+      "concepto": "Petrobras Insignia",
+      "tipo": "Variable",
+      "monto": 308968,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-05-04",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 107000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Salud",
+      "subcategoria": "",
+      "fecha": "2026-05-05",
+      "concepto": "Dr. Vic (consulta médica)",
+      "tipo": "Variable",
+      "monto": 50000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-05-05",
+      "concepto": "Delimarket",
+      "tipo": "Variable",
+      "monto": 435994,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Disney+",
+      "tipo": "Fijo",
+      "monto": 121469,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-05-06",
+      "concepto": "Libro (Kindle)",
+      "tipo": "Variable",
+      "monto": 73327,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-05-08",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 214000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-05-08",
+      "concepto": "Frontliner",
+      "tipo": "Variable",
+      "monto": 56000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-05-12",
+      "concepto": "Mimo & Co (viaje Argentina)",
+      "tipo": "Variable",
+      "monto": 425242,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-05-18",
+      "concepto": "Rapa Nui Nordelta (viaje Argentina)",
+      "tipo": "Variable",
+      "monto": 296076,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-05-19",
+      "concepto": "Sup.Mundi Mark",
+      "tipo": "Variable",
+      "monto": 619681,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-05-20",
+      "concepto": "Petrobras Centenario",
+      "tipo": "Variable",
+      "monto": 295000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-05-22",
+      "concepto": "Libro (Kindle)",
+      "tipo": "Variable",
+      "monto": 61717,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Viajes",
+      "subcategoria": "",
+      "fecha": "2026-05-23",
+      "concepto": "Asistencia al viajero (DLocal Assist Card)",
+      "tipo": "Variable",
+      "monto": 277650,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Cuidado personal",
+      "fecha": "2026-05-23",
+      "concepto": "Salón Brasilia",
+      "tipo": "Variable",
+      "monto": 450185,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-05-25",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 112000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-05-26",
+      "concepto": "Biggie-Sgto.Gauto",
+      "tipo": "Variable",
+      "monto": 332275,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro cancelación de deuda (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 13525,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento tarjeta Ueno",
+      "tipo": "Fijo",
+      "monto": 22727,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-05-27",
+      "concepto": "Stock Express Brasili",
+      "tipo": "Variable",
+      "monto": 32700,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-05",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53965,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-06-04",
+      "concepto": "Petrobras Centenario",
+      "tipo": "Variable",
+      "monto": 280600,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-06-05",
+      "concepto": "S6 España (sin identificar)",
+      "tipo": "Variable",
+      "monto": 892735,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-06-06",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 149000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-06-12",
+      "concepto": "Petrobras Centenario",
+      "tipo": "Variable",
+      "monto": 252000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-06-13",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 198000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-06-16",
+      "concepto": "Lacteos Sona Angela-",
+      "tipo": "Variable",
+      "monto": 20000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-06-19",
+      "concepto": "Leben- Viandas",
+      "tipo": "Variable",
+      "monto": 65000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-06-19",
+      "concepto": "Petrobras-Washington",
+      "tipo": "Variable",
+      "monto": 267128,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-06-23",
+      "concepto": "Grano De Cafe Eas",
+      "tipo": "Variable",
+      "monto": 30000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento tarjeta Ueno",
+      "tipo": "Fijo",
+      "monto": 22727,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro cancelación de deuda (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 4338,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Transporte",
+      "fecha": "2026-06-30",
+      "concepto": "Peaje Ecovía",
+      "tipo": "Variable",
+      "monto": 15165,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-06-30",
+      "concepto": "Biggie-Sanber-Aqua",
+      "tipo": "Variable",
+      "monto": 513392,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-06",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-06-30",
+      "concepto": "Petrobras Centenario",
+      "tipo": "Variable",
+      "monto": 320000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-07-12",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 201000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-07-13",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 253000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-07-16",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 198000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-07-19",
+      "concepto": "Delivery - Monchis",
+      "tipo": "Variable",
+      "monto": 351000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Día a día",
+      "subcategoria": "Nafta",
+      "fecha": "2026-07-21",
+      "concepto": "Petrobras Molas Lope",
+      "tipo": "Variable",
+      "monto": 328834,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Servicios",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Mantenimiento tarjeta Ueno",
+      "tipo": "Fijo",
+      "monto": 22727,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-07",
+      "categoria": "Seguros",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Seguro cancelación de deuda (tarjeta Ueno)",
+      "tipo": "Variable",
+      "monto": 4238,
+      "metodo": "Tarjeta de crédito (Ueno)"
     }
   ],
   "INVERSIONES_DATA": {
@@ -3991,14 +5471,14 @@
     }
   ],
   "PRESUPUESTOS": {
-    "Servicios": 670000,
-    "Telecomunicaciones": 260000,
+    "Servicios": 760000,
+    "Telecomunicaciones": 130000,
     "Educación": 3385000,
     "Salud": 1256200,
-    "Seguros": 686000,
-    "Suscripciones": 300000,
-    "Compras adicionales": 1300000,
-    "Día a día": 7500000,
+    "Seguros": 770000,
+    "Suscripciones": 620000,
+    "Compras adicionales": 550000,
+    "Día a día": 7800000,
     "IPS": 390000
   }
 }
