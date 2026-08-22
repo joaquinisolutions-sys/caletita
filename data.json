@@ -2301,16 +2301,6 @@
       "metodo": "Tarjeta de crédito"
     },
     {
-      "mes": "2026-06",
-      "categoria": "Servicios",
-      "subcategoria": "",
-      "fecha": "2026-06-01",
-      "concepto": "Culligan (agua)",
-      "tipo": "Fijo",
-      "monto": 250000,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
       "mes": "2026-07",
       "categoria": "Suscripciones",
       "subcategoria": "",
@@ -2462,10 +2452,10 @@
     },
     {
       "mes": "2026-06",
-      "categoria": "Educación",
+      "categoria": "Viajes",
       "subcategoria": "",
       "fecha": "2026-06-17",
-      "concepto": "Pearson (curso online Guada)",
+      "concepto": "Pearson (curso online Guada, gasto del viaje)",
       "tipo": "Variable",
       "monto": 4724610,
       "metodo": "Tarjeta de crédito (Guada)"
@@ -3248,16 +3238,6 @@
       "concepto": "Supermercado - Stock Express",
       "tipo": "Variable",
       "monto": 29150,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-08",
-      "categoria": "Servicios",
-      "subcategoria": "",
-      "fecha": "2026-08-03",
-      "concepto": "Culligan (agua)",
-      "tipo": "Fijo",
-      "monto": 250000,
       "metodo": "Tarjeta de crédito"
     },
     {
