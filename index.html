@@ -599,8 +599,8 @@ function renderDaily() {
 }
 
 function personaFromMetodo(metodo) {
-  if (metodo === 'Tarjeta de crédito (Ueno)' || metodo === 'Tarjeta de crédito (personal)') return 'Joaquín (personal)';
   if (metodo === 'Tarjeta de crédito (Guada)') return 'Guada (personal)';
+  if (metodo === 'Tarjeta de crédito (Ueno)' || (metodo || '').indexOf('(personal)') !== -1) return 'Joaquín (personal)';
   return 'Compartido';
 }
 

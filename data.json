@@ -2269,10 +2269,40 @@
       "tipo": "Variable",
       "monto": 162000,
       "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-08-20",
+      "concepto": "Max Dominios (gestión web marca)",
+      "tipo": "Fijo",
+      "monto": 38000,
+      "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-08-21",
+      "concepto": "Limpieza",
+      "tipo": "Variable",
+      "monto": 120000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-08-22",
+      "concepto": "Delivery",
+      "tipo": "Variable",
+      "monto": 163000,
+      "metodo": "Tarjeta de crédito"
     }
   ],
   "INVERSIONES_DATA": {
-    "fecha_actualizacion": "2026-08-20",
+    "fecha_actualizacion": "2026-08-22",
     "fondos": [
       {
         "entidad": "Itaú",
@@ -2295,7 +2325,7 @@
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
         "monto": 2000000,
-        "monto_usd": 331.9435961441432,
+        "monto_usd": 331.63591019962826,
         "tasa": "6,34%"
       },
       {
@@ -2303,7 +2333,7 @@
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
         "monto": 7208376,
-        "monto_usd": 1196.387125899567,
+        "monto_usd": 1195.2781679105776,
         "tasa": "6,50%"
       },
       {
@@ -2311,7 +2341,7 @@
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
         "monto": 2025000,
-        "monto_usd": 336.092891095945,
+        "monto_usd": 335.78135907712357,
         "tasa": "9,25%"
       }
     ],
@@ -2323,10 +2353,10 @@
         "qty": 0.153045088,
         "precio_compra": 689.14,
         "invertido": 105.47,
-        "precio_actual": 716.08,
-        "valor_actual": 109.59,
-        "utilidad": 4.12,
-        "utilidad_pct": 0.039063,
+        "precio_actual": 713.44,
+        "valor_actual": 109.19,
+        "utilidad": 3.72,
+        "utilidad_pct": 0.035271,
         "titular": "JI"
       },
       {
@@ -2336,10 +2366,10 @@
         "qty": 0.6,
         "precio_compra": 49.8,
         "invertido": 29.88,
-        "precio_actual": 45.01,
-        "valor_actual": 27.01,
-        "utilidad": -2.87,
-        "utilidad_pct": -0.096051,
+        "precio_actual": 46.07,
+        "valor_actual": 27.64,
+        "utilidad": -2.24,
+        "utilidad_pct": -0.074967,
         "titular": "JI"
       },
       {
@@ -2349,10 +2379,10 @@
         "qty": 0.027,
         "precio_compra": 1998.15,
         "invertido": 53.95,
-        "precio_actual": 1751.73,
-        "valor_actual": 48.0,
-        "utilidad": -5.95,
-        "utilidad_pct": -0.110287,
+        "precio_actual": 1763.76,
+        "valor_actual": 48.33,
+        "utilidad": -5.62,
+        "utilidad_pct": -0.104171,
         "titular": "JI"
       },
       {
@@ -2362,10 +2392,10 @@
         "qty": 0.185,
         "precio_compra": 451.24,
         "invertido": 83.48,
-        "precio_actual": 249.34,
-        "valor_actual": 46.13,
-        "utilidad": -37.35,
-        "utilidad_pct": -0.447413,
+        "precio_actual": 243.32,
+        "valor_actual": 45.01,
+        "utilidad": -38.47,
+        "utilidad_pct": -0.460829,
         "titular": "JI"
       },
       {
@@ -2375,10 +2405,10 @@
         "qty": 0.111,
         "precio_compra": 452.61,
         "invertido": 50.24,
-        "precio_actual": 412.09,
-        "valor_actual": 45.74,
-        "utilidad": -4.5,
-        "utilidad_pct": -0.08957,
+        "precio_actual": 418.95,
+        "valor_actual": 46.5,
+        "utilidad": -3.74,
+        "utilidad_pct": -0.074443,
         "titular": "JI"
       },
       {
@@ -2388,10 +2418,10 @@
         "qty": 0.083,
         "precio_compra": 591.69,
         "invertido": 49.11,
-        "precio_actual": 546.03,
-        "valor_actual": 45.48,
-        "utilidad": -3.63,
-        "utilidad_pct": -0.073916,
+        "precio_actual": 549.9,
+        "valor_actual": 45.81,
+        "utilidad": -3.3,
+        "utilidad_pct": -0.067196,
         "titular": "JI"
       },
       {
@@ -2401,10 +2431,10 @@
         "qty": 0.067,
         "precio_compra": 391.04,
         "invertido": 26.2,
-        "precio_actual": 484.31,
-        "valor_actual": 32.28,
-        "utilidad": 6.08,
-        "utilidad_pct": 0.232061,
+        "precio_actual": 483.24,
+        "valor_actual": 32.21,
+        "utilidad": 6.01,
+        "utilidad_pct": 0.229389,
         "titular": "JI"
       },
       {
@@ -2414,10 +2444,10 @@
         "qty": 0.167,
         "precio_compra": 211.68,
         "invertido": 35.35,
-        "precio_actual": 217.56,
-        "valor_actual": 36.26,
-        "utilidad": 0.91,
-        "utilidad_pct": 0.025743,
+        "precio_actual": 214.72,
+        "valor_actual": 35.79,
+        "utilidad": 0.44,
+        "utilidad_pct": 0.012447,
         "titular": "JI"
       },
       {
@@ -2427,10 +2457,10 @@
         "qty": 0.103,
         "precio_compra": 376.7,
         "invertido": 38.8,
-        "precio_actual": 344.72,
-        "valor_actual": 35.66,
-        "utilidad": -3.14,
-        "utilidad_pct": -0.080928,
+        "precio_actual": 344.82,
+        "valor_actual": 35.67,
+        "utilidad": -3.13,
+        "utilidad_pct": -0.08067,
         "titular": "JI"
       },
       {
@@ -2440,10 +2470,10 @@
         "qty": 1.84,
         "precio_compra": 204.17,
         "invertido": 375.68,
-        "precio_actual": 139.65,
-        "valor_actual": 256.96,
-        "utilidad": -118.72,
-        "utilidad_pct": -0.316014,
+        "precio_actual": 136.97,
+        "valor_actual": 252.02,
+        "utilidad": -123.66,
+        "utilidad_pct": -0.329163,
         "titular": "JI"
       },
       {
@@ -2453,10 +2483,10 @@
         "qty": 4.144,
         "precio_compra": 50.25,
         "invertido": 208.24,
-        "precio_actual": 50.06,
-        "valor_actual": 207.45,
-        "utilidad": -0.79,
-        "utilidad_pct": -0.003794,
+        "precio_actual": 51.18,
+        "valor_actual": 212.09,
+        "utilidad": 3.85,
+        "utilidad_pct": 0.018488,
         "titular": "JI"
       },
       {
@@ -2466,10 +2496,10 @@
         "qty": 0.699,
         "precio_compra": 733.91,
         "invertido": 513.0,
-        "precio_actual": 769.06,
-        "valor_actual": 537.22,
-        "utilidad": 24.22,
-        "utilidad_pct": 0.047212,
+        "precio_actual": 765.72,
+        "valor_actual": 534.88,
+        "utilidad": 21.88,
+        "utilidad_pct": 0.042651,
         "titular": "Compartido",
         "split_gr": 0.7,
         "split_ji": 0.3
@@ -2481,10 +2511,10 @@
         "qty": 20.587,
         "precio_compra": 13.31,
         "invertido": 274.0,
-        "precio_actual": 14.61,
-        "valor_actual": 300.78,
-        "utilidad": 26.78,
-        "utilidad_pct": 0.097737,
+        "precio_actual": 14.58,
+        "valor_actual": 300.16,
+        "utilidad": 26.16,
+        "utilidad_pct": 0.095474,
         "titular": "Compartido",
         "split_gr": 0.7,
         "split_ji": 0.3
@@ -2496,10 +2526,10 @@
         "qty": 2.001,
         "precio_compra": 136.93,
         "invertido": 274.0,
-        "precio_actual": 164.77,
-        "valor_actual": 329.78,
-        "utilidad": 55.78,
-        "utilidad_pct": 0.203577,
+        "precio_actual": 165.11,
+        "valor_actual": 330.46,
+        "utilidad": 56.46,
+        "utilidad_pct": 0.206058,
         "titular": "Compartido",
         "split_gr": 0.7,
         "split_ji": 0.3
@@ -2511,10 +2541,10 @@
         "qty": 3.135,
         "precio_compra": 65.71,
         "invertido": 206.0,
-        "precio_actual": 68.42,
-        "valor_actual": 214.48,
-        "utilidad": 8.48,
-        "utilidad_pct": 0.041165,
+        "precio_actual": 69.58,
+        "valor_actual": 218.11,
+        "utilidad": 12.11,
+        "utilidad_pct": 0.058786,
         "titular": "Compartido",
         "split_gr": 0.7,
         "split_ji": 0.3
@@ -2526,10 +2556,10 @@
         "qty": 0.285,
         "precio_compra": 1217.26,
         "invertido": 346.92,
-        "precio_actual": 1280.34,
-        "valor_actual": 364.58,
-        "utilidad": 17.66,
-        "utilidad_pct": 0.050905,
+        "precio_actual": 1255.4,
+        "valor_actual": 357.48,
+        "utilidad": 10.56,
+        "utilidad_pct": 0.030439,
         "titular": "Compartido",
         "split_gr": 0.7,
         "split_ji": 0.3
@@ -2541,10 +2571,10 @@
         "qty": 1.148,
         "precio_compra": 87.11,
         "invertido": 100.0,
-        "precio_actual": 85.91,
-        "valor_actual": 98.6,
-        "utilidad": -1.4,
-        "utilidad_pct": -0.014,
+        "precio_actual": 83.65,
+        "valor_actual": 96.01,
+        "utilidad": -3.99,
+        "utilidad_pct": -0.0399,
         "titular": "JI"
       },
       {
@@ -2554,19 +2584,19 @@
         "qty": 1.99,
         "precio_compra": 50.37,
         "invertido": 100.23,
-        "precio_actual": 46.48,
-        "valor_actual": 92.49,
-        "utilidad": -7.74,
-        "utilidad_pct": -0.077222,
+        "precio_actual": 46.74,
+        "valor_actual": 93.01,
+        "utilidad": -7.22,
+        "utilidad_pct": -0.072034,
         "titular": "JI"
       }
     ],
     "crypto": {
       "activo": "Bitcoin (BTC, Ledger)",
       "cantidad": 0.02134699,
-      "precio": 72100.85,
-      "valor_usd": 1539.14,
-      "valor_gs": 9273503.1968
+      "precio": 76934.19,
+      "valor_usd": 1642.31,
+      "valor_gs": 9904295.3401
     },
     "otras": {
       "entidad": "Sudameris + Ahorro Programado",
@@ -2577,25 +2607,25 @@
     "resumen": [
       {
         "clase": "Fondos Mutuos",
-        "valor_usd": 9914.523613139656
+        "valor_usd": 9912.79543718733
       },
       {
         "clase": "Acciones / ETFs / Cedears",
-        "valor_usd": 2828.49
+        "valor_usd": 2820.3700000000003
       },
       {
         "clase": "Criptomonedas",
-        "valor_usd": 1539.14
+        "valor_usd": 1642.31
       },
       {
         "clase": "Otras (local, Gs.)",
-        "valor_usd": 661.4988581140293
+        "valor_usd": 660.8857000253702
       }
     ],
-    "total_usd": 14943.652471253685,
-    "total_gs": 90037299.3776,
-    "fx_usdpyg": 6025.12,
-    "fx_usdars": 1497.24
+    "total_usd": 15036.3611372127,
+    "total_gs": 90679933.4738,
+    "fx_usdpyg": 6030.71,
+    "fx_usdars": 1499.05
   },
   "INVERSIONES_GR_DATA": {
     "fecha_actualizacion": "2026-08-12",
@@ -2665,27 +2695,27 @@
     ]
   },
   "PATRIMONIO_DATA": {
-    "fx_usdpyg": 6025.12,
-    "ji_total_usd": 13720.864471253684,
-    "gr_total_usd": 33667.626415124236,
-    "combined_total_usd": 47388.49088637792,
+    "fx_usdpyg": 6030.71,
+    "ji_total_usd": 13817.598137212699,
+    "gr_total_usd": 33663.601415124234,
+    "combined_total_usd": 47481.19955233693,
     "ji_breakdown": {
-      "Fondos Mutuos": 9914.523613139656,
-      "Acciones/ETFs/Cedears (part. JI)": 1605.7019999999998,
-      "Criptomonedas": 1539.14,
-      "Otras (Sudameris + Ah.Prog.)": 661.4988581140293
+      "Fondos Mutuos": 9912.79543718733,
+      "Acciones/ETFs/Cedears (part. JI)": 1601.6069999999997,
+      "Criptomonedas": 1642.31,
+      "Otras (Sudameris + Ah.Prog.)": 660.8857000253702
     },
     "gr_breakdown": {
       "Bienes Raíces (capital pagado)": 21617.930858477135,
       "Depósitos a plazo": 9114.576859912268,
       "Bono Cadiem": 1712.3306967348271,
-      "Acciones/ETFs (part. GR)": 1222.7879999999998
+      "Acciones/ETFs (part. GR)": 1218.763
     },
     "gr_real_estate_detail": {
       "bosque_lago_paid_gs": 85788864,
       "fortaleza_paid_gs": 44660000
     },
-    "fecha_actualizacion": "2026-08-20"
+    "fecha_actualizacion": "2026-08-22"
   },
   "HISTORIAL_INVERSIONES": [
     {
@@ -2725,6 +2755,16 @@
       "fecha": "2026-08-20",
       "total_usd": 14944,
       "combinado_usd": 47388
+    },
+    {
+      "fecha": "2026-08-21",
+      "total_usd": 15046,
+      "combinado_usd": 47491
+    },
+    {
+      "fecha": "2026-08-22",
+      "total_usd": 15036,
+      "combinado_usd": 47481
     }
   ],
   "PRESUPUESTOS": {
