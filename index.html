@@ -127,6 +127,30 @@
   .sub-amount { font-size: 13px; font-weight: 600; min-width: 90px; text-align: right; font-variant-numeric: tabular-nums; }
   .sub-amount.pending { color: var(--muted); font-weight: 400; font-style: italic; }
 
+  /* Stock holdings — app-style hero + segmented bar + card list */
+  .stock-hero-value { font-size: 34px; font-weight: 800; letter-spacing: -.01em; }
+  .stock-hero-gain { font-size: 14px; font-weight: 600; margin-top: 4px; }
+  .stock-hero-gain.pos { color: var(--accent); }
+  .stock-hero-gain.neg { color: #e2607a; }
+  .seg-bar-track { display: flex; width: 100%; height: 10px; border-radius: 6px; overflow: hidden; margin: 14px 0 10px; background: var(--panel2); }
+  .seg-bar-seg { height: 100%; }
+  .seg-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; margin-bottom: 18px; }
+  .seg-legend-item { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+  .stock-sector-group { margin-bottom: 16px; }
+  .stock-sector-title { font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 8px; }
+  .stock-card-list { display: flex; flex-direction: column; gap: 8px; }
+  .stock-card { display: flex; align-items: center; justify-content: space-between; background: var(--panel2); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+  .stock-card-left { display: flex; align-items: center; gap: 12px; }
+  .stock-icon { width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #111; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 10.5px; flex-shrink: 0; }
+  .stock-card-name { display: flex; flex-direction: column; }
+  .stock-card-ticker { font-weight: 700; font-size: 14px; }
+  .stock-card-empresa { font-size: 11.5px; color: var(--muted); }
+  .stock-card-right { text-align: right; }
+  .stock-card-value { font-size: 14px; font-weight: 700; }
+  .stock-card-gain { font-size: 12px; margin-top: 2px; }
+  .stock-card-gain.pos { color: var(--accent); }
+  .stock-card-gain.neg { color: #e2607a; }
+
   @media (max-width: 900px) {
     .grid, .grid.even { grid-template-columns: 1fr; }
   }
@@ -318,6 +342,17 @@
   </div>
 </div>
 
+<div class="grid" style="grid-template-columns: 1fr;">
+  <div class="card">
+    <h2>Acciones</h2>
+    <div class="stock-hero-value" id="stockHeroValue">-</div>
+    <div class="stock-hero-gain" id="stockHeroGain">-</div>
+    <div class="seg-bar-track" id="stockSegBar"></div>
+    <div class="seg-legend" id="stockSegLegend"></div>
+    <div id="stockCardGroups"></div>
+  </div>
+</div>
+
 <div class="grid even">
   <div class="card">
     <h2>Acciones por sector</h2>
@@ -420,10 +455,67 @@
 
 <div class="hint" style="margin-top:-6px;">Fondos Mutuos y posiciones locales (Sudameris) según última carga manual, no verificado en vivo en esta actualización. Acciones/ETFs/Cedears y Bitcoin con precio de mercado del día de la actualización.</div>
 
+<h2 style="margin-top:24px;">Activos vs Pasivos (criterio Rich Dad Poor Dad)</h2>
+<div class="hint" id="kiyoNota" style="margin-bottom:10px;"></div>
+
+<div class="kpis">
+  <div class="kpi variable">
+    <div class="label">Ingreso anual de activos</div>
+    <div class="value" id="kiyoKpiActivos">-</div>
+    <div class="sub">Fondos, depósitos, bonos, dividendos</div>
+  </div>
+  <div class="kpi fijo">
+    <div class="label">Costo anual de pasivos</div>
+    <div class="value" id="kiyoKpiPasivos">-</div>
+    <div class="sub">Cuotas de terrenos y tarjeta</div>
+  </div>
+  <div class="kpi total">
+    <div class="label">Flujo neto anual</div>
+    <div class="value" id="kiyoKpiNeto">-</div>
+    <div class="sub" id="kiyoKpiNetoSub">-</div>
+  </div>
+</div>
+
+<div class="grid even">
+  <div class="card">
+    <h2>Activos que generan ingreso</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fuente</th><th>Detalle</th><th style="text-align:right">Monto (Gs./año)</th><th>Periodicidad</th></tr></thead>
+        <tbody id="kiyoActivosBody"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Pasivos que consumen efectivo</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fuente</th><th>Detalle</th><th style="text-align:right">Cuota (Gs./mes)</th><th>Meses restantes</th></tr></thead>
+        <tbody id="kiyoPasivosBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin-top:24px;">Plan de activos</h2>
+<div class="hint" id="planAporteHint" style="margin-bottom:10px;"></div>
+<div class="hint" id="planPasivoHint" style="margin-bottom:10px;"></div>
+
+<div class="card">
+  <h2>Proyección del aporte mensual</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Plazo</th><th>Fecha</th><th style="text-align:right">Aportado (Gs.)</th><th style="text-align:right">Valor futuro (Gs.)</th><th style="text-align:right">Interés acumulado (Gs.)</th><th style="text-align:right">Ingreso anual adicional (Gs.)</th></tr></thead>
+      <tbody id="planProyeccionBody"></tbody>
+    </table>
+  </div>
+  <div class="hint" id="planNotaHint" style="margin-top:10px;"></div>
+</div>
+
 </div><!-- /viewInversiones -->
 
 <script>
-let RAW_DATA, INVERSIONES_DATA, INVERSIONES_GR_DATA, PATRIMONIO_DATA, HISTORIAL_INVERSIONES, PRESUPUESTOS;
+let RAW_DATA, INVERSIONES_DATA, INVERSIONES_GR_DATA, PATRIMONIO_DATA, HISTORIAL_INVERSIONES, PRESUPUESTOS, BALANCE_KIYOSAKI, PLAN_ACTIVOS;
 
 
 const fmt = new Intl.NumberFormat('es-PY', { maximumFractionDigits: 0 });
@@ -943,6 +1035,71 @@ function renderInversiones() {
     }
   });
 
+  // Acciones — vista tipo app (hero + barra segmentada + tarjetas por sector)
+  const accGain = D.acciones.reduce((s,a) => s + a.utilidad, 0);
+  document.getElementById('stockHeroValue').textContent = '$' + fmt.format(accTotal);
+  const heroGainEl = document.getElementById('stockHeroGain');
+  heroGainEl.textContent = (accGain >= 0 ? '+$' : '-$') + fmt.format(Math.abs(accGain)) + ' rendimiento actual';
+  heroGainEl.className = 'stock-hero-gain ' + (accGain >= 0 ? 'pos' : 'neg');
+
+  const stockSectorTotals = {};
+  D.acciones.forEach(a => {
+    const s = a.sector || 'Otros';
+    stockSectorTotals[s] = (stockSectorTotals[s] || 0) + a.valor_actual;
+  });
+  const stockSectorLabels = Object.keys(stockSectorTotals).sort((a,b) => stockSectorTotals[b]-stockSectorTotals[a]);
+  const stockSectorColors = ['#4dd4ac','#5b8def','#f0a860','#8f6bd8','#c9d94a','#e2607a','#6bc7d8','#d8a6f0'];
+  const segBar = document.getElementById('stockSegBar');
+  segBar.innerHTML = '';
+  const segLegend = document.getElementById('stockSegLegend');
+  segLegend.innerHTML = '';
+  stockSectorLabels.forEach((s, i) => {
+    const pct = stockSectorTotals[s] / accTotal * 100;
+    const seg = document.createElement('div');
+    seg.className = 'seg-bar-seg';
+    seg.style.width = pct + '%';
+    seg.style.background = stockSectorColors[i % stockSectorColors.length];
+    segBar.appendChild(seg);
+    const leg = document.createElement('div');
+    leg.className = 'seg-legend-item';
+    leg.innerHTML = `<span class="legend-dot" style="background:${stockSectorColors[i % stockSectorColors.length]}"></span>${s} ${Math.round(pct)}%`;
+    segLegend.appendChild(leg);
+  });
+
+  const groupsEl = document.getElementById('stockCardGroups');
+  groupsEl.innerHTML = '';
+  stockSectorLabels.forEach((s, i) => {
+    const group = document.createElement('div');
+    group.className = 'stock-sector-group';
+    const title = document.createElement('div');
+    title.className = 'stock-sector-title';
+    title.textContent = s.toUpperCase();
+    group.appendChild(title);
+    const list = document.createElement('div');
+    list.className = 'stock-card-list';
+    const stocksInSector = D.acciones.filter(a => (a.sector || 'Otros') === s).sort((a,b) => b.valor_actual - a.valor_actual);
+    stocksInSector.forEach(a => {
+      const card = document.createElement('div');
+      card.className = 'stock-card';
+      const gainPos = a.utilidad >= 0;
+      card.innerHTML = `
+        <div class="stock-card-left">
+          <div class="stock-icon">${a.ticker.slice(0,4)}</div>
+          <div class="stock-card-name">
+            <span class="stock-card-ticker">${a.ticker}</span>
+            <span class="stock-card-empresa">${a.empresa}</span>
+          </div>
+        </div>
+        <div class="stock-card-right">
+          <div class="stock-card-value">$${fmt.format(a.valor_actual)}</div>
+          <div class="stock-card-gain ${gainPos ? 'pos' : 'neg'}">${gainPos ? '+' : '-'}$${fmt.format(Math.abs(a.utilidad))}</div>
+        </div>`;
+      list.appendChild(card);
+    });
+    group.appendChild(list);
+    groupsEl.appendChild(group);
+  });
+
   // Acciones por sector (doughnut)
   const sectorTotals = {};
   D.acciones.forEach(a => {
@@ -1094,6 +1251,60 @@ function renderInversiones() {
       }
     }
   });
+
+  // Activos vs Pasivos (Rich Dad Poor Dad)
+  if (BALANCE_KIYOSAKI) {
+    const K = BALANCE_KIYOSAKI;
+    document.getElementById('kiyoNota').textContent = K.nota_metodologia;
+    document.getElementById('kiyoKpiActivos').textContent = money(K.total_ingreso_activos_gs_anual);
+    document.getElementById('kiyoKpiPasivos').textContent = money(K.total_pasivo_gs_anual);
+    const neto = K.flujo_neto_anual_gs;
+    const netoEl = document.getElementById('kiyoKpiNeto');
+    netoEl.textContent = (neto >= 0 ? '+' : '-') + money(Math.abs(neto));
+    netoEl.style.color = neto >= 0 ? '#4dd4ac' : '#e2607a';
+    document.getElementById('kiyoKpiNetoSub').textContent = neto >= 0
+      ? 'Los activos ya cubren el costo de los pasivos'
+      : 'Falta cubrir ' + money(Math.abs(neto)) + '/año con ingreso de activos';
+
+    const kaBody = document.getElementById('kiyoActivosBody');
+    kaBody.innerHTML = '';
+    K.activos_ingreso.forEach(a => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${a.fuente}</td><td>${a.detalle}</td><td style="text-align:right">${fmt.format(a.monto_gs_anual)}</td><td>${a.periodicidad}</td>`;
+      kaBody.appendChild(tr);
+    });
+
+    const kpBody = document.getElementById('kiyoPasivosBody');
+    kpBody.innerHTML = '';
+    K.pasivos_costo.forEach(p => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${p.fuente}</td><td>${p.detalle}</td><td style="text-align:right">${fmt.format(p.monto_gs_mensual)}</td><td>${p.meses_restantes}</td>`;
+      kpBody.appendChild(tr);
+    });
+  }
+
+  // Plan de activos
+  if (PLAN_ACTIVOS) {
+    const P = PLAN_ACTIVOS;
+    document.getElementById('planAporteHint').innerHTML =
+      `Aporte personal (Joaquín): <b>${money(P.aporte_mensual_personal_gs)}/mes</b> · ` +
+      `Aporte familiar conjunto: <b>${money(P.aporte_mensual_familiar_gs)}/mes</b> (desde ${P.aporte_mensual_familiar_desde}) · ` +
+      `Combinado: <b>${money(P.aporte_mensual_combinado_gs)}/mes</b>`;
+    document.getElementById('planPasivoHint').textContent = P.nota_pasivo_personal;
+    document.getElementById('planNotaHint').textContent = P.nota_metodologia;
+
+    const ppBody = document.getElementById('planProyeccionBody');
+    ppBody.innerHTML = '';
+    P.proyeccion.forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${row.meses} meses</td><td>${row.fecha_objetivo}</td>` +
+        `<td style="text-align:right">${fmt.format(row.aportado_gs)}</td>` +
+        `<td style="text-align:right">${fmt.format(row.valor_futuro_gs)}</td>` +
+        `<td style="text-align:right">${fmt.format(row.interes_acumulado_gs)}</td>` +
+        `<td style="text-align:right">${fmt.format(row.ingreso_anual_adicional_gs)}</td>`;
+      ppBody.appendChild(tr);
+    });
+  }
 }
 
 monthFilter.addEventListener('change', () => safeRender());
@@ -1128,6 +1339,8 @@ fetch('data.json')
     PATRIMONIO_DATA = data.PATRIMONIO_DATA || {};
     HISTORIAL_INVERSIONES = data.HISTORIAL_INVERSIONES || [];
     PRESUPUESTOS = data.PRESUPUESTOS || {};
+    BALANCE_KIYOSAKI = data.BALANCE_KIYOSAKI || null;
+    PLAN_ACTIVOS = data.PLAN_ACTIVOS || null;
     initFilters();
     safeRender();
   })

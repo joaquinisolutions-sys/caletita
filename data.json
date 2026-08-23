@@ -4859,6 +4859,56 @@
       "tipo": "Variable",
       "monto": 4238,
       "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-22",
+      "concepto": "Almuerzo (plato ₲350.000 + propina ₲35.000)",
+      "tipo": "Variable",
+      "monto": 385000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-22",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 67000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-22",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 830000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-22",
+      "concepto": "Reintegro supermercado (20%)",
+      "tipo": "Variable",
+      "monto": -166000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Otras compras",
+      "fecha": "2026-08-22",
+      "concepto": "Utensilios de cocina",
+      "tipo": "Variable",
+      "monto": 210000,
+      "metodo": "Tarjeta de crédito"
     }
   ],
   "INVERSIONES_DATA": {
@@ -5460,5 +5510,110 @@
     "Compras adicionales": 550000,
     "Día a día": 7800000,
     "IPS": 390000
+  },
+  "BALANCE_KIYOSAKI": {
+    "fecha_actualizacion": "2026-08-22",
+    "nota_metodologia": "Sigue la definición de Rich Dad Poor Dad: activo = pone dinero en el bolsillo (genera ingreso), pasivo = saca dinero del bolsillo. No se cuentan cripto ni acciones sin dividendo relevante como generadoras de ingreso (son posiciones fraccionarias, dividendo total ~US$6,6/año); ese capital sigue en Inversiones pero no aporta a este flujo de caja. El capital invertido en Bosque Lago/Fortaleza (terrenos en cuotas) tampoco cuenta como activo hasta que genere renta o se venda con ganancia.",
+    "activos_ingreso": [
+      {
+        "fuente": "Fondos Mutuos (JI)",
+        "detalle": "Interés anual estimado sobre 5 fondos (Itaú, Ueno, Investor)",
+        "monto_gs_anual": 2671932,
+        "periodicidad": "Variable según fondo"
+      },
+      {
+        "fuente": "Sudameris + Ahorro Programado (JI)",
+        "detalle": "Dividendo reciente",
+        "monto_gs_anual": 245773,
+        "periodicidad": "No confirmada"
+      },
+      {
+        "fuente": "Depósito a plazo GNB (GR)",
+        "detalle": "Interés al vencimiento (05/11/2026), tasa 6,60% anual",
+        "monto_gs_anual": 3254795,
+        "periodicidad": "Al vencimiento (anual)"
+      },
+      {
+        "fuente": "Bono Cadiem (GR)",
+        "detalle": "Cupón 12,35% anual sobre Gs. 10.000.000 nominal, pago trimestral",
+        "monto_gs_anual": 1235000,
+        "periodicidad": "Trimestral"
+      },
+      {
+        "fuente": "Dividendos de acciones (JI+GR)",
+        "detalle": "Posiciones fraccionarias muy chicas (~US$6,6/año total) — no cuantificado por ser inmaterial",
+        "monto_gs_anual": 0,
+        "periodicidad": "Trimestral/semestral"
+      }
+    ],
+    "total_ingreso_activos_gs_anual": 7407500,
+    "pasivos_costo": [
+      {
+        "fuente": "PC / Tienda Naranja (JI)",
+        "detalle": "Cuota mensual, termina feb/2027 (6 cuotas restantes)",
+        "monto_gs_mensual": 505932,
+        "meses_restantes": 6
+      },
+      {
+        "fuente": "Bosque Lago (GR)",
+        "detalle": "Cuota original Gs. 2.042.592/mes desde feb/2023, sujeta a reajuste anual por IPC — monto actual exacto no confirmado",
+        "monto_gs_mensual": 2042592,
+        "meses_restantes": 198
+      },
+      {
+        "fuente": "Fortaleza (GR)",
+        "detalle": "Cuota actual (jul/2026)",
+        "monto_gs_mensual": 1655000,
+        "meses_restantes": 211
+      }
+    ],
+    "total_pasivo_gs_mensual": 4203524,
+    "total_pasivo_gs_anual": 50442288,
+    "flujo_neto_anual_gs": -43034788
+  },
+  "PLAN_ACTIVOS": {
+    "fecha_creacion": "2026-08-22",
+    "aporte_mensual_personal_gs": 2500000,
+    "aporte_mensual_familiar_gs": 900000,
+    "aporte_mensual_familiar_desde": "2026-09",
+    "aporte_mensual_combinado_gs": 3400000,
+    "rendimiento_referencia_pct_anual": 4.47,
+    "nota_metodologia": "El 4,47% anual es el rendimiento promedio ponderado actual de los fondos mutuos de Joaquín (no es una recomendación de instrumento — el tipo de activo se define mes a mes). Sirve solo como referencia para proyectar, la tasa real dependerá de en qué se invierta cada mes.",
+    "nota_pasivo_personal": "El PC (Tienda Naranja) termina en feb/2027 (6 cuotas restantes desde ago/2026) — a partir de ahí el pasivo personal de tarjeta de Joaquín baja a Gs. 0/mes, independientemente de este plan.",
+    "proyeccion": [
+      {
+        "meses": 6,
+        "fecha_objetivo": "2027-02",
+        "aportado_gs": 20400000,
+        "valor_futuro_gs": 20587080,
+        "interes_acumulado_gs": 187080,
+        "ingreso_anual_adicional_gs": 920144
+      },
+      {
+        "meses": 12,
+        "fecha_objetivo": "2027-08",
+        "aportado_gs": 40800000,
+        "valor_futuro_gs": 41629202,
+        "interes_acumulado_gs": 829202,
+        "ingreso_anual_adicional_gs": 1860625
+      },
+      {
+        "meses": 24,
+        "fecha_objetivo": "2028-08",
+        "aportado_gs": 81600000,
+        "valor_futuro_gs": 85119029,
+        "interes_acumulado_gs": 3519029,
+        "ingreso_anual_adicional_gs": 3804412
+      },
+      {
+        "meses": 36,
+        "fecha_objetivo": "2029-08",
+        "aportado_gs": 122400000,
+        "valor_futuro_gs": 130552643,
+        "interes_acumulado_gs": 8152643,
+        "ingreso_anual_adicional_gs": 5835076
+      }
+    ],
+    "historial_asignaciones": []
   }
 }
