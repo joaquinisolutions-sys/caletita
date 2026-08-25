@@ -52,14 +52,19 @@
     flex-wrap: wrap;
     margin-bottom: 22px;
   }
-  select {
+  select, input[type="text"] {
     background: var(--panel2);
     color: var(--text);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 8px 14px;
     font-size: 14px;
+    font-family: inherit;
   }
+  input[type="text"]#searchFilter {
+    min-width: 220px;
+  }
+  input[type="text"]::placeholder { color: var(--muted); }
 
   .kpis {
     display: grid;
@@ -151,6 +156,21 @@
   .stock-card-gain.pos { color: var(--accent); }
   .stock-card-gain.neg { color: #e2607a; }
 
+  /* Budget alerts, semáforo de completitud, vencimientos unificados */
+  .alert-banner { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+  .alert-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; font-size: 12.5px; font-weight: 600; }
+  .alert-chip.danger { background: rgba(226,96,122,0.15); color: #e2607a; border: 1px solid rgba(226,96,122,0.4); }
+  .alert-chip.warn { background: rgba(240,168,96,0.15); color: #f0a860; border: 1px solid rgba(240,168,96,0.4); }
+  .alert-chip.ok { background: rgba(77,212,172,0.12); color: #4dd4ac; border: 1px solid rgba(77,212,172,0.35); }
+  .semaforo-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 13.5px; }
+  .semaforo-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .semaforo-dot.ok { background: #4dd4ac; }
+  .semaforo-dot.missing { background: #e2607a; }
+  .venc-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+  .venc-item:last-child { border-bottom: none; }
+  .venc-badge { font-size: 10.5px; font-weight: 700; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; background: var(--panel2); color: var(--muted); flex-shrink: 0; min-width: 60px; text-align: center; }
+  .venc-days { margin-left: auto; font-weight: 600; font-size: 12.5px; white-space: nowrap; }
+
   @media (max-width: 900px) {
     .grid, .grid.even { grid-template-columns: 1fr; }
   }
@@ -188,6 +208,7 @@
     <option value="Fijo">Solo Fijo</option>
     <option value="Variable">Solo Variable</option>
   </select>
+  <input type="text" id="searchFilter" placeholder="Buscar por concepto...">
 </div>
 
 <div class="kpis">
@@ -231,6 +252,14 @@
   </div>
 </div>
 
+<div class="grid" style="grid-template-columns: 1fr;">
+  <div class="card">
+    <h2>Completitud del mes</h2>
+    <div class="hint" id="semaforoHint">Gastos fijos habituales — chequeo del mes seleccionado</div>
+    <div id="semaforoBox"></div>
+  </div>
+</div>
+
 <div class="grid even">
   <div class="card">
     <h2>Gasto por persona</h2>
@@ -240,6 +269,7 @@
   <div class="card">
     <h2>Presupuesto vs. real por categoría</h2>
     <div class="hint" id="budgetHint">Mes seleccionado</div>
+    <div class="alert-banner" id="budgetAlerts"></div>
     <div class="sub-list" id="budgetList"></div>
   </div>
 </div>
@@ -252,6 +282,14 @@
   <div class="card">
     <h2>Distribución por categoría</h2>
     <div class="chart-wrap small"><canvas id="categoryChart"></canvas></div>
+  </div>
+</div>
+
+<div class="grid" style="grid-template-columns: 1fr;">
+  <div class="card">
+    <h2>Evolución mensual por categoría</h2>
+    <div class="hint">Todo el período cargado, una línea por categoría</div>
+    <div class="chart-wrap"><canvas id="categoryEvolutionChart"></canvas></div>
   </div>
 </div>
 
@@ -512,6 +550,15 @@
   <div class="hint" id="planNotaHint" style="margin-top:10px;"></div>
 </div>
 
+<div class="card">
+  <h2>Historial de asignaciones</h2>
+  <div class="hint" id="planHistorialHint" style="margin-bottom:10px;"></div>
+  <div id="planHistorialEmpty" class="hint" style="display:none;">Todavía no hay asignaciones registradas. Se van a ir cargando acá cada mes cuando definas en qué instrumento poner el aporte (fondo mutuo, acciones, etc.).</div>
+  <div class="chart-wrap" id="planHistorialChartWrap">
+    <canvas id="planHistorialChart"></canvas>
+  </div>
+</div>
+
 </div><!-- /viewInversiones -->
 
 <script>
@@ -524,6 +571,7 @@ function money(n) { return "₲ " + fmt.format(Math.round(n)); }
 const monthFilter = document.getElementById('monthFilter');
 const typeFilter = document.getElementById('typeFilter');
 const categoryFilter = document.getElementById('categoryFilter');
+const searchFilter = document.getElementById('searchFilter');
 
 function pad2(n) { return n < 10 ? '0'+n : ''+n; }
 const now = new Date();
@@ -558,7 +606,9 @@ const categoryColors = {
   'Seguros': '#f0a860',
   'Suscripciones': '#57c7e3',
   'Compras adicionales': '#c9d94a',
-  'Día a día': '#ff8fa3'
+  'Día a día': '#ff8fa3',
+  'IPS': '#66c2a5',
+  'Viajes': '#d98fd9'
 };
 const subcatColors = {
   'Supermercado': '#5b8def',
@@ -578,16 +628,18 @@ function subcatColor(s) { return subcatColors[s] || '#9aa4bb'; }
 const BASE_SUBCATEGORIAS = ['Supermercado', 'Delivery', 'Comida afuera', 'Nafta', 'Ocio', 'Donaciones', 'Limpieza', 'Transporte', 'Cuidado personal', 'Libros', 'Regalos'];
 function catColor(cat) { return categoryColors[cat] || '#9aa4bb'; }
 
-let monthlyChart, categoryChart, topConceptsChart;
+let monthlyChart, categoryChart, topConceptsChart, categoryEvolutionChart;
 
 function getFiltered() {
   const m = monthFilter.value;
   const t = typeFilter.value;
   const c = categoryFilter.value;
+  const q = (searchFilter && searchFilter.value || '').trim().toLowerCase();
   return RAW_DATA.filter(d =>
     (m === 'Todos' || d.mes === m) &&
     (t === 'Todos' || d.tipo === t) &&
-    (c === 'Todas' || d.categoria === c)
+    (c === 'Todas' || d.categoria === c) &&
+    (!q || (d.concepto||'').toLowerCase().includes(q) || (d.subcategoria||'').toLowerCase().includes(q) || (d.categoria||'').toLowerCase().includes(q))
   );
 }
 
@@ -743,14 +795,52 @@ function renderPersona(filtered) {
   });
 }
 
+const FIXED_EXPENSE_CHECKLIST = [
+  'ANDE', 'Personal - línea Jay', 'Tigo - línea Guada', 'Cuota colegio Rufina', 'Oami',
+  'Internet', 'Bek', 'Aquamaq', 'Seguro auto Jay', 'Netflix', 'Claude', 'Taxit',
+  'Migone', 'Seguro auto Guada', 'IPS'
+];
+
+function renderSemaforo() {
+  const box = document.getElementById('semaforoBox');
+  const hint = document.getElementById('semaforoHint');
+  if (!box) return;
+  const m = monthFilter.value;
+  if (m === 'Todos') {
+    box.innerHTML = '';
+    hint.textContent = 'Seleccioná un mes específico para chequear los gastos fijos habituales';
+    return;
+  }
+  hint.textContent = 'Gastos fijos habituales — chequeo de ' + m;
+  const conceptsThisMonth = RAW_DATA.filter(d => d.mes === m).map(d => d.concepto.toLowerCase());
+  const missing = [];
+  const present = [];
+  FIXED_EXPENSE_CHECKLIST.forEach(item => {
+    const found = conceptsThisMonth.some(c => c.includes(item.toLowerCase()));
+    if (found) present.push(item); else missing.push(item);
+  });
+  let html = '';
+  if (!missing.length) {
+    html += `<div class="semaforo-item"><span class="semaforo-dot ok"></span><span>Todos los gastos fijos habituales (${present.length}) están cargados este mes.</span></div>`;
+  } else {
+    missing.forEach(item => {
+      html += `<div class="semaforo-item"><span class="semaforo-dot missing"></span><span>Falta cargar: <b>${item}</b></span></div>`;
+    });
+    html += `<div class="semaforo-item" style="color:var(--muted);"><span class="semaforo-dot ok"></span><span>${present.length} de ${FIXED_EXPENSE_CHECKLIST.length} ya están cargados.</span></div>`;
+  }
+  box.innerHTML = html;
+}
+
 function renderBudget() {
   const list = document.getElementById('budgetList');
   const hint = document.getElementById('budgetHint');
+  const alerts = document.getElementById('budgetAlerts');
   const m = monthFilter.value;
-  if (!PRESUPUESTOS) { list.innerHTML = ''; return; }
+  if (!PRESUPUESTOS) { list.innerHTML = ''; if (alerts) alerts.innerHTML = ''; return; }
   if (m === 'Todos') {
     hint.textContent = 'Seleccioná un mes específico para comparar contra el presupuesto';
     list.innerHTML = '';
+    if (alerts) alerts.innerHTML = '';
     return;
   }
   hint.textContent = 'Gastado en ' + m + ' vs. presupuesto mensual';
@@ -758,21 +848,45 @@ function renderBudget() {
   RAW_DATA.filter(d => d.mes === m).forEach(d => { byCat[d.categoria] = (byCat[d.categoria]||0) + d.monto; });
 
   list.innerHTML = '';
+  const over = [], near = [];
   Object.keys(PRESUPUESTOS).forEach(cat => {
     const gastado = byCat[cat] || 0;
     const presupuesto = PRESUPUESTOS[cat];
     const pct = presupuesto ? Math.round(gastado/presupuesto*100) : 0;
-    const barColor = pct > 100 ? '#e2607a' : (pct >= 80 ? '#f0a860' : '#4dd4ac');
+    const state = pct > 100 ? 'danger' : (pct >= 80 ? 'warn' : 'ok');
+    const barColor = state === 'danger' ? '#e2607a' : (state === 'warn' ? '#f0a860' : '#4dd4ac');
+    if (state === 'danger') over.push({ cat, pct });
+    else if (state === 'warn') near.push({ cat, pct });
     const row = document.createElement('div');
     row.className = 'sub-item';
     row.innerHTML = `
       <span class="sub-dot" style="background:${barColor}"></span>
       <span class="sub-name">${cat}</span>
       <span class="sub-bar-track"><span class="sub-bar-fill" style="width:${Math.min(pct,100)}%;background:${barColor}"></span></span>
-      <span class="sub-amount">${money(gastado)} / ${money(presupuesto)} (${pct}%)</span>
+      <span class="sub-amount" style="color:${barColor}">${money(gastado)} / ${money(presupuesto)} (${pct}%)</span>
     `;
     list.appendChild(row);
   });
+
+  if (alerts) {
+    alerts.innerHTML = '';
+    if (!over.length && !near.length) {
+      alerts.innerHTML = `<span class="alert-chip ok">✓ Todas las categorías dentro de presupuesto</span>`;
+    } else {
+      over.forEach(o => {
+        const chip = document.createElement('span');
+        chip.className = 'alert-chip danger';
+        chip.textContent = `⚠ ${o.cat} superado (${o.pct}%)`;
+        alerts.appendChild(chip);
+      });
+      near.forEach(n => {
+        const chip = document.createElement('span');
+        chip.className = 'alert-chip warn';
+        chip.textContent = `${n.cat} cerca del tope (${n.pct}%)`;
+        alerts.appendChild(chip);
+      });
+    }
+  }
 }
 
 function render() {
@@ -871,6 +985,37 @@ function render() {
     }
   });
 
+  // Evolución mensual por categoría (todas las categorías, todo el período)
+  const allCats = Array.from(new Set(RAW_DATA.map(d => d.categoria))).sort();
+  const evoDatasets = allCats.map(cat => ({
+    label: cat,
+    data: months.map(mo => RAW_DATA.filter(d => d.mes === mo && d.categoria === cat).reduce((s,d)=>s+d.monto,0)),
+    borderColor: catColor(cat),
+    backgroundColor: catColor(cat),
+    tension: 0.3,
+    fill: false,
+    spanGaps: true
+  }));
+  if (categoryEvolutionChart) categoryEvolutionChart.destroy();
+  const evoCanvas = document.getElementById('categoryEvolutionChart');
+  if (evoCanvas) {
+    categoryEvolutionChart = new Chart(evoCanvas, {
+      type: 'line',
+      data: { labels: months, datasets: evoDatasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
+          tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + money(ctx.raw) } }
+        },
+        scales: {
+          x: { ticks: { color: '#8b93a8' }, grid: { display: false } },
+          y: { ticks: { color: '#8b93a8', callback: v => fmt.format(v) }, grid: { color: '#222a3c' } }
+        }
+      }
+    });
+  }
+
   const tbody = document.getElementById('detailBody');
   tbody.innerHTML = '';
   const sorted = [...filtered].sort((a,b) => b.mes.localeCompare(a.mes) || (b.fecha||'').localeCompare(a.fecha||'') || b.monto - a.monto);
@@ -887,6 +1032,7 @@ function render() {
   renderDaily();
   renderPersona(filtered);
   renderBudget();
+  renderSemaforo();
 }
 
 function switchView(view) {
@@ -909,7 +1055,7 @@ function switchView(view) {
 }
 
 let invRendered = false;
-let invRendimientoChart, invAllocationChart, invSectorChart, patTitularChart, patGRChart;
+let invRendimientoChart, invAllocationChart, invSectorChart, patTitularChart, patGRChart, planHistorialChart;
 
 function parseDDMMYYYY(s) {
   if (!s) return null;
@@ -918,25 +1064,59 @@ function parseDDMMYYYY(s) {
   return new Date(parseInt(m[3]), parseInt(m[2])-1, parseInt(m[1]));
 }
 
+function mesToApproxDate(mes) {
+  // 'YYYY-MM' -> first day of that month
+  const [y, mo] = mes.split('-').map(Number);
+  return new Date(y, mo - 1, 1);
+}
+
 function renderVencimientos() {
   const box = document.getElementById('vencimientosBox');
   const GR = INVERSIONES_GR_DATA;
   const hoy = new Date();
-  const items = GR.items.map(it => {
-    const fecha = parseDDMMYYYY(it.vencimiento);
-    if (!fecha) return null;
-    const dias = Math.ceil((fecha - hoy) / (1000*60*60*24));
-    return { entidad: it.entidad, concepto: it.concepto, fechaStr: it.vencimiento, dias };
-  }).filter(Boolean).sort((a,b) => a.dias - b.dias);
+  const items = [];
 
+  // Vencimientos de GR (inmuebles, bonos, depósitos)
+  GR.items.forEach(it => {
+    const fecha = parseDDMMYYYY(it.vencimiento);
+    if (!fecha) return;
+    const dias = Math.ceil((fecha - hoy) / (1000*60*60*24));
+    items.push({ tipo: 'Inmueble/GR', nombre: it.entidad, detalle: it.concepto, fechaStr: it.vencimiento, dias });
+  });
+
+  // Próxima cuota pendiente de cada plan en curso (Compras adicionales)
+  const cuotaItems = RAW_DATA.filter(d => d.categoria === 'Compras adicionales');
+  const groups = {};
+  cuotaItems.forEach(d => {
+    const base = d.concepto.replace(/\s*-\s*cuota\s*\d+\/\d+\s*$/i, '').trim();
+    if (!groups[base]) groups[base] = [];
+    groups[base].push(d);
+  });
+  Object.keys(groups).forEach(base => {
+    const pcItems = groups[base].slice().sort((a,b) => a.mes.localeCompare(b.mes));
+    const pendientes = pcItems.filter(d => d.mes > currentYYYYMM);
+    if (!pendientes.length) return;
+    const next = pendientes[0];
+    const fecha = mesToApproxDate(next.mes);
+    const dias = Math.ceil((fecha - hoy) / (1000*60*60*24));
+    const m = next.concepto.match(/cuota\s*(\d+\/\d+)/i);
+    items.push({ tipo: 'Cuota tarjeta', nombre: base, detalle: (m ? 'cuota ' + m[1] : 'próxima cuota') + ' — ' + money(next.monto), fechaStr: next.mes, dias });
+  });
+
+  items.sort((a,b) => a.dias - b.dias);
   if (!items.length) { box.innerHTML = ''; return; }
 
-  const parts = items.map(it => {
+  let html = '<div style="font-weight:600;margin-bottom:6px;">Próximos vencimientos y cuotas</div>';
+  items.forEach(it => {
     const color = it.dias < 30 ? '#e2607a' : (it.dias < 90 ? '#f0a860' : '#4dd4ac');
-    const diasStr = it.dias >= 0 ? it.dias + ' días' : 'vencido hace ' + Math.abs(it.dias) + ' días';
-    return `<span style="color:${color}"><b>${it.entidad}</b> (${it.concepto}): vence ${it.fechaStr} — ${diasStr}</span>`;
+    const diasStr = it.dias >= 0 ? 'en ' + it.dias + ' días' : 'vencido hace ' + Math.abs(it.dias) + ' días';
+    html += `<div class="venc-item">
+      <span class="venc-badge">${it.tipo}</span>
+      <span><b>${it.nombre}</b> — ${it.detalle} (${it.fechaStr})</span>
+      <span class="venc-days" style="color:${color}">${diasStr}</span>
+    </div>`;
   });
-  box.innerHTML = '<b>Vencimientos próximos:</b> ' + parts.join(' &nbsp;|&nbsp; ');
+  box.innerHTML = html;
 }
 
 let historialChart;
@@ -1304,12 +1484,53 @@ function renderInversiones() {
         `<td style="text-align:right">${fmt.format(row.ingreso_anual_adicional_gs)}</td>`;
       ppBody.appendChild(tr);
     });
+
+    // Historial de asignaciones
+    const hist = P.historial_asignaciones || [];
+    const histEmpty = document.getElementById('planHistorialEmpty');
+    const histWrap = document.getElementById('planHistorialChartWrap');
+    const histHint = document.getElementById('planHistorialHint');
+    if (!hist.length) {
+      histEmpty.style.display = 'block';
+      histWrap.style.display = 'none';
+      histHint.textContent = '';
+    } else {
+      histEmpty.style.display = 'none';
+      histWrap.style.display = 'block';
+      const totalAsignado = hist.reduce((s, h) => s + (h.monto_gs || 0), 0);
+      histHint.innerHTML = `Total asignado hasta ahora: <b>${money(totalAsignado)}</b>`;
+
+      const mesesHist = [...new Set(hist.map(h => h.mes))].sort();
+      const instrumentos = [...new Set(hist.map(h => h.instrumento))];
+      const histColors = ['#4dd4ac', '#5b8def', '#f0a860', '#e2607a', '#a78bfa', '#66c2a5', '#d98fd9'];
+      const datasets = instrumentos.map((instr, idx) => ({
+        label: instr,
+        data: mesesHist.map(m => hist.filter(h => h.mes === m && h.instrumento === instr).reduce((s, h) => s + (h.monto_gs || 0), 0)),
+        backgroundColor: histColors[idx % histColors.length],
+      }));
+
+      if (planHistorialChart) planHistorialChart.destroy();
+      planHistorialChart = new Chart(document.getElementById('planHistorialChart'), {
+        type: 'bar',
+        data: { labels: mesesHist, datasets },
+        options: {
+          responsive: true,
+          scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: v => fmt.format(v) } } },
+          plugins: { tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${fmt.format(ctx.raw)}` } } }
+        }
+      });
+    }
   }
 }
 
 monthFilter.addEventListener('change', () => safeRender());
 typeFilter.addEventListener('change', () => safeRender());
 categoryFilter.addEventListener('change', () => safeRender());
+let searchDebounce;
+searchFilter.addEventListener('input', () => {
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(() => safeRender(), 200);
+});
 
 function safeRender() {
   try {
