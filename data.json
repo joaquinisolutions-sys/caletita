@@ -5099,6 +5099,36 @@
       "tipo": "Variable",
       "monto": 59294,
       "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Telecomunicaciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Tigo - línea Guada",
+      "tipo": "Fijo",
+      "monto": 130000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53174,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "Claude",
+      "tipo": "Fijo",
+      "monto": 134420,
+      "metodo": "Tarjeta de crédito"
     }
   ],
   "INVERSIONES_DATA": {

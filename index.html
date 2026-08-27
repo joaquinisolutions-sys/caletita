@@ -319,7 +319,7 @@
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>Mes</th><th>Fecha</th><th>Categoría</th><th>Subcategoría</th><th>Concepto</th><th>Tipo</th><th>Método</th><th style="text-align:right">Monto (₲)</th></tr>
+          <tr><th>Fecha</th><th>Categoría</th><th>Concepto</th><th>Tipo</th><th>Método</th><th style="text-align:right">Monto (₲)</th></tr>
         </thead>
         <tbody id="detailBody"></tbody>
       </table>
@@ -612,7 +612,8 @@ function getFiltered() {
 }
 
 function renderInstallments() {
-  const allItems = RAW_DATA.filter(d => d.categoria === 'Compras adicionales');
+  // Excluimos reintegros/descuentos puntuales (montos negativos) — no son planes de cuotas reales
+  const allItems = RAW_DATA.filter(d => d.categoria === 'Compras adicionales' && d.monto > 0);
   const box = document.getElementById('installmentBox');
   if (!allItems.length) { box.innerHTML = '<div style="color:var(--muted);font-size:13px;">Sin datos de cuotas.</div>'; return; }
 
@@ -631,12 +632,16 @@ function renderInstallments() {
   });
 
   let html = '';
+  let anyRendered = false;
   baseNames.forEach(base => {
     const pcItems = groups[base].slice().sort((a,b) => a.mes.localeCompare(b.mes));
     const total = pcItems.length;
     const cuotaMonto = pcItems[0].monto;
     const pagadas = pcItems.filter(d => d.mes <= currentYYYYMM).length;
     const cuotaActual = Math.min(pagadas, total);
+    // Un plan ya terminado (todas las cuotas pagadas) no aporta más — lo sacamos del tracker
+    if (cuotaActual >= total) return;
+    anyRendered = true;
     const pctVal = Math.round((cuotaActual/total)*100);
     const totalPagado = pcItems.filter(d => d.mes <= currentYYYYMM).reduce((s,d)=>s+d.monto,0);
     const totalRestante = pcItems.filter(d => d.mes > currentYYYYMM).reduce((s,d)=>s+d.monto,0);
@@ -656,7 +661,7 @@ function renderInstallments() {
     </div>`;
   });
 
-  box.innerHTML = html;
+  box.innerHTML = anyRendered ? html : '<div style="color:var(--muted);font-size:13px;">No hay cuotas en curso — todos los planes están saldados.</div>';
 }
 
 function renderSubscriptions() {
@@ -931,7 +936,8 @@ function render() {
   const sorted = [...filtered].sort((a,b) => b.mes.localeCompare(a.mes) || (b.fecha||'').localeCompare(a.fecha||'') || b.monto - a.monto);
   sorted.forEach(d => {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${d.mes}</td><td>${d.fecha || "-"}</td><td>${d.categoria}</td><td>${d.subcategoria || "-"}</td><td>${d.concepto}</td>` +
+    const catStr = d.subcategoria ? `${d.categoria} <span class="hint" style="font-size:11px;">› ${d.subcategoria}</span>` : d.categoria;
+    tr.innerHTML = `<td>${d.fecha || d.mes}</td><td>${catStr}</td><td>${d.concepto}</td>` +
       `<td><span class="badge ${d.tipo}">${d.tipo}</span></td><td>${d.metodo}</td>` +
       `<td class="monto">${fmt.format(d.monto)}</td>`;
     tbody.appendChild(tr);
