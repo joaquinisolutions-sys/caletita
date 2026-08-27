@@ -268,12 +268,7 @@
   </div>
 </div>
 
-<div class="grid even">
-  <div class="card">
-    <h2>Gasto por persona</h2>
-    <div class="hint">Según método de pago, del período filtrado</div>
-    <div class="chart-wrap small"><canvas id="personaChart"></canvas></div>
-  </div>
+<div class="grid" style="grid-template-columns: 1fr;">
   <div class="card">
     <h2>Presupuesto vs. real por categoría</h2>
     <div class="hint" id="budgetHint">Mes seleccionado</div>
@@ -282,14 +277,10 @@
   </div>
 </div>
 
-<div class="grid">
+<div class="grid" style="grid-template-columns: 1fr;">
   <div class="card">
     <h2>Evolución mensual (Fijo vs Variable)</h2>
     <div class="chart-wrap"><canvas id="monthlyChart"></canvas></div>
-  </div>
-  <div class="card">
-    <h2>Distribución por categoría</h2>
-    <div class="chart-wrap small"><canvas id="categoryChart"></canvas></div>
   </div>
 </div>
 
@@ -322,11 +313,7 @@
   </div>
 </div>
 
-<div class="grid even">
-  <div class="card">
-    <h2>Top conceptos</h2>
-    <div class="chart-wrap small"><canvas id="topConceptsChart"></canvas></div>
-  </div>
+<div class="grid" style="grid-template-columns: 1fr;">
   <div class="card">
     <h2>Detalle de gastos</h2>
     <div class="table-wrap">
@@ -609,7 +596,7 @@ function subcatColor(s) { return subcatColors[s] || '#9aa4bb'; }
 const BASE_SUBCATEGORIAS = ['Supermercado', 'Delivery', 'Comida afuera', 'Nafta', 'Ocio', 'Donaciones', 'Limpieza', 'Transporte', 'Cuidado personal', 'Libros', 'Regalos'];
 function catColor(cat) { return categoryColors[cat] || '#9aa4bb'; }
 
-let monthlyChart, categoryChart, topConceptsChart, categoryEvolutionChart;
+let monthlyChart, categoryEvolutionChart;
 
 function getFiltered() {
   const m = monthFilter.value;
@@ -746,7 +733,6 @@ function personaFromMetodo(metodo) {
   return 'Compartido';
 }
 
-let personaChart;
 function renderPersona(filtered) {
   const totals = { 'Compartido': 0, 'Joaquín (personal)': 0, 'Guada (personal)': 0 };
   filtered.forEach(d => { totals[personaFromMetodo(d.metodo)] += d.monto; });
@@ -758,22 +744,6 @@ function renderPersona(filtered) {
   document.getElementById('kpiPersonaJIPct').textContent = total ? (Math.round(totals['Joaquín (personal)']/total*1000)/10) + '% del total' : '-';
   document.getElementById('kpiPersonaGuada').textContent = money(totals['Guada (personal)']);
   document.getElementById('kpiPersonaGuadaPct').textContent = total ? (Math.round(totals['Guada (personal)']/total*1000)/10) + '% del total' : '-';
-
-  if (personaChart) personaChart.destroy();
-  personaChart = new Chart(document.getElementById('personaChart'), {
-    type: 'doughnut',
-    data: {
-      labels: Object.keys(totals),
-      datasets: [{ data: Object.values(totals), backgroundColor: ['#5b8def','#f0a860','#e2607a'], borderColor: '#171d2b', borderWidth: 2 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-        tooltip: { callbacks: { label: ctx => ctx.label + ': ' + money(ctx.raw) } }
-      }
-    }
-  });
 }
 
 const FIXED_EXPENSE_CHECKLIST = [
@@ -921,47 +891,6 @@ function render() {
       plugins: {
         legend: { labels: { color: '#e8ecf4' } },
         tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + money(ctx.raw) } }
-      }
-    }
-  });
-
-  if (categoryChart) categoryChart.destroy();
-  categoryChart = new Chart(document.getElementById('categoryChart'), {
-    type: 'doughnut',
-    data: {
-      labels: catEntries.map(e=>e[0]),
-      datasets: [{ data: catEntries.map(e=>e[1]), backgroundColor: catEntries.map(e=>catColor(e[0])), borderColor: '#171d2b', borderWidth: 2 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-        tooltip: { callbacks: { label: ctx => ctx.label + ': ' + money(ctx.raw) } }
-      }
-    }
-  });
-
-  const byConcept = {};
-  filtered.forEach(d => { byConcept[d.concepto] = (byConcept[d.concepto]||0) + d.monto; });
-  const topConcepts = Object.entries(byConcept).sort((a,b)=>b[1]-a[1]).slice(0,8);
-
-  if (topConceptsChart) topConceptsChart.destroy();
-  topConceptsChart = new Chart(document.getElementById('topConceptsChart'), {
-    type: 'bar',
-    data: {
-      labels: topConcepts.map(e=>e[0]),
-      datasets: [{ data: topConcepts.map(e=>e[1]), backgroundColor: topConcepts.map(e=> {
-        const item = filtered.find(d=>d.concepto===e[0]);
-        return item ? catColor(item.categoria) : '#5b8def';
-      }), borderRadius: 4 }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => money(ctx.raw) } } },
-      scales: {
-        x: { ticks: { color: '#8b93a8', callback: v => fmt.format(v) }, grid: { color: '#222a3c' } },
-        y: { ticks: { color: '#e8ecf4', font: { size: 11 } }, grid: { display: false } }
       }
     }
   });
