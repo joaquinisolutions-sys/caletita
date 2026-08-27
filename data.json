@@ -1921,16 +1921,6 @@
       "metodo": "No especificado"
     },
     {
-      "mes": "2026-08",
-      "categoria": "Compras adicionales",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Mantenimiento auto - cuota 1/2",
-      "tipo": "Fijo",
-      "monto": 812527,
-      "metodo": "Tarjeta de crédito (débito automático)"
-    },
-    {
       "mes": "2026-09",
       "categoria": "Compras adicionales",
       "subcategoria": "",
@@ -2275,7 +2265,7 @@
       "categoria": "Compras adicionales",
       "subcategoria": "",
       "fecha": "2026-08-19",
-      "concepto": "Mantenimiento auto - cuota 2/2",
+      "concepto": "Mantenimiento auto - cuota 1/2",
       "tipo": "Fijo",
       "monto": 811390,
       "metodo": "Tarjeta de crédito (débito automático)"
@@ -5079,6 +5069,36 @@
       "tipo": "Variable",
       "monto": 48500,
       "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-27",
+      "concepto": "Comida afuera",
+      "tipo": "Variable",
+      "monto": 66000,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-08-25",
+      "concepto": "Claude",
+      "tipo": "Fijo",
+      "monto": 133540,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Libros",
+      "fecha": "2026-08-27",
+      "concepto": "Libro (Amazon)",
+      "tipo": "Variable",
+      "monto": 59294,
+      "metodo": "Tarjeta de crédito (Ueno)"
     }
   ],
   "INVERSIONES_DATA": {
@@ -5777,5 +5797,23 @@
       }
     ],
     "historial_asignaciones": []
-  }
+  },
+  "TARJETAS_CIERRE": [
+    {
+      "tarjeta": "Itaú (compartida)",
+      "metodos": [
+        "Tarjeta de crédito",
+        "Tarjeta de crédito (débito automático)"
+      ],
+      "ultimo_cierre": "2026-08-18"
+    },
+    {
+      "tarjeta": "Ueno (personal)",
+      "metodos": [
+        "Tarjeta de crédito (Ueno)",
+        "Tarjeta de crédito (personal)"
+      ],
+      "ultimo_cierre": "2026-08-25"
+    }
+  ]
 }
