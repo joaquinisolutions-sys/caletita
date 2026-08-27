@@ -254,6 +254,14 @@
 
 <div class="grid" style="grid-template-columns: 1fr;">
   <div class="card">
+    <h2>Tarjetas de crédito — acumulado del período</h2>
+    <div class="hint" id="tarjetasHint">Según último cierre informado de cada tarjeta — validar contra el resumen real al pagar</div>
+    <div id="tarjetasBox"></div>
+  </div>
+</div>
+
+<div class="grid" style="grid-template-columns: 1fr;">
+  <div class="card">
     <h2>Completitud del mes</h2>
     <div class="hint" id="semaforoHint">Gastos fijos habituales — chequeo del mes seleccionado</div>
     <div id="semaforoBox"></div>
@@ -369,14 +377,10 @@
   </div>
 </div>
 
-<div class="grid">
+<div class="grid" style="grid-template-columns: 1fr;">
   <div class="card">
     <h2>Rendimiento por posición (Acciones/ETFs/Cedears, %)</h2>
     <div class="chart-wrap"><canvas id="invRendimientoChart"></canvas></div>
-  </div>
-  <div class="card">
-    <h2>Distribución por clase de activo</h2>
-    <div class="chart-wrap small"><canvas id="invAllocationChart"></canvas></div>
   </div>
 </div>
 
@@ -393,23 +397,6 @@
 
 <div class="grid even">
   <div class="card">
-    <h2>Acciones por sector</h2>
-    <div class="chart-wrap small"><canvas id="invSectorChart"></canvas></div>
-  </div>
-  <div class="card">
-    <h2>Dividendos</h2>
-    <div class="hint" id="invDividendosHint"></div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Ticker</th><th>¿Paga?</th><th>Frecuencia</th><th>Próximo pago</th><th>Nota</th></tr></thead>
-        <tbody id="invDividendosBody"></tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<div class="grid even">
-  <div class="card">
     <h2>Fondos Mutuos</h2>
     <div class="table-wrap">
       <table>
@@ -419,25 +406,19 @@
     </div>
   </div>
   <div class="card">
-    <h2>Otras posiciones</h2>
+    <h2>Dividendos y otras posiciones</h2>
+    <div class="hint" id="invDividendosHint"></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Ticker</th><th>¿Paga?</th><th>Frecuencia</th><th>Próximo pago</th><th>Nota</th></tr></thead>
+        <tbody id="invDividendosBody"></tbody>
+      </table>
+    </div>
+    <div class="hint" style="margin-top:12px;">Otras posiciones (crypto, ahorro)</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Activo</th><th>Cantidad / Detalle</th><th style="text-align:right">Valor</th></tr></thead>
         <tbody id="invOtrasBody"></tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<div class="grid" style="grid-template-columns: 1fr;">
-  <div class="card">
-    <h2>Detalle — Acciones, ETFs y Cedears</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Ticker</th><th>Empresa</th><th>Rubro</th><th>Titular</th><th style="text-align:right">Cantidad</th><th style="text-align:right">Invertido (USD)</th><th style="text-align:right">Precio Actual (USD)</th><th style="text-align:right">Valor Actual (USD)</th><th style="text-align:right">Utilidad (USD)</th><th style="text-align:right">Utilidad %</th></tr>
-        </thead>
-        <tbody id="invAccionesBody"></tbody>
       </table>
     </div>
   </div>
@@ -562,7 +543,7 @@
 </div><!-- /viewInversiones -->
 
 <script>
-let RAW_DATA, INVERSIONES_DATA, INVERSIONES_GR_DATA, PATRIMONIO_DATA, HISTORIAL_INVERSIONES, PRESUPUESTOS, BALANCE_KIYOSAKI, PLAN_ACTIVOS;
+let RAW_DATA, INVERSIONES_DATA, INVERSIONES_GR_DATA, PATRIMONIO_DATA, HISTORIAL_INVERSIONES, PRESUPUESTOS, BALANCE_KIYOSAKI, PLAN_ACTIVOS, TARJETAS_CIERRE;
 
 
 const fmt = new Intl.NumberFormat('es-PY', { maximumFractionDigits: 0 });
@@ -1033,6 +1014,7 @@ function render() {
   renderPersona(filtered);
   renderBudget();
   renderSemaforo();
+  renderTarjetas();
 }
 
 function switchView(view) {
@@ -1055,13 +1037,50 @@ function switchView(view) {
 }
 
 let invRendered = false;
-let invRendimientoChart, invAllocationChart, invSectorChart, patTitularChart, patGRChart, planHistorialChart;
+let invRendimientoChart, patTitularChart, patGRChart, planHistorialChart;
 
 function parseDDMMYYYY(s) {
   if (!s) return null;
   const m = s.match(/(\d{2})\/(\d{2})\/(\d{4})/);
   if (!m) return null;
   return new Date(parseInt(m[3]), parseInt(m[2])-1, parseInt(m[1]));
+}
+
+function nextMonthStr(mesStr) {
+  const [y, m] = mesStr.split('-').map(Number);
+  const d = new Date(y, m, 1); // m is 1-indexed, so this lands on the 1st of the next month
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
+function renderTarjetas() {
+  const box = document.getElementById('tarjetasBox');
+  if (!box) return;
+  if (!TARJETAS_CIERRE || !TARJETAS_CIERRE.length) { box.innerHTML = ''; return; }
+
+  let html = '';
+  TARJETAS_CIERRE.forEach(t => {
+    const mesCierre = t.ultimo_cierre.slice(0, 7);
+    const mesSiguiente = nextMonthStr(mesCierre);
+    let cerrado = 0, nuevo = 0;
+    RAW_DATA.forEach(d => {
+      if (!t.metodos.includes(d.metodo)) return;
+      // Solo consideramos el mes que acaba de cerrar y el mes siguiente (período en curso)
+      if (d.mes === mesCierre) {
+        if (!d.fecha || d.fecha <= t.ultimo_cierre) cerrado += d.monto; else nuevo += d.monto;
+      } else if (d.mes === mesSiguiente && d.fecha) {
+        // Solo contamos ítems del mes siguiente que ya tienen fecha real (cargos ya
+        // confirmados). Los fijos sin fecha del mes siguiente son proyección, no gasto real.
+        nuevo += d.monto;
+      }
+    });
+    const [yyyy, mm, dd] = t.ultimo_cierre.split('-');
+    html += `<div class="venc-item">
+      <span class="venc-badge">${t.tarjeta}</span>
+      <span>Cerró el ${dd}/${mm} — <b>por pagar: ${money(cerrado)}</b></span>
+      <span class="venc-days" style="color:#5b8def">Acumulado nuevo período: ${money(nuevo)}</span>
+    </div>`;
+  });
+  box.innerHTML = html;
 }
 
 function mesToApproxDate(mes) {
@@ -1197,24 +1216,6 @@ function renderInversiones() {
     }
   });
 
-  // Distribución por clase de activo (pie)
-  const allocColors = ['#5b8def', '#f0a860', '#c9d94a', '#8f6bd8'];
-  if (invAllocationChart) invAllocationChart.destroy();
-  invAllocationChart = new Chart(document.getElementById('invAllocationChart'), {
-    type: 'doughnut',
-    data: {
-      labels: D.resumen.map(r => r.clase),
-      datasets: [{ data: D.resumen.map(r => r.valor_usd), backgroundColor: allocColors, borderColor: '#171d2b', borderWidth: 2 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-        tooltip: { callbacks: { label: ctx => ctx.label + ': $' + fmt.format(ctx.raw) } }
-      }
-    }
-  });
-
   // Acciones — vista tipo app (hero + barra segmentada + tarjetas por sector)
   const accGain = D.acciones.reduce((s,a) => s + a.utilidad, 0);
   document.getElementById('stockHeroValue').textContent = '$' + fmt.format(accTotal);
@@ -1280,30 +1281,6 @@ function renderInversiones() {
     groupsEl.appendChild(group);
   });
 
-  // Acciones por sector (doughnut)
-  const sectorTotals = {};
-  D.acciones.forEach(a => {
-    const s = a.sector || 'Otros';
-    sectorTotals[s] = (sectorTotals[s] || 0) + a.valor_actual;
-  });
-  const sectorLabels = Object.keys(sectorTotals).sort((a,b) => sectorTotals[b]-sectorTotals[a]);
-  const sectorColors = ['#5b8def','#f0a860','#c9d94a','#8f6bd8','#4dd4ac','#e2607a','#6bc7d8','#d8a6f0'];
-  if (invSectorChart) invSectorChart.destroy();
-  invSectorChart = new Chart(document.getElementById('invSectorChart'), {
-    type: 'doughnut',
-    data: {
-      labels: sectorLabels,
-      datasets: [{ data: sectorLabels.map(s => sectorTotals[s]), backgroundColor: sectorColors, borderColor: '#171d2b', borderWidth: 2 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-        tooltip: { callbacks: { label: ctx => ctx.label + ': $' + fmt.format(ctx.raw) + ' (' + (Math.round(ctx.raw/accTotal*1000)/10) + '%)' } }
-      }
-    }
-  });
-
   // Dividendos
   const pagan = D.acciones.filter(a => a.dividendo && a.dividendo.paga);
   const noPagan = D.acciones.filter(a => !a.dividendo || !a.dividendo.paga);
@@ -1349,24 +1326,6 @@ function renderInversiones() {
   const trOtras = document.createElement('tr');
   trOtras.innerHTML = `<td>${D.otras.entidad}</td><td>${D.otras.concepto}</td><td style="text-align:right">${fmt.format(D.otras.monto_gs)} Gs.</td>`;
   oBody.appendChild(trOtras);
-
-  // Acciones detail table
-  const aBody = document.getElementById('invAccionesBody');
-  aBody.innerHTML = '';
-  const sortedByValue = [...D.acciones].sort((a,b) => b.valor_actual - a.valor_actual);
-  sortedByValue.forEach(a => {
-    const tr = document.createElement('tr');
-    const plClass = a.utilidad >= 0 ? 'pl-pos' : 'pl-neg';
-    const titularStr = a.titular === 'Compartido' ? `Compartido (${Math.round(a.split_gr*100)}% GR / ${Math.round(a.split_ji*100)}% JI)` : 'Joaquín';
-    tr.innerHTML = `<td>${a.ticker}</td><td>${a.empresa}</td><td>${a.rubro}</td><td>${titularStr}</td>` +
-      `<td style="text-align:right">${a.qty.toFixed(3)}</td>` +
-      `<td style="text-align:right">$${fmt.format(a.invertido)}</td>` +
-      `<td style="text-align:right">$${fmt.format(a.precio_actual)}</td>` +
-      `<td style="text-align:right">$${fmt.format(a.valor_actual)}</td>` +
-      `<td class="${plClass}" style="text-align:right">${a.utilidad>=0?'+':''}$${fmt.format(a.utilidad)}</td>` +
-      `<td class="${plClass}" style="text-align:right">${a.utilidad_pct>=0?'+':''}${(Math.round(a.utilidad_pct*1000)/10)}%</td>`;
-    aBody.appendChild(tr);
-  });
 
   // Inversiones GR (Guada)
   const GR = INVERSIONES_GR_DATA;
@@ -1562,6 +1521,7 @@ fetch('data.json')
     PRESUPUESTOS = data.PRESUPUESTOS || {};
     BALANCE_KIYOSAKI = data.BALANCE_KIYOSAKI || null;
     PLAN_ACTIVOS = data.PLAN_ACTIVOS || null;
+    TARJETAS_CIERRE = data.TARJETAS_CIERRE || null;
     initFilters();
     safeRender();
   })
