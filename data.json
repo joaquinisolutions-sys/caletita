@@ -1111,10 +1111,10 @@
       "metodo": "Tarjeta de crédito (débito automático)"
     },
     {
-      "mes": "2026-08",
+      "mes": "2026-09",
       "categoria": "Compras adicionales",
       "subcategoria": "",
-      "fecha": null,
+      "fecha": "2026-08-29",
       "concepto": "PC - cuota 6/12",
       "tipo": "Fijo",
       "monto": 505932,
@@ -1479,56 +1479,6 @@
       "tipo": "Fijo",
       "monto": 135960,
       "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-01",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53745,
-      "metodo": "No especificado"
-    },
-    {
-      "mes": "2026-02",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53745,
-      "metodo": "No especificado"
-    },
-    {
-      "mes": "2026-03",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53745,
-      "metodo": "No especificado"
-    },
-    {
-      "mes": "2026-04",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53745,
-      "metodo": "No especificado"
-    },
-    {
-      "mes": "2026-05",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53745,
-      "metodo": "No especificado"
     },
     {
       "mes": "2026-06",
@@ -3462,16 +3412,6 @@
     },
     {
       "mes": "2026-01",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 60101,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-01",
       "categoria": "Día a día",
       "subcategoria": "Supermercado",
       "fecha": "2025-12-30",
@@ -5112,66 +5052,136 @@
     },
     {
       "mes": "2026-08",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": null,
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53174,
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-08-28",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 114000,
       "metodo": "Tarjeta de crédito"
     },
     {
       "mes": "2026-08",
       "categoria": "Suscripciones",
       "subcategoria": "",
-      "fecha": null,
-      "concepto": "Claude",
-      "tipo": "Fijo",
-      "monto": 134420,
+      "fecha": "2026-08-28",
+      "concepto": "Max Dominios - invertrust.com.py (6 meses)",
+      "tipo": "Variable",
+      "monto": 374200,
+      "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-28",
+      "concepto": "Comida afuera",
+      "tipo": "Variable",
+      "monto": 150000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Donaciones",
+      "fecha": "2026-08-31",
+      "concepto": "Donación",
+      "tipo": "Variable",
+      "monto": 25000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-08-31",
+      "concepto": "Salida afuera",
+      "tipo": "Variable",
+      "monto": 10000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-31",
+      "concepto": "Comida afuera",
+      "tipo": "Variable",
+      "monto": 236000,
       "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": "2026-08-29",
+      "concepto": "Netflix",
+      "tipo": "Fijo",
+      "monto": 53765,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Ocio",
+      "fecha": "2026-08-31",
+      "concepto": "Fútbol",
+      "tipo": "Variable",
+      "monto": 45000,
+      "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-08",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-08-31",
+      "concepto": "Asado",
+      "tipo": "Variable",
+      "monto": 75000,
+      "metodo": "Transferencia"
     }
   ],
   "INVERSIONES_DATA": {
-    "fecha_actualizacion": "2026-08-27",
+    "fecha_actualizacion": "2026-08-31",
     "fondos": [
       {
         "entidad": "Itaú",
         "concepto": "IAM Low Volatility",
         "moneda": "USD",
-        "monto": 7173.57,
-        "monto_usd": 7173.57,
+        "monto": 7201.61,
+        "monto_usd": 7201.61,
         "tasa": "3,86%"
       },
       {
         "entidad": "Ueno",
         "concepto": "Fondo Mutuo",
         "moneda": "USD",
-        "monto": 876.53,
-        "monto_usd": 876.53,
+        "monto": 880.21,
+        "monto_usd": 880.21,
         "tasa": "4,15%"
       },
       {
         "entidad": "Itaú",
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
-        "monto": 2000000,
-        "monto_usd": 336.963554021997,
+        "monto": 2067045,
+        "monto_usd": 348.259414,
         "tasa": "6,34%"
       },
       {
         "entidad": "Ueno",
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
-        "monto": 7208376,
-        "monto_usd": 1214.4799978434332,
+        "monto": 7255873,
+        "monto_usd": 1222.44868,
         "tasa": "6,50%"
       },
       {
         "entidad": "Investor",
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
-        "monto": 2025000,
-        "monto_usd": 341.17559844727197,
+        "monto": 2092327,
+        "monto_usd": 352.518972,
         "tasa": "9,25%"
       }
     ],
@@ -5184,10 +5194,10 @@
         "titular": "JI",
         "qty": 0.153,
         "invertido": 105.47,
-        "precio_actual": 711.37,
-        "valor_actual": 108.87,
-        "utilidad": 3.4,
-        "utilidad_pct": 0.0322366549729781,
+        "precio_actual": 714.54,
+        "valor_actual": 109.32462,
+        "utilidad": 3.85462,
+        "utilidad_pct": 0.036546,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5203,10 +5213,10 @@
         "titular": "JI",
         "qty": 0.6,
         "invertido": 29.88,
-        "precio_actual": 48.05,
-        "valor_actual": 28.83,
-        "utilidad": -1.05,
-        "utilidad_pct": -0.035140562248995984,
+        "precio_actual": 45.56,
+        "valor_actual": 27.336,
+        "utilidad": -2.544,
+        "utilidad_pct": -0.085141,
         "dividendo": {
           "paga": false,
           "nota": "Distribución irregular, normalmente anual"
@@ -5220,10 +5230,10 @@
         "titular": "JI",
         "qty": 0.027,
         "invertido": 53.95,
-        "precio_actual": 1745.64,
-        "valor_actual": 47.83,
-        "utilidad": -6.12,
-        "utilidad_pct": -0.11343836886005561,
+        "precio_actual": 1699.2,
+        "valor_actual": 45.8784,
+        "utilidad": -8.0716,
+        "utilidad_pct": -0.149622,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5241,10 +5251,10 @@
         "titular": "JI",
         "qty": 0.185,
         "invertido": 83.48,
-        "precio_actual": 251.06,
-        "valor_actual": 46.45,
-        "utilidad": -37.03,
-        "utilidad_pct": -0.443579300431241,
+        "precio_actual": 240.65,
+        "valor_actual": 44.52025,
+        "utilidad": -38.95975,
+        "utilidad_pct": -0.466714,
         "dividendo": {
           "paga": false
         }
@@ -5257,10 +5267,10 @@
         "titular": "JI",
         "qty": 0.111,
         "invertido": 50.24,
-        "precio_actual": 417.69,
-        "valor_actual": 46.36,
-        "utilidad": -3.88,
-        "utilidad_pct": -0.07722929936305732,
+        "precio_actual": 420.2,
+        "valor_actual": 46.6422,
+        "utilidad": -3.5978,
+        "utilidad_pct": -0.071619,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5277,10 +5287,10 @@
         "titular": "JI",
         "qty": 0.083,
         "invertido": 49.11,
-        "precio_actual": 576.14,
-        "valor_actual": 47.99,
-        "utilidad": -1.12,
-        "utilidad_pct": -0.02280594583587864,
+        "precio_actual": 574.24,
+        "valor_actual": 47.66192,
+        "utilidad": -1.44808,
+        "utilidad_pct": -0.029486,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5298,10 +5308,10 @@
         "titular": "JI",
         "qty": 0.067,
         "invertido": 26.2,
-        "precio_actual": 496.37,
-        "valor_actual": 33.09,
-        "utilidad": 6.89,
-        "utilidad_pct": 0.2629770992366412,
+        "precio_actual": 510.01,
+        "valor_actual": 34.17067,
+        "utilidad": 7.97067,
+        "utilidad_pct": 0.304224,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5318,10 +5328,10 @@
         "titular": "JI",
         "qty": 0.167,
         "invertido": 35.35,
-        "precio_actual": 209.66,
-        "valor_actual": 34.94,
-        "utilidad": -0.41,
-        "utilidad_pct": -0.011598302687411598,
+        "precio_actual": 218.42,
+        "valor_actual": 36.47614,
+        "utilidad": 1.12614,
+        "utilidad_pct": 0.031856,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5338,10 +5348,10 @@
         "titular": "JI",
         "qty": 0.103,
         "invertido": 38.8,
-        "precio_actual": 342.0,
-        "valor_actual": 35.38,
-        "utilidad": -3.42,
-        "utilidad_pct": -0.08814432989690722,
+        "precio_actual": 340.55,
+        "valor_actual": 35.07665,
+        "utilidad": -3.72335,
+        "utilidad_pct": -0.095963,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5359,10 +5369,10 @@
         "titular": "JI",
         "qty": 1.84,
         "invertido": 375.68,
-        "precio_actual": 139.63,
-        "valor_actual": 256.92,
-        "utilidad": -118.76,
-        "utilidad_pct": -0.31612010221465076,
+        "precio_actual": 142.45,
+        "valor_actual": 262.108,
+        "utilidad": -113.572,
+        "utilidad_pct": -0.302311,
         "dividendo": {
           "paga": false,
           "nota": "Empresa privada, no cotiza en bolsa pública"
@@ -5376,10 +5386,10 @@
         "titular": "JI",
         "qty": 4.144,
         "invertido": 208.24,
-        "precio_actual": 50.27,
-        "valor_actual": 208.32,
-        "utilidad": 0.08,
-        "utilidad_pct": 0.000384172109104879,
+        "precio_actual": 51.3,
+        "valor_actual": 212.5872,
+        "utilidad": 4.3472,
+        "utilidad_pct": 0.020876,
         "dividendo": {
           "paga": false
         }
@@ -5392,10 +5402,10 @@
         "titular": "Compartido",
         "qty": 0.699,
         "invertido": 513.0,
-        "precio_actual": 766.08,
-        "valor_actual": 535.13,
-        "utilidad": 22.13,
-        "utilidad_pct": 0.04313840155945419,
+        "precio_actual": 766.78,
+        "valor_actual": 535.99722,
+        "utilidad": 22.99722,
+        "utilidad_pct": 0.04483,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5413,10 +5423,10 @@
         "titular": "Compartido",
         "qty": 20.587,
         "invertido": 274.0,
-        "precio_actual": 15.17,
-        "valor_actual": 312.31,
-        "utilidad": 38.31,
-        "utilidad_pct": 0.1398175182481752,
+        "precio_actual": 14.37,
+        "valor_actual": 295.83519,
+        "utilidad": 21.83519,
+        "utilidad_pct": 0.079691,
         "dividendo": {
           "paga": false
         },
@@ -5431,10 +5441,10 @@
         "titular": "Compartido",
         "qty": 2.001,
         "invertido": 274.0,
-        "precio_actual": 158.19,
-        "valor_actual": 316.61,
-        "utilidad": 42.61,
-        "utilidad_pct": 0.1555109489051095,
+        "precio_actual": 161.29,
+        "valor_actual": 322.74129,
+        "utilidad": 48.74129,
+        "utilidad_pct": 0.177888,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5453,10 +5463,10 @@
         "titular": "Compartido",
         "qty": 3.135,
         "invertido": 206.0,
-        "precio_actual": 68.66,
-        "valor_actual": 215.23,
-        "utilidad": 9.23,
-        "utilidad_pct": 0.04480582524271845,
+        "precio_actual": 72.35,
+        "valor_actual": 226.81725,
+        "utilidad": 20.81725,
+        "utilidad_pct": 0.101055,
         "dividendo": {
           "paga": false
         },
@@ -5471,10 +5481,10 @@
         "titular": "Compartido",
         "qty": 0.285,
         "invertido": 346.92,
-        "precio_actual": 1189.41,
-        "valor_actual": 338.69,
-        "utilidad": -8.23,
-        "utilidad_pct": -0.023723048541450478,
+        "precio_actual": 1170.0,
+        "valor_actual": 333.45,
+        "utilidad": -13.47,
+        "utilidad_pct": -0.038825,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5493,10 +5503,10 @@
         "titular": "JI",
         "qty": 1.148,
         "invertido": 100.0,
-        "precio_actual": 84.22,
-        "valor_actual": 96.66,
-        "utilidad": -3.34,
-        "utilidad_pct": -0.0334,
+        "precio_actual": 81.12,
+        "valor_actual": 93.12576,
+        "utilidad": -6.87424,
+        "utilidad_pct": -0.068742,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5513,10 +5523,10 @@
         "titular": "JI",
         "qty": 1.99,
         "invertido": 100.23,
-        "precio_actual": 47.19,
-        "valor_actual": 93.91,
-        "utilidad": -6.32,
-        "utilidad_pct": -0.06305497356081013,
+        "precio_actual": 45.11,
+        "valor_actual": 89.7689,
+        "utilidad": -10.4611,
+        "utilidad_pct": -0.104372,
         "dividendo": {
           "paga": true,
           "frecuencia": "Semestral",
@@ -5529,9 +5539,9 @@
     "crypto": {
       "activo": "Bitcoin (BTC, Ledger)",
       "cantidad": 0.02134699,
-      "precio": 79654.02,
-      "valor_usd": 1700.37,
-      "valor_gs": 10092308
+      "precio": 78144.99,
+      "valor_usd": 1668.16032,
+      "valor_gs": 9901132
     },
     "otras": {
       "entidad": "Sudameris + Ahorro Programado",
@@ -5542,23 +5552,23 @@
     "resumen": [
       {
         "clase": "Fondos Mutuos",
-        "valor_usd": 9942.719150312701
+        "valor_usd": 10005.047066
       },
       {
         "clase": "Acciones / ETFs / Cedears",
-        "valor_usd": 2803.52
+        "valor_usd": 2799.51766
       },
       {
         "clase": "Criptomonedas",
-        "valor_usd": 1700.37
+        "valor_usd": 1668.16032
       },
       {
         "clase": "Otras (local, Gs.)",
         "valor_usd": 671.5026552728058
       }
     ],
-    "total_usd": 15118.111805585508,
-    "total_gs": 89731436.08639999,
+    "total_usd": 15144.227701,
+    "total_gs": 89886443.33,
     "fx_usdpyg": 5935.36,
     "fx_usdars": 1514.75
   },
@@ -5631,26 +5641,26 @@
   },
   "PATRIMONIO_DATA": {
     "fx_usdpyg": 5935.36,
-    "ji_total_usd": 13915.532805585506,
-    "gr_total_usd": 33345.79592365753,
-    "combined_total_usd": 47261.32872924304,
+    "ji_total_usd": 13943.839036,
+    "gr_total_usd": 33343.605589,
+    "combined_total_usd": 47287.444625,
     "ji_breakdown": {
-      "Fondos Mutuos": 9942.719150312701,
-      "Acciones/ETFs/Cedears (part. JI)": 1600.941,
-      "Criptomonedas": 1700.37,
+      "Fondos Mutuos": 10005.047066,
+      "Acciones/ETFs/Cedears (part. JI)": 1599.128995,
+      "Criptomonedas": 1668.16032,
       "Otras (Sudameris + Ah.Prog.)": 671.5026552728058
     },
     "gr_breakdown": {
       "Bienes Raíces (capital pagado)": 21978.25641578607,
       "Depósitos a plazo": 8424.088850549924,
       "Bono Cadiem": 1740.8716573215443,
-      "Acciones/ETFs (part. GR)": 1202.5790000000002
+      "Acciones/ETFs (part. GR)": 1200.388665
     },
     "gr_real_estate_detail": {
       "bosque_lago_paid_gs": 85788864,
       "fortaleza_paid_gs": 44660000
     },
-    "fecha_actualizacion": "2026-08-27"
+    "fecha_actualizacion": "2026-08-31"
   },
   "HISTORIAL_INVERSIONES": [
     {
@@ -5710,6 +5720,11 @@
       "fecha": "2026-08-27",
       "total_usd": 13916,
       "combinado_usd": 47261
+    },
+    {
+      "fecha": "2026-08-31",
+      "total_usd": 13944,
+      "combinado_usd": 47287
     }
   ],
   "PRESUPUESTOS": {
@@ -5724,8 +5739,8 @@
     "IPS": 390000
   },
   "BALANCE_KIYOSAKI": {
-    "fecha_actualizacion": "2026-08-22",
-    "nota_metodologia": "Sigue la definición de Rich Dad Poor Dad: activo = pone dinero en el bolsillo (genera ingreso), pasivo = saca dinero del bolsillo. No se cuentan cripto ni acciones sin dividendo relevante como generadoras de ingreso (son posiciones fraccionarias, dividendo total ~US$6,6/año); ese capital sigue en Inversiones pero no aporta a este flujo de caja. El capital invertido en Bosque Lago/Fortaleza (terrenos en cuotas) tampoco cuenta como activo hasta que genere renta o se venda con ganancia.",
+    "fecha_actualizacion": "2026-08-31",
+    "nota_metodologia": "Sigue la definición de Rich Dad Poor Dad: activo = pone dinero en el bolsillo (genera ingreso), pasivo = saca dinero del bolsillo. No se cuentan cripto ni acciones sin dividendo relevante como generadoras de ingreso (son posiciones fraccionarias, dividendo total ~US$6,6/año); ese capital sigue en Inversiones pero no aporta a este flujo de caja. El capital invertido en Bosque Lago/Fortaleza (terrenos en cuotas) tampoco cuenta como activo hasta que genere renta o se venda con ganancia. Las tablas de abajo muestran el flujo combinado (JI+GR); los KPI adicionales ji_/gr_ separan lo que es responsabilidad personal de Joaquín (fondos mutuos, Sudameris, PC/Tienda Naranja) de lo que gestiona Guada (terrenos Bosque Lago/Fortaleza, depósito GNB, Bono Cadiem) — el pasivo de los terrenos no debe imputarse al flujo personal de Joaquín.",
     "activos_ingreso": [
       {
         "fuente": "Fondos Mutuos (JI)",
@@ -5781,7 +5796,13 @@
     ],
     "total_pasivo_gs_mensual": 4203524,
     "total_pasivo_gs_anual": 50442288,
-    "flujo_neto_anual_gs": -43034788
+    "flujo_neto_anual_gs": -43034788,
+    "ji_total_ingreso_gs_anual": 2917705,
+    "ji_total_pasivo_gs_anual": 6071184,
+    "ji_flujo_neto_anual_gs": -3153479,
+    "gr_total_ingreso_gs_anual": 4489795,
+    "gr_total_pasivo_gs_anual": 44371104,
+    "gr_flujo_neto_anual_gs": -39881309
   },
   "PLAN_ACTIVOS": {
     "fecha_creacion": "2026-08-22",

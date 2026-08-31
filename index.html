@@ -459,7 +459,7 @@
 
 <div class="hint" style="margin-top:-6px;">Bienes raíces de GR valuados a capital efectivamente pagado a la fecha (no el valor total contratado a 20 años). Acciones compartidas (SPY, NU, XOM, VIST, LLY) divididas 70% GR / 30% JI según planilla Lemon de Guada. El resto de los activos de Joaquín (fondos, cripto, otras acciones) se asume 100% JI.</div>
 
-<div class="hint" style="margin-top:-6px;">Fondos Mutuos y posiciones locales (Sudameris) según última carga manual, no verificado en vivo en esta actualización. Acciones/ETFs/Cedears y Bitcoin con precio de mercado del día de la actualización.</div>
+<div class="hint" style="margin-top:-6px;">Fondos Mutuos y posiciones locales (Sudameris) según última carga manual (31/08/2026). Acciones/ETFs/Cedears y Bitcoin con precio de mercado en vivo (apertura 31/08/2026).</div>
 
 <h2 style="margin-top:24px;">Activos vs Pasivos (criterio Rich Dad Poor Dad)</h2>
 <div class="hint" id="kiyoNota" style="margin-bottom:10px;"></div>
@@ -481,6 +481,8 @@
     <div class="sub" id="kiyoKpiNetoSub">-</div>
   </div>
 </div>
+
+<div class="hint" id="kiyoJiGrSplit" style="margin-top:-4px; margin-bottom:14px;"></div>
 
 <div class="grid even">
   <div class="card">
@@ -544,6 +546,7 @@ const searchFilter = document.getElementById('searchFilter');
 function pad2(n) { return n < 10 ? '0'+n : ''+n; }
 const now = new Date();
 const currentYYYYMM = now.getFullYear() + '-' + pad2(now.getMonth()+1);
+const todayStr = currentYYYYMM + '-' + pad2(now.getDate());
 let months = [];
 
 function initFilters() {
@@ -637,14 +640,18 @@ function renderInstallments() {
     const pcItems = groups[base].slice().sort((a,b) => a.mes.localeCompare(b.mes));
     const total = pcItems.length;
     const cuotaMonto = pcItems[0].monto;
-    const pagadas = pcItems.filter(d => d.mes <= currentYYYYMM).length;
+    // Si el ítem tiene fecha real, usamos esa fecha contra hoy (cuotas que ya se cobraron
+    // pero cuyo "mes" quedó tageado al período de estado de cuenta siguiente igual cuentan
+    // como pagadas). Si no tiene fecha, caemos al criterio de mes calendario.
+    const yaPagada = d => d.fecha ? d.fecha <= todayStr : d.mes <= currentYYYYMM;
+    const pagadas = pcItems.filter(yaPagada).length;
     const cuotaActual = Math.min(pagadas, total);
     // Un plan ya terminado (todas las cuotas pagadas) no aporta más — lo sacamos del tracker
     if (cuotaActual >= total) return;
     anyRendered = true;
     const pctVal = Math.round((cuotaActual/total)*100);
-    const totalPagado = pcItems.filter(d => d.mes <= currentYYYYMM).reduce((s,d)=>s+d.monto,0);
-    const totalRestante = pcItems.filter(d => d.mes > currentYYYYMM).reduce((s,d)=>s+d.monto,0);
+    const totalPagado = pcItems.filter(yaPagada).reduce((s,d)=>s+d.monto,0);
+    const totalRestante = pcItems.filter(d => !yaPagada(d)).reduce((s,d)=>s+d.monto,0);
 
     html += `
     <div style="margin-bottom:16px;">
@@ -853,7 +860,9 @@ function render() {
   const total = totalFijo + totalVariable;
 
   document.getElementById('kpiTotal').textContent = money(total);
-  document.getElementById('kpiTotalSub').textContent = monthFilter.value === 'Todos' ? (months[0] + ' a ' + months[months.length-1]) : monthFilter.value;
+  const proyectadoTotal = filtered.filter(d => !d.fecha && d.mes >= currentYYYYMM).reduce((s,d) => s + d.monto, 0);
+  const periodoLabel = monthFilter.value === 'Todos' ? (months[0] + ' a ' + months[months.length-1]) : monthFilter.value;
+  document.getElementById('kpiTotalSub').textContent = periodoLabel + (proyectadoTotal > 0 ? ' · de los cuales ' + money(proyectadoTotal) + ' es proyectado (aún sin pagar)' : '');
   document.getElementById('kpiFijo').textContent = money(totalFijo);
   document.getElementById('kpiFijoPct').textContent = total ? (Math.round(totalFijo/total*1000)/10) + '% del total' : '-';
   document.getElementById('kpiVariable').textContent = money(totalVariable);
@@ -937,7 +946,9 @@ function render() {
   sorted.forEach(d => {
     const tr = document.createElement('tr');
     const catStr = d.subcategoria ? `${d.categoria} <span class="hint" style="font-size:11px;">› ${d.subcategoria}</span>` : d.categoria;
-    tr.innerHTML = `<td>${d.fecha || d.mes}</td><td>${catStr}</td><td>${d.concepto}</td>` +
+    const esProyectado = !d.fecha && d.mes >= currentYYYYMM;
+    const conceptoStr = d.concepto + (esProyectado ? ' <span class="badge" style="background:#3a3f52;color:#c7cede;font-size:10px;">proyectado</span>' : '');
+    tr.innerHTML = `<td>${d.fecha || d.mes}</td><td>${catStr}</td><td>${conceptoStr}</td>` +
       `<td><span class="badge ${d.tipo}">${d.tipo}</span></td><td>${d.metodo}</td>` +
       `<td class="monto">${fmt.format(d.monto)}</td>`;
     tbody.appendChild(tr);
@@ -1039,7 +1050,7 @@ function renderVencimientos() {
   });
 
   // Próxima cuota pendiente de cada plan en curso (Compras adicionales)
-  const cuotaItems = RAW_DATA.filter(d => d.categoria === 'Compras adicionales');
+  const cuotaItems = RAW_DATA.filter(d => d.categoria === 'Compras adicionales' && d.monto > 0);
   const groups = {};
   cuotaItems.forEach(d => {
     const base = d.concepto.replace(/\s*-\s*cuota\s*\d+\/\d+\s*$/i, '').trim();
@@ -1048,7 +1059,8 @@ function renderVencimientos() {
   });
   Object.keys(groups).forEach(base => {
     const pcItems = groups[base].slice().sort((a,b) => a.mes.localeCompare(b.mes));
-    const pendientes = pcItems.filter(d => d.mes > currentYYYYMM);
+    const yaPagada = d => d.fecha ? d.fecha <= todayStr : d.mes <= currentYYYYMM;
+    const pendientes = pcItems.filter(d => !yaPagada(d));
     if (!pendientes.length) return;
     const next = pendientes[0];
     const fecha = mesToApproxDate(next.mes);
@@ -1339,6 +1351,17 @@ function renderInversiones() {
     document.getElementById('kiyoKpiNetoSub').textContent = neto >= 0
       ? 'Los activos ya cubren el costo de los pasivos'
       : 'Falta cubrir ' + money(Math.abs(neto)) + '/año con ingreso de activos';
+
+    const splitEl = document.getElementById('kiyoJiGrSplit');
+    if (splitEl && K.ji_flujo_neto_anual_gs !== undefined && K.gr_flujo_neto_anual_gs !== undefined) {
+      const jiNeto = K.ji_flujo_neto_anual_gs, grNeto = K.gr_flujo_neto_anual_gs;
+      const jiColor = jiNeto >= 0 ? '#4dd4ac' : '#e2607a';
+      const grColor = grNeto >= 0 ? '#4dd4ac' : '#e2607a';
+      splitEl.innerHTML =
+        `<b>Flujo personal (JI, Joaquín):</b> <span style="color:${jiColor}">${jiNeto >= 0 ? '+' : '-'}${money(Math.abs(jiNeto))}/año</span>` +
+        ` &nbsp;·&nbsp; <b>Flujo de Guada (GR, terrenos + depósitos):</b> <span style="color:${grColor}">${grNeto >= 0 ? '+' : '-'}${money(Math.abs(grNeto))}/año</span>` +
+        ` — el pasivo de los terrenos (Bosque Lago, Fortaleza) es de Guada, no impacta tu flujo personal.`;
+    }
 
     const kaBody = document.getElementById('kiyoActivosBody');
     kaBody.innerHTML = '';
