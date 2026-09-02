@@ -338,6 +338,7 @@
 <div class="grid even">
   <div class="card">
     <h2>Fondos Mutuos</h2>
+    <div class="hint" id="invFondosTotalHint" style="font-size:15px;color:var(--text);font-weight:600;">Total: -</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Entidad</th><th>Concepto</th><th>Moneda</th><th>Monto</th><th>Tasa Anual</th></tr></thead>
@@ -371,107 +372,6 @@
     </div>
     <div class="hint" id="grNotas" style="margin-top:10px;"></div>
     <div class="hint" id="vencimientosBox" style="margin-top:10px;"></div>
-  </div>
-</div>
-
-<div class="kpis" style="margin-top:6px;">
-  <div class="kpi total">
-    <div class="label">Patrimonio Combinado (USD)</div>
-    <div class="value" id="patKpiTotal">-</div>
-    <div class="sub" id="patKpiTotalGs">-</div>
-  </div>
-  <div class="kpi fijo">
-    <div class="label">Joaquín (JI)</div>
-    <div class="value" id="patKpiJI">-</div>
-    <div class="sub" id="patKpiJIPct">-</div>
-  </div>
-  <div class="kpi variable">
-    <div class="label">Guada (GR)</div>
-    <div class="value" id="patKpiGR">-</div>
-    <div class="sub" id="patKpiGRPct">-</div>
-  </div>
-</div>
-
-<div class="grid">
-  <div class="card">
-    <h2>Patrimonio por titular</h2>
-    <div class="chart-wrap small"><canvas id="patTitularChart"></canvas></div>
-  </div>
-  <div class="card">
-    <h2>Composición de GR (Guada) por clase de activo</h2>
-    <div class="chart-wrap small"><canvas id="patGRChart"></canvas></div>
-  </div>
-</div>
-
-<div class="hint" style="margin-top:-6px;">Bienes raíces de GR valuados a capital efectivamente pagado a la fecha (no el valor total contratado a 20 años). Acciones compartidas (SPY, NU, XOM, VIST, LLY) divididas 70% GR / 30% JI según planilla Lemon de Guada. El resto de los activos de Joaquín (fondos, cripto, otras acciones) se asume 100% JI.</div>
-
-<div class="hint" style="margin-top:-6px;">Fondos Mutuos y posiciones locales (Sudameris) según última carga manual (31/08/2026). Acciones/ETFs/Cedears y Bitcoin con precio de mercado en vivo (apertura 31/08/2026).</div>
-
-<h2 style="margin-top:24px;">Activos vs Pasivos (criterio Rich Dad Poor Dad)</h2>
-<div class="hint" id="kiyoNota" style="margin-bottom:10px;"></div>
-
-<div class="kpis">
-  <div class="kpi variable">
-    <div class="label">Ingreso anual de activos</div>
-    <div class="value" id="kiyoKpiActivos">-</div>
-    <div class="sub">Fondos, depósitos, bonos, dividendos</div>
-  </div>
-  <div class="kpi fijo">
-    <div class="label">Costo anual de pasivos</div>
-    <div class="value" id="kiyoKpiPasivos">-</div>
-    <div class="sub">Cuotas de terrenos y tarjeta</div>
-  </div>
-  <div class="kpi total">
-    <div class="label">Flujo neto anual</div>
-    <div class="value" id="kiyoKpiNeto">-</div>
-    <div class="sub" id="kiyoKpiNetoSub">-</div>
-  </div>
-</div>
-
-<div class="hint" id="kiyoJiGrSplit" style="margin-top:-4px; margin-bottom:14px;"></div>
-
-<div class="grid even">
-  <div class="card">
-    <h2>Activos que generan ingreso</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Fuente</th><th>Detalle</th><th style="text-align:right">Monto (Gs./año)</th><th>Periodicidad</th></tr></thead>
-        <tbody id="kiyoActivosBody"></tbody>
-      </table>
-    </div>
-  </div>
-  <div class="card">
-    <h2>Pasivos que consumen efectivo</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Fuente</th><th>Detalle</th><th style="text-align:right">Cuota (Gs./mes)</th><th>Meses restantes</th></tr></thead>
-        <tbody id="kiyoPasivosBody"></tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<h2 style="margin-top:24px;">Plan de activos</h2>
-<div class="hint" id="planAporteHint" style="margin-bottom:10px;"></div>
-<div class="hint" id="planPasivoHint" style="margin-bottom:10px;"></div>
-
-<div class="card">
-  <h2>Proyección del aporte mensual</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Plazo</th><th>Fecha</th><th style="text-align:right">Aportado (Gs.)</th><th style="text-align:right">Valor futuro (Gs.)</th><th style="text-align:right">Interés acumulado (Gs.)</th><th style="text-align:right">Ingreso anual adicional (Gs.)</th></tr></thead>
-      <tbody id="planProyeccionBody"></tbody>
-    </table>
-  </div>
-  <div class="hint" id="planNotaHint" style="margin-top:10px;"></div>
-</div>
-
-<div class="card">
-  <h2>Historial de asignaciones</h2>
-  <div class="hint" id="planHistorialHint" style="margin-bottom:10px;"></div>
-  <div id="planHistorialEmpty" class="hint" style="display:none;">Todavía no hay asignaciones registradas. Se van a ir cargando acá cada mes cuando definas en qué instrumento poner el aporte (fondo mutuo, acciones, etc.).</div>
-  <div class="chart-wrap" id="planHistorialChartWrap">
-    <canvas id="planHistorialChart"></canvas>
   </div>
 </div>
 
@@ -797,7 +697,7 @@ function switchView(view) {
 }
 
 let invRendered = false;
-let invRendimientoChart, patTitularChart, patGRChart, planHistorialChart;
+let invRendimientoChart;
 
 function parseDDMMYYYY(s) {
   if (!s) return null;
@@ -994,7 +894,8 @@ function renderInversiones() {
     dBody.appendChild(tr);
   });
 
-  // Fondos Mutuos table
+  // Fondos Mutuos table (con total arriba en USD equivalente)
+  document.getElementById('invFondosTotalHint').textContent = 'Total: $ ' + fmt.format(fondosTotal) + ' equivalente';
   const fBody = document.getElementById('invFondosBody');
   fBody.innerHTML = '';
   D.fondos.forEach(f => {
@@ -1022,151 +923,6 @@ function renderInversiones() {
   document.getElementById('grNotas').innerHTML = grNotas;
 
   renderVencimientos();
-
-  // Patrimonio combinado — Joaquín (JI) vs Guada (GR)
-  const PAT = PATRIMONIO_DATA;
-  document.getElementById('patKpiTotal').textContent = '$ ' + fmt.format(PAT.combined_total_usd);
-  document.getElementById('patKpiTotalGs').textContent = money(PAT.combined_total_usd * PAT.fx_usdpyg);
-  document.getElementById('patKpiJI').textContent = '$ ' + fmt.format(PAT.ji_total_usd);
-  document.getElementById('patKpiJIPct').textContent = (Math.round(PAT.ji_total_usd/PAT.combined_total_usd*1000)/10) + '% del total';
-  document.getElementById('patKpiGR').textContent = '$ ' + fmt.format(PAT.gr_total_usd);
-  document.getElementById('patKpiGRPct').textContent = (Math.round(PAT.gr_total_usd/PAT.combined_total_usd*1000)/10) + '% del total';
-
-  if (patTitularChart) patTitularChart.destroy();
-  patTitularChart = new Chart(document.getElementById('patTitularChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Joaquín (JI)', 'Guada (GR)'],
-      datasets: [{ data: [PAT.ji_total_usd, PAT.gr_total_usd], backgroundColor: ['#5b8def', '#f0a860'], borderColor: '#171d2b', borderWidth: 2 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-        tooltip: { callbacks: { label: ctx => ctx.label + ': $' + fmt.format(ctx.raw) + ' (' + (Math.round(ctx.raw/PAT.combined_total_usd*1000)/10) + '%)' } }
-      }
-    }
-  });
-
-  const grClasses = Object.keys(PAT.gr_breakdown);
-  const grValues = grClasses.map(k => PAT.gr_breakdown[k]);
-  const grColors = ['#8f6bd8', '#c9d94a', '#4dd4ac', '#f0a860'];
-  if (patGRChart) patGRChart.destroy();
-  patGRChart = new Chart(document.getElementById('patGRChart'), {
-    type: 'doughnut',
-    data: {
-      labels: grClasses,
-      datasets: [{ data: grValues, backgroundColor: grColors, borderColor: '#171d2b', borderWidth: 2 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-        tooltip: { callbacks: { label: ctx => ctx.label + ': $' + fmt.format(ctx.raw) } }
-      }
-    }
-  });
-
-  // Activos vs Pasivos (Rich Dad Poor Dad)
-  if (BALANCE_KIYOSAKI) {
-    const K = BALANCE_KIYOSAKI;
-    document.getElementById('kiyoNota').textContent = K.nota_metodologia;
-    document.getElementById('kiyoKpiActivos').textContent = money(K.total_ingreso_activos_gs_anual);
-    document.getElementById('kiyoKpiPasivos').textContent = money(K.total_pasivo_gs_anual);
-    const neto = K.flujo_neto_anual_gs;
-    const netoEl = document.getElementById('kiyoKpiNeto');
-    netoEl.textContent = (neto >= 0 ? '+' : '-') + money(Math.abs(neto));
-    netoEl.style.color = neto >= 0 ? '#4dd4ac' : '#e2607a';
-    document.getElementById('kiyoKpiNetoSub').textContent = neto >= 0
-      ? 'Los activos ya cubren el costo de los pasivos'
-      : 'Falta cubrir ' + money(Math.abs(neto)) + '/año con ingreso de activos';
-
-    const splitEl = document.getElementById('kiyoJiGrSplit');
-    if (splitEl && K.ji_flujo_neto_anual_gs !== undefined && K.gr_flujo_neto_anual_gs !== undefined) {
-      const jiNeto = K.ji_flujo_neto_anual_gs, grNeto = K.gr_flujo_neto_anual_gs;
-      const jiColor = jiNeto >= 0 ? '#4dd4ac' : '#e2607a';
-      const grColor = grNeto >= 0 ? '#4dd4ac' : '#e2607a';
-      splitEl.innerHTML =
-        `<b>Flujo personal (JI, Joaquín):</b> <span style="color:${jiColor}">${jiNeto >= 0 ? '+' : '-'}${money(Math.abs(jiNeto))}/año</span>` +
-        ` &nbsp;·&nbsp; <b>Flujo de Guada (GR, terrenos + depósitos):</b> <span style="color:${grColor}">${grNeto >= 0 ? '+' : '-'}${money(Math.abs(grNeto))}/año</span>` +
-        ` — el pasivo de los terrenos (Bosque Lago, Fortaleza) es de Guada, no impacta tu flujo personal.`;
-    }
-
-    const kaBody = document.getElementById('kiyoActivosBody');
-    kaBody.innerHTML = '';
-    K.activos_ingreso.forEach(a => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `<td>${a.fuente}</td><td>${a.detalle}</td><td style="text-align:right">${fmt.format(a.monto_gs_anual)}</td><td>${a.periodicidad}</td>`;
-      kaBody.appendChild(tr);
-    });
-
-    const kpBody = document.getElementById('kiyoPasivosBody');
-    kpBody.innerHTML = '';
-    K.pasivos_costo.forEach(p => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `<td>${p.fuente}</td><td>${p.detalle}</td><td style="text-align:right">${fmt.format(p.monto_gs_mensual)}</td><td>${p.meses_restantes}</td>`;
-      kpBody.appendChild(tr);
-    });
-  }
-
-  // Plan de activos
-  if (PLAN_ACTIVOS) {
-    const P = PLAN_ACTIVOS;
-    document.getElementById('planAporteHint').innerHTML =
-      `Aporte personal (Joaquín): <b>${money(P.aporte_mensual_personal_gs)}/mes</b> · ` +
-      `Aporte familiar conjunto: <b>${money(P.aporte_mensual_familiar_gs)}/mes</b> (desde ${P.aporte_mensual_familiar_desde}) · ` +
-      `Combinado: <b>${money(P.aporte_mensual_combinado_gs)}/mes</b>`;
-    document.getElementById('planPasivoHint').textContent = P.nota_pasivo_personal;
-    document.getElementById('planNotaHint').textContent = P.nota_metodologia;
-
-    const ppBody = document.getElementById('planProyeccionBody');
-    ppBody.innerHTML = '';
-    P.proyeccion.forEach(row => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `<td>${row.meses} meses</td><td>${row.fecha_objetivo}</td>` +
-        `<td style="text-align:right">${fmt.format(row.aportado_gs)}</td>` +
-        `<td style="text-align:right">${fmt.format(row.valor_futuro_gs)}</td>` +
-        `<td style="text-align:right">${fmt.format(row.interes_acumulado_gs)}</td>` +
-        `<td style="text-align:right">${fmt.format(row.ingreso_anual_adicional_gs)}</td>`;
-      ppBody.appendChild(tr);
-    });
-
-    // Historial de asignaciones
-    const hist = P.historial_asignaciones || [];
-    const histEmpty = document.getElementById('planHistorialEmpty');
-    const histWrap = document.getElementById('planHistorialChartWrap');
-    const histHint = document.getElementById('planHistorialHint');
-    if (!hist.length) {
-      histEmpty.style.display = 'block';
-      histWrap.style.display = 'none';
-      histHint.textContent = '';
-    } else {
-      histEmpty.style.display = 'none';
-      histWrap.style.display = 'block';
-      const totalAsignado = hist.reduce((s, h) => s + (h.monto_gs || 0), 0);
-      histHint.innerHTML = `Total asignado hasta ahora: <b>${money(totalAsignado)}</b>`;
-
-      const mesesHist = [...new Set(hist.map(h => h.mes))].sort();
-      const instrumentos = [...new Set(hist.map(h => h.instrumento))];
-      const histColors = ['#4dd4ac', '#5b8def', '#f0a860', '#e2607a', '#a78bfa', '#66c2a5', '#d98fd9'];
-      const datasets = instrumentos.map((instr, idx) => ({
-        label: instr,
-        data: mesesHist.map(m => hist.filter(h => h.mes === m && h.instrumento === instr).reduce((s, h) => s + (h.monto_gs || 0), 0)),
-        backgroundColor: histColors[idx % histColors.length],
-      }));
-
-      if (planHistorialChart) planHistorialChart.destroy();
-      planHistorialChart = new Chart(document.getElementById('planHistorialChart'), {
-        type: 'bar',
-        data: { labels: mesesHist, datasets },
-        options: {
-          responsive: true,
-          scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: v => fmt.format(v) } } },
-          plugins: { tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${fmt.format(ctx.raw)}` } } }
-        }
-      });
-    }
-  }
 }
 
 monthFilter.addEventListener('change', () => safeRender());
