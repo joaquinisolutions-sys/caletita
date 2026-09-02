@@ -5180,6 +5180,26 @@
       "tipo": "Variable",
       "monto": 120000,
       "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Oficina",
+      "fecha": "2026-09-02",
+      "concepto": "Estacionamiento oficina",
+      "tipo": "Variable",
+      "monto": 10000,
+      "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Oficina",
+      "fecha": "2026-09-02",
+      "concepto": "Desayuno oficina",
+      "tipo": "Variable",
+      "monto": 32400,
+      "metodo": "Transferencia (personal)"
     }
   ],
   "INVERSIONES_DATA": {
