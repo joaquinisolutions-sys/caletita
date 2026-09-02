@@ -617,7 +617,7 @@
       "fecha": null,
       "concepto": "Taxit (app ingresos/egresos fisco)",
       "tipo": "Fijo",
-      "monto": 149000,
+      "monto": 0,
       "metodo": "Tarjeta de crédito (personal)"
     },
     {
@@ -677,7 +677,7 @@
       "fecha": null,
       "concepto": "Taxit (app ingresos/egresos fisco)",
       "tipo": "Fijo",
-      "monto": 149000,
+      "monto": 0,
       "metodo": "Tarjeta de crédito (personal)"
     },
     {
@@ -737,7 +737,7 @@
       "fecha": null,
       "concepto": "Taxit (app ingresos/egresos fisco)",
       "tipo": "Fijo",
-      "monto": 149000,
+      "monto": 0,
       "metodo": "Tarjeta de crédito (personal)"
     },
     {
@@ -797,7 +797,7 @@
       "fecha": null,
       "concepto": "Taxit (app ingresos/egresos fisco)",
       "tipo": "Fijo",
-      "monto": 149000,
+      "monto": 0,
       "metodo": "Tarjeta de crédito (personal)"
     },
     {
@@ -1497,7 +1497,7 @@
       "fecha": null,
       "concepto": "Netflix",
       "tipo": "Fijo",
-      "monto": 53745,
+      "monto": 0,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -1507,7 +1507,7 @@
       "fecha": null,
       "concepto": "Netflix",
       "tipo": "Fijo",
-      "monto": 53745,
+      "monto": 0,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -1517,7 +1517,7 @@
       "fecha": null,
       "concepto": "Netflix",
       "tipo": "Fijo",
-      "monto": 53745,
+      "monto": 0,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -1527,7 +1527,7 @@
       "fecha": null,
       "concepto": "Netflix",
       "tipo": "Fijo",
-      "monto": 53745,
+      "monto": 0,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -2165,7 +2165,7 @@
       "categoria": "Suscripciones",
       "subcategoria": "",
       "fecha": "2026-08-20",
-      "concepto": "Max Dominios (gestión web marca)",
+      "concepto": "GTM Paraguay (gestión web marca)",
       "tipo": "Fijo",
       "monto": 38000,
       "metodo": "Transferencia (personal)"
@@ -5027,7 +5027,7 @@
       "fecha": "2026-08-25",
       "concepto": "Claude",
       "tipo": "Fijo",
-      "monto": 133540,
+      "monto": 0,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -5068,7 +5068,8 @@
       "concepto": "Max Dominios - invertrust.com.py (6 meses)",
       "tipo": "Variable",
       "monto": 374200,
-      "metodo": "Transferencia (personal)"
+      "metodo": "Transferencia (personal)",
+      "vencimiento": "2027-02-28"
     },
     {
       "mes": "2026-08",
@@ -5108,16 +5109,6 @@
       "concepto": "Comida afuera",
       "tipo": "Variable",
       "monto": 236000,
-      "metodo": "Tarjeta de crédito"
-    },
-    {
-      "mes": "2026-09",
-      "categoria": "Suscripciones",
-      "subcategoria": "",
-      "fecha": "2026-08-29",
-      "concepto": "Netflix",
-      "tipo": "Fijo",
-      "monto": 53765,
       "metodo": "Tarjeta de crédito"
     },
     {
@@ -5169,6 +5160,26 @@
       "tipo": "Variable",
       "monto": 262140,
       "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Suscripciones",
+      "subcategoria": "",
+      "fecha": null,
+      "concepto": "GTM Paraguay (gestión web marca)",
+      "tipo": "Fijo",
+      "monto": 0,
+      "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-09-02",
+      "concepto": "Limpieza",
+      "tipo": "Variable",
+      "monto": 120000,
+      "metodo": "Transferencia"
     }
   ],
   "INVERSIONES_DATA": {
@@ -5568,10 +5579,10 @@
     ],
     "crypto": {
       "activo": "Bitcoin (BTC, Ledger)",
-      "cantidad": 0.02134699,
+      "cantidad": 0.0181713,
       "precio": 77118.98,
-      "valor_usd": 1646.258095,
-      "valor_gs": 9771134
+      "valor_usd": 1401.352121,
+      "valor_gs": 8317529
     },
     "otras": {
       "entidad": "Sudameris + Ahorro Programado",
@@ -5590,15 +5601,15 @@
       },
       {
         "clase": "Criptomonedas",
-        "valor_usd": 1646.258095
+        "valor_usd": 1401.352121
       },
       {
         "clase": "Otras (local, Gs.)",
         "valor_usd": 671.502655
       }
     ],
-    "total_usd": 13158.386976,
-    "total_gs": 78099763.72,
+    "total_usd": 12913.481002,
+    "total_gs": 76646158.6,
     "fx_usdpyg": 5935.36,
     "fx_usdars": 1514.75
   },
@@ -5671,13 +5682,13 @@
   },
   "PATRIMONIO_DATA": {
     "fx_usdpyg": 5935.36,
-    "ji_total_usd": 11938.557113,
+    "ji_total_usd": 11693.651139,
     "gr_total_usd": 33363.046787,
-    "combined_total_usd": 45301.6039,
+    "combined_total_usd": 45056.697926,
     "ji_breakdown": {
       "Fondos Mutuos": 8005.347066,
       "Acciones/ETFs/Cedears (part. JI)": 1615.449297,
-      "Criptomonedas": 1646.258095,
+      "Criptomonedas": 1401.352121,
       "Otras (Sudameris + Ah.Prog.)": 671.502655
     },
     "gr_breakdown": {
@@ -5763,8 +5774,8 @@
     },
     {
       "fecha": "2026-09-02",
-      "total_usd": 13158,
-      "combinado_usd": 45302
+      "total_usd": 12913,
+      "combinado_usd": 45057
     }
   ],
   "PRESUPUESTOS": {

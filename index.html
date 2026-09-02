@@ -255,25 +255,8 @@
 <div class="grid" style="grid-template-columns: 1fr;">
   <div class="card">
     <h2>Tarjetas de crédito — acumulado del período</h2>
-    <div class="hint" id="tarjetasHint">Según último cierre informado de cada tarjeta — validar contra el resumen real al pagar</div>
+    <div class="hint" id="tarjetasHint">Pago informado por vos para el período cerrado de cada tarjeta</div>
     <div id="tarjetasBox"></div>
-  </div>
-</div>
-
-<div class="grid" style="grid-template-columns: 1fr;">
-  <div class="card">
-    <h2>Completitud del mes</h2>
-    <div class="hint" id="semaforoHint">Gastos fijos habituales — chequeo del mes seleccionado</div>
-    <div id="semaforoBox"></div>
-  </div>
-</div>
-
-<div class="grid" style="grid-template-columns: 1fr;">
-  <div class="card">
-    <h2>Presupuesto vs. real por categoría</h2>
-    <div class="hint" id="budgetHint">Mes seleccionado</div>
-    <div class="alert-banner" id="budgetAlerts"></div>
-    <div class="sub-list" id="budgetList"></div>
   </div>
 </div>
 
@@ -281,14 +264,6 @@
   <div class="card">
     <h2>Evolución mensual (Fijo vs Variable)</h2>
     <div class="chart-wrap"><canvas id="monthlyChart"></canvas></div>
-  </div>
-</div>
-
-<div class="grid" style="grid-template-columns: 1fr;">
-  <div class="card">
-    <h2>Evolución mensual por categoría</h2>
-    <div class="hint">Todo el período cargado, una línea por categoría</div>
-    <div class="chart-wrap"><canvas id="categoryEvolutionChart"></canvas></div>
   </div>
 </div>
 
@@ -310,20 +285,6 @@
     <h2>Día a día</h2>
     <div class="hint" id="dailyHint">Total del mes seleccionado, por subcategoría</div>
     <div class="sub-list" id="dailyList"></div>
-  </div>
-</div>
-
-<div class="grid" style="grid-template-columns: 1fr;">
-  <div class="card">
-    <h2>Detalle de gastos</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Fecha</th><th>Categoría</th><th>Concepto</th><th>Tipo</th><th>Método</th><th style="text-align:right">Monto (₲)</th></tr>
-        </thead>
-        <tbody id="detailBody"></tbody>
-      </table>
-    </div>
   </div>
 </div>
 
@@ -353,14 +314,6 @@
     <div class="label">Criptomonedas</div>
     <div class="value" id="invKpiCrypto">-</div>
     <div class="sub">Bitcoin (BTC)</div>
-  </div>
-</div>
-
-<div class="grid" style="grid-template-columns: 1fr;">
-  <div class="card">
-    <h2>Evolución del portafolio</h2>
-    <div class="hint">Registro histórico desde que se empezó a trackear (10/8/2026)</div>
-    <div class="chart-wrap"><canvas id="historialChart"></canvas></div>
   </div>
 </div>
 
@@ -399,13 +352,6 @@
       <table>
         <thead><tr><th>Ticker</th><th>¿Paga?</th><th>Frecuencia</th><th>Próximo pago</th><th>Nota</th></tr></thead>
         <tbody id="invDividendosBody"></tbody>
-      </table>
-    </div>
-    <div class="hint" style="margin-top:12px;">Otras posiciones (crypto, ahorro)</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Activo</th><th>Cantidad / Detalle</th><th style="text-align:right">Valor</th></tr></thead>
-        <tbody id="invOtrasBody"></tbody>
       </table>
     </div>
   </div>
@@ -599,7 +545,7 @@ function subcatColor(s) { return subcatColors[s] || '#9aa4bb'; }
 const BASE_SUBCATEGORIAS = ['Supermercado', 'Delivery', 'Comida afuera', 'Nafta', 'Ocio', 'Donaciones', 'Limpieza', 'Transporte', 'Cuidado personal', 'Libros', 'Regalos'];
 function catColor(cat) { return categoryColors[cat] || '#9aa4bb'; }
 
-let monthlyChart, categoryEvolutionChart;
+let monthlyChart;
 
 function getFiltered() {
   const m = monthFilter.value;
@@ -643,7 +589,7 @@ function renderInstallments() {
     // Si el ítem tiene fecha real, usamos esa fecha contra hoy (cuotas que ya se cobraron
     // pero cuyo "mes" quedó tageado al período de estado de cuenta siguiente igual cuentan
     // como pagadas). Si no tiene fecha, caemos al criterio de mes calendario.
-    const yaPagada = d => d.fecha ? d.fecha <= todayStr : d.mes <= currentYYYYMM;
+    const yaPagada = d => d.fecha ? d.fecha <= todayStr : d.mes < currentYYYYMM;
     const pagadas = pcItems.filter(yaPagada).length;
     const cuotaActual = Math.min(pagadas, total);
     // Un plan ya terminado (todas las cuotas pagadas) no aporta más — lo sacamos del tracker
@@ -677,32 +623,40 @@ function renderSubscriptions() {
   subs.forEach(d => {
     if (!byConcept[d.concepto] || d.mes > byConcept[d.concepto].mes) byConcept[d.concepto] = d;
   });
-  const entries = Object.values(byConcept).sort((a,b) => b.monto - a.monto);
-  const maxMonto = Math.max(...entries.map(e => e.monto), 1);
+  const entries = Object.values(byConcept).sort((a,b) => (b.monto||0) - (a.monto||0));
+  const maxMonto = Math.max(...entries.map(e => e.monto || 0), 1);
 
   const list = document.getElementById('subList');
   list.innerHTML = '';
   entries.forEach(e => {
-    const pct = Math.round((e.monto / maxMonto) * 100);
     const row = document.createElement('div');
     row.className = 'sub-item';
-    row.innerHTML = `
-      <span class="sub-dot" style="background:${catColor('Suscripciones')}"></span>
-      <span class="sub-name">${e.concepto}</span>
-      <span class="sub-bar-track"><span class="sub-bar-fill" style="width:${pct}%;background:${catColor('Suscripciones')}"></span></span>
-      <span class="sub-amount">${money(e.monto)}</span>
-    `;
+    if (e.vencimiento) {
+      // Pagado por varios meses de una — mostramos cuándo vence en vez de un monto mensual
+      row.innerHTML = `
+        <span class="sub-dot" style="background:${catColor('Suscripciones')}"></span>
+        <span class="sub-name">${e.concepto}</span>
+        <span class="sub-bar-track"></span>
+        <span class="sub-amount pending">vence ${e.vencimiento}</span>
+      `;
+    } else if (!e.monto) {
+      row.innerHTML = `
+        <span class="sub-dot" style="background:var(--muted)"></span>
+        <span class="sub-name">${e.concepto}</span>
+        <span class="sub-bar-track"></span>
+        <span class="sub-amount pending">pendiente de pago</span>
+      `;
+    } else {
+      const pct = Math.round((e.monto / maxMonto) * 100);
+      row.innerHTML = `
+        <span class="sub-dot" style="background:${catColor('Suscripciones')}"></span>
+        <span class="sub-name">${e.concepto}</span>
+        <span class="sub-bar-track"><span class="sub-bar-fill" style="width:${pct}%;background:${catColor('Suscripciones')}"></span></span>
+        <span class="sub-amount">${money(e.monto)}</span>
+      `;
+    }
     list.appendChild(row);
   });
-  const pending = document.createElement('div');
-  pending.className = 'sub-item';
-  pending.innerHTML = `
-    <span class="sub-dot" style="background:var(--muted)"></span>
-    <span class="sub-name">Disney+</span>
-    <span class="sub-bar-track"></span>
-    <span class="sub-amount pending">pendiente</span>
-  `;
-  list.appendChild(pending);
 }
 
 function renderDaily() {
@@ -756,100 +710,6 @@ function renderPersona(filtered) {
   document.getElementById('kpiPersonaJIPct').textContent = total ? (Math.round(totals['Joaquín (personal)']/total*1000)/10) + '% del total' : '-';
   document.getElementById('kpiPersonaGuada').textContent = money(totals['Guada (personal)']);
   document.getElementById('kpiPersonaGuadaPct').textContent = total ? (Math.round(totals['Guada (personal)']/total*1000)/10) + '% del total' : '-';
-}
-
-const FIXED_EXPENSE_CHECKLIST = [
-  'ANDE', 'Personal - línea Jay', 'Tigo - línea Guada', 'Cuota colegio Rufina', 'Oami',
-  'Internet', 'Bek', 'Aquamaq', 'Seguro auto Jay', 'Netflix', 'Claude', 'Taxit',
-  'Migone', 'Seguro auto Guada', 'IPS'
-];
-
-function renderSemaforo() {
-  const box = document.getElementById('semaforoBox');
-  const hint = document.getElementById('semaforoHint');
-  if (!box) return;
-  const m = monthFilter.value;
-  if (m === 'Todos') {
-    box.innerHTML = '';
-    hint.textContent = 'Seleccioná un mes específico para chequear los gastos fijos habituales';
-    return;
-  }
-  hint.textContent = 'Gastos fijos habituales — chequeo de ' + m;
-  const conceptsThisMonth = RAW_DATA.filter(d => d.mes === m).map(d => d.concepto.toLowerCase());
-  const missing = [];
-  const present = [];
-  FIXED_EXPENSE_CHECKLIST.forEach(item => {
-    const found = conceptsThisMonth.some(c => c.includes(item.toLowerCase()));
-    if (found) present.push(item); else missing.push(item);
-  });
-  let html = '';
-  if (!missing.length) {
-    html += `<div class="semaforo-item"><span class="semaforo-dot ok"></span><span>Todos los gastos fijos habituales (${present.length}) están cargados este mes.</span></div>`;
-  } else {
-    missing.forEach(item => {
-      html += `<div class="semaforo-item"><span class="semaforo-dot missing"></span><span>Falta cargar: <b>${item}</b></span></div>`;
-    });
-    html += `<div class="semaforo-item" style="color:var(--muted);"><span class="semaforo-dot ok"></span><span>${present.length} de ${FIXED_EXPENSE_CHECKLIST.length} ya están cargados.</span></div>`;
-  }
-  box.innerHTML = html;
-}
-
-function renderBudget() {
-  const list = document.getElementById('budgetList');
-  const hint = document.getElementById('budgetHint');
-  const alerts = document.getElementById('budgetAlerts');
-  const m = monthFilter.value;
-  if (!PRESUPUESTOS) { list.innerHTML = ''; if (alerts) alerts.innerHTML = ''; return; }
-  if (m === 'Todos') {
-    hint.textContent = 'Seleccioná un mes específico para comparar contra el presupuesto';
-    list.innerHTML = '';
-    if (alerts) alerts.innerHTML = '';
-    return;
-  }
-  hint.textContent = 'Gastado en ' + m + ' vs. presupuesto mensual';
-  const byCat = {};
-  RAW_DATA.filter(d => d.mes === m).forEach(d => { byCat[d.categoria] = (byCat[d.categoria]||0) + d.monto; });
-
-  list.innerHTML = '';
-  const over = [], near = [];
-  Object.keys(PRESUPUESTOS).forEach(cat => {
-    const gastado = byCat[cat] || 0;
-    const presupuesto = PRESUPUESTOS[cat];
-    const pct = presupuesto ? Math.round(gastado/presupuesto*100) : 0;
-    const state = pct > 100 ? 'danger' : (pct >= 80 ? 'warn' : 'ok');
-    const barColor = state === 'danger' ? '#e2607a' : (state === 'warn' ? '#f0a860' : '#4dd4ac');
-    if (state === 'danger') over.push({ cat, pct });
-    else if (state === 'warn') near.push({ cat, pct });
-    const row = document.createElement('div');
-    row.className = 'sub-item';
-    row.innerHTML = `
-      <span class="sub-dot" style="background:${barColor}"></span>
-      <span class="sub-name">${cat}</span>
-      <span class="sub-bar-track"><span class="sub-bar-fill" style="width:${Math.min(pct,100)}%;background:${barColor}"></span></span>
-      <span class="sub-amount" style="color:${barColor}">${money(gastado)} / ${money(presupuesto)} (${pct}%)</span>
-    `;
-    list.appendChild(row);
-  });
-
-  if (alerts) {
-    alerts.innerHTML = '';
-    if (!over.length && !near.length) {
-      alerts.innerHTML = `<span class="alert-chip ok">✓ Todas las categorías dentro de presupuesto</span>`;
-    } else {
-      over.forEach(o => {
-        const chip = document.createElement('span');
-        chip.className = 'alert-chip danger';
-        chip.textContent = `⚠ ${o.cat} superado (${o.pct}%)`;
-        alerts.appendChild(chip);
-      });
-      near.forEach(n => {
-        const chip = document.createElement('span');
-        chip.className = 'alert-chip warn';
-        chip.textContent = `${n.cat} cerca del tope (${n.pct}%)`;
-        alerts.appendChild(chip);
-      });
-    }
-  }
 }
 
 function render() {
@@ -909,57 +769,10 @@ function render() {
     }
   });
 
-  // Evolución mensual por categoría (todas las categorías, todo el período)
-  const allCats = Array.from(new Set(RAW_DATA.map(d => d.categoria))).sort();
-  const evoDatasets = allCats.map(cat => ({
-    label: cat,
-    data: months.map(mo => RAW_DATA.filter(d => d.mes === mo && d.categoria === cat).reduce((s,d)=>s+d.monto,0)),
-    borderColor: catColor(cat),
-    backgroundColor: catColor(cat),
-    tension: 0.3,
-    fill: false,
-    spanGaps: true
-  }));
-  if (categoryEvolutionChart) categoryEvolutionChart.destroy();
-  const evoCanvas = document.getElementById('categoryEvolutionChart');
-  if (evoCanvas) {
-    categoryEvolutionChart = new Chart(evoCanvas, {
-      type: 'line',
-      data: { labels: months, datasets: evoDatasets },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-          tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + money(ctx.raw) } }
-        },
-        scales: {
-          x: { ticks: { color: '#8b93a8' }, grid: { display: false } },
-          y: { ticks: { color: '#8b93a8', callback: v => fmt.format(v) }, grid: { color: '#222a3c' } }
-        }
-      }
-    });
-  }
-
-  const tbody = document.getElementById('detailBody');
-  tbody.innerHTML = '';
-  const sorted = [...filtered].sort((a,b) => b.mes.localeCompare(a.mes) || (b.fecha||'').localeCompare(a.fecha||'') || b.monto - a.monto);
-  sorted.forEach(d => {
-    const tr = document.createElement('tr');
-    const catStr = d.subcategoria ? `${d.categoria} <span class="hint" style="font-size:11px;">› ${d.subcategoria}</span>` : d.categoria;
-    const esProyectado = !d.fecha && d.mes >= currentYYYYMM;
-    const conceptoStr = d.concepto + (esProyectado ? ' <span class="badge" style="background:#3a3f52;color:#c7cede;font-size:10px;">proyectado</span>' : '');
-    tr.innerHTML = `<td>${d.fecha || d.mes}</td><td>${catStr}</td><td>${conceptoStr}</td>` +
-      `<td><span class="badge ${d.tipo}">${d.tipo}</span></td><td>${d.metodo}</td>` +
-      `<td class="monto">${fmt.format(d.monto)}</td>`;
-    tbody.appendChild(tr);
-  });
-
   renderInstallments();
   renderSubscriptions();
   renderDaily();
   renderPersona(filtered);
-  renderBudget();
-  renderSemaforo();
   renderTarjetas();
 }
 
@@ -992,12 +805,6 @@ function parseDDMMYYYY(s) {
   return new Date(parseInt(m[3]), parseInt(m[2])-1, parseInt(m[1]));
 }
 
-function nextMonthStr(mesStr) {
-  const [y, m] = mesStr.split('-').map(Number);
-  const d = new Date(y, m, 1); // m is 1-indexed, so this lands on the 1st of the next month
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
-}
-
 function renderTarjetas() {
   const box = document.getElementById('tarjetasBox');
   if (!box) return;
@@ -1005,34 +812,18 @@ function renderTarjetas() {
 
   let html = '';
   TARJETAS_CIERRE.forEach(t => {
-    const mesCierre = t.ultimo_cierre.slice(0, 7);
-    const mesSiguiente = nextMonthStr(mesCierre);
-    let cerrado = 0, nuevo = 0;
-    RAW_DATA.forEach(d => {
-      if (!t.metodos.includes(d.metodo)) return;
-      // Solo consideramos el mes que acaba de cerrar y el mes siguiente (período en curso)
-      if (d.mes === mesCierre) {
-        if (!d.fecha || d.fecha <= t.ultimo_cierre) cerrado += d.monto; else nuevo += d.monto;
-      } else if (d.mes === mesSiguiente && d.fecha) {
-        // Solo contamos ítems del mes siguiente que ya tienen fecha real (cargos ya
-        // confirmados). Los fijos sin fecha del mes siguiente son proyección, no gasto real.
-        nuevo += d.monto;
-      }
-    });
     const [yyyy, mm, dd] = t.ultimo_cierre.split('-');
+    let pagoStr = '<span style="color:var(--muted)">sin pago registrado todavía</span>';
+    if (t.ultimo_pago && t.monto_ultimo_pago_gs) {
+      const [py, pm, pd] = t.ultimo_pago.split('-');
+      pagoStr = `<b>pagado ${pd}/${pm}: ${money(t.monto_ultimo_pago_gs)}</b>`;
+    }
     html += `<div class="venc-item">
       <span class="venc-badge">${t.tarjeta}</span>
-      <span>Cerró el ${dd}/${mm} — <b>por pagar: ${money(cerrado)}</b></span>
-      <span class="venc-days" style="color:#5b8def">Acumulado nuevo período: ${money(nuevo)}</span>
+      <span>Cerró el ${dd}/${mm} — ${pagoStr}</span>
     </div>`;
   });
   box.innerHTML = html;
-}
-
-function mesToApproxDate(mes) {
-  // 'YYYY-MM' -> first day of that month
-  const [y, mo] = mes.split('-').map(Number);
-  return new Date(y, mo - 1, 1);
 }
 
 function renderVencimientos() {
@@ -1049,30 +840,10 @@ function renderVencimientos() {
     items.push({ tipo: 'Inmueble/GR', nombre: it.entidad, detalle: it.concepto, fechaStr: it.vencimiento, dias });
   });
 
-  // Próxima cuota pendiente de cada plan en curso (Compras adicionales)
-  const cuotaItems = RAW_DATA.filter(d => d.categoria === 'Compras adicionales' && d.monto > 0);
-  const groups = {};
-  cuotaItems.forEach(d => {
-    const base = d.concepto.replace(/\s*-\s*cuota\s*\d+\/\d+\s*$/i, '').trim();
-    if (!groups[base]) groups[base] = [];
-    groups[base].push(d);
-  });
-  Object.keys(groups).forEach(base => {
-    const pcItems = groups[base].slice().sort((a,b) => a.mes.localeCompare(b.mes));
-    const yaPagada = d => d.fecha ? d.fecha <= todayStr : d.mes <= currentYYYYMM;
-    const pendientes = pcItems.filter(d => !yaPagada(d));
-    if (!pendientes.length) return;
-    const next = pendientes[0];
-    const fecha = mesToApproxDate(next.mes);
-    const dias = Math.ceil((fecha - hoy) / (1000*60*60*24));
-    const m = next.concepto.match(/cuota\s*(\d+\/\d+)/i);
-    items.push({ tipo: 'Cuota tarjeta', nombre: base, detalle: (m ? 'cuota ' + m[1] : 'próxima cuota') + ' — ' + money(next.monto), fechaStr: next.mes, dias });
-  });
-
   items.sort((a,b) => a.dias - b.dias);
   if (!items.length) { box.innerHTML = ''; return; }
 
-  let html = '<div style="font-weight:600;margin-bottom:6px;">Próximos vencimientos y cuotas</div>';
+  let html = '<div style="font-weight:600;margin-bottom:6px;">Próximos vencimientos (inversiones / pasivos)</div>';
   items.forEach(it => {
     const color = it.dias < 30 ? '#e2607a' : (it.dias < 90 ? '#f0a860' : '#4dd4ac');
     const diasStr = it.dias >= 0 ? 'en ' + it.dias + ' días' : 'vencido hace ' + Math.abs(it.dias) + ' días';
@@ -1083,38 +854,6 @@ function renderVencimientos() {
     </div>`;
   });
   box.innerHTML = html;
-}
-
-let historialChart;
-function renderHistorial() {
-  const wrap = document.getElementById('historialChart');
-  if (!wrap) return;
-  if (!HISTORIAL_INVERSIONES || !HISTORIAL_INVERSIONES.length) return;
-  const labels = HISTORIAL_INVERSIONES.map(h => h.fecha);
-  const totalJI = HISTORIAL_INVERSIONES.map(h => h.total_usd);
-  const combinado = HISTORIAL_INVERSIONES.map(h => (h.combinado_usd === undefined ? null : h.combinado_usd));
-  if (historialChart) historialChart.destroy();
-  historialChart = new Chart(wrap, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [
-        { label: 'Portafolio Joaquín (USD)', data: totalJI, borderColor: '#5b8def', backgroundColor: 'rgba(91,141,239,0.15)', tension: 0.3, fill: true, spanGaps: true },
-        { label: 'Patrimonio combinado (USD)', data: combinado, borderColor: '#f0a860', backgroundColor: 'rgba(240,168,96,0.1)', tension: 0.3, fill: true, spanGaps: true }
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#e8ecf4', boxWidth: 10, font: { size: 11 } } },
-        tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': $' + fmt.format(ctx.raw) } }
-      },
-      scales: {
-        x: { ticks: { color: '#8b93a8' }, grid: { display: false } },
-        y: { ticks: { color: '#8b93a8', callback: v => '$'+fmt.format(v) }, grid: { color: '#222a3c' } }
-      }
-    }
-  });
 }
 
 function renderInversiones() {
@@ -1264,16 +1003,6 @@ function renderInversiones() {
     fBody.appendChild(tr);
   });
 
-  // Otras table
-  const oBody = document.getElementById('invOtrasBody');
-  oBody.innerHTML = '';
-  const trCrypto = document.createElement('tr');
-  trCrypto.innerHTML = `<td>${D.crypto.activo}</td><td>${D.crypto.cantidad} BTC</td><td style="text-align:right">$ ${fmt.format(D.crypto.valor_usd)}</td>`;
-  oBody.appendChild(trCrypto);
-  const trOtras = document.createElement('tr');
-  trOtras.innerHTML = `<td>${D.otras.entidad}</td><td>${D.otras.concepto}</td><td style="text-align:right">${fmt.format(D.otras.monto_gs)} Gs.</td>`;
-  oBody.appendChild(trOtras);
-
   // Inversiones GR (Guada)
   const GR = INVERSIONES_GR_DATA;
   const grTotal = GR.items.reduce((s,it) => s + (it.monto_gs || 0), 0);
@@ -1292,7 +1021,6 @@ function renderInversiones() {
   document.getElementById('grNotas').innerHTML = grNotas;
 
   renderVencimientos();
-  renderHistorial();
 
   // Patrimonio combinado — Joaquín (JI) vs Guada (GR)
   const PAT = PATRIMONIO_DATA;
