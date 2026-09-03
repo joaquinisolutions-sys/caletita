@@ -2638,7 +2638,8 @@
       "concepto": "Anthropic (consola/API)",
       "tipo": "Fijo",
       "monto": 33825,
-      "metodo": "Tarjeta de crédito (personal)"
+      "metodo": "Tarjeta de crédito (personal)",
+      "unico": true
     },
     {
       "mes": "2026-05",
@@ -5203,7 +5204,7 @@
     }
   ],
   "INVERSIONES_DATA": {
-    "fecha_actualizacion": "2026-09-02",
+    "fecha_actualizacion": "2026-09-03",
     "fondos": [
       {
         "entidad": "Itaú",
@@ -5214,14 +5215,6 @@
         "tasa": "3,86%"
       },
       {
-        "entidad": "Ueno",
-        "concepto": "Fondo Mutuo",
-        "moneda": "USD",
-        "monto": 880.51,
-        "monto_usd": 880.51,
-        "tasa": "4,15%"
-      },
-      {
         "entidad": "Itaú",
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
@@ -5230,20 +5223,30 @@
         "tasa": "6,34%"
       },
       {
-        "entidad": "Ueno",
-        "concepto": "Fondo Mutuo",
-        "moneda": "PYG",
-        "monto": 7255873,
-        "monto_usd": 1222.44868,
-        "tasa": "6,50%"
-      },
-      {
         "entidad": "Investor",
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
         "monto": 2092327,
         "monto_usd": 352.518972,
         "tasa": "9,25%"
+      },
+      {
+        "entidad": "Balanz",
+        "concepto": "Ahorro corto plazo Clase A (BCAHA)",
+        "moneda": "USD",
+        "monto": 5.0,
+        "monto_usd": 5.0,
+        "tasa": "N/D",
+        "fecha_compra": "17/06/2026"
+      },
+      {
+        "entidad": "Balanz",
+        "concepto": "Inflation linked Clase A (INSTITUA)",
+        "moneda": "USD",
+        "monto": 206.0,
+        "monto_usd": 206.0,
+        "tasa": "N/D",
+        "fecha_compra": "17/06/2026"
       }
     ],
     "acciones": [
@@ -5256,15 +5259,17 @@
         "qty": 0.153,
         "invertido": 105.47,
         "precio_actual": 708.13,
-        "valor_actual": 108.34389,
-        "utilidad": 2.87389,
-        "utilidad_pct": 0.027248,
+        "valor_actual": 110.55,
+        "utilidad": 5.08,
+        "utilidad_pct": 0.048165,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
           "monto_share": null,
           "nota": "Distribuye los dividendos acumulados del Nasdaq 100"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "03/08/2026"
       },
       {
         "ticker": "URA",
@@ -5275,13 +5280,15 @@
         "qty": 0.6,
         "invertido": 29.88,
         "precio_actual": 43.85,
-        "valor_actual": 26.31,
-        "utilidad": -3.57,
-        "utilidad_pct": -0.119478,
+        "valor_actual": 27.63,
+        "utilidad": -2.25,
+        "utilidad_pct": -0.075301,
         "dividendo": {
           "paga": false,
           "nota": "Distribución irregular, normalmente anual"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "ASML",
@@ -5292,9 +5299,9 @@
         "qty": 0.027,
         "invertido": 53.95,
         "precio_actual": 1673.34,
-        "valor_actual": 45.18018,
-        "utilidad": -8.76982,
-        "utilidad_pct": -0.162555,
+        "valor_actual": 47.84,
+        "utilidad": -6.11,
+        "utilidad_pct": -0.113253,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5302,7 +5309,9 @@
           "ex_dividendo": "2026-07-29",
           "proximo_pago": "2026-08-05",
           "nota": "Ya cobrado este ciclo"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "ARM",
@@ -5313,12 +5322,14 @@
         "qty": 0.185,
         "invertido": 83.48,
         "precio_actual": 232.17,
-        "valor_actual": 42.95145,
-        "utilidad": -40.52855,
-        "utilidad_pct": -0.485488,
+        "valor_actual": 45.25,
+        "utilidad": -38.23,
+        "utilidad_pct": -0.457954,
         "dividendo": {
           "paga": false
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "TSM",
@@ -5329,16 +5340,18 @@
         "qty": 0.111,
         "invertido": 50.24,
         "precio_actual": 412.72,
-        "valor_actual": 45.81192,
-        "utilidad": -4.42808,
-        "utilidad_pct": -0.088139,
+        "valor_actual": 48.01,
+        "utilidad": -2.23,
+        "utilidad_pct": -0.044387,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
           "monto_share": 1.11,
           "ex_dividendo": "2026-09-16",
           "proximo_pago": "2026-10-08"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "META",
@@ -5349,9 +5362,9 @@
         "qty": 0.083,
         "invertido": 49.11,
         "precio_actual": 592.55,
-        "valor_actual": 49.18165,
-        "utilidad": 0.07165,
-        "utilidad_pct": 0.001459,
+        "valor_actual": 51.36,
+        "utilidad": 2.25,
+        "utilidad_pct": 0.045816,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5359,7 +5372,9 @@
           "ex_dividendo": "2026-06-15",
           "proximo_pago": "2026-06-25",
           "nota": "Ya cobrado; próximo ciclo estimado sept/2026"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "MSFT",
@@ -5370,16 +5385,18 @@
         "qty": 0.067,
         "invertido": 26.2,
         "precio_actual": 497.0,
-        "valor_actual": 33.299,
-        "utilidad": 7.099,
-        "utilidad_pct": 0.270954,
+        "valor_actual": 34.38,
+        "utilidad": 8.18,
+        "utilidad_pct": 0.312214,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
           "monto_share": 0.91,
           "ex_dividendo": "2026-08-20",
           "proximo_pago": "2026-09-10"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "NVDA",
@@ -5390,16 +5407,18 @@
         "qty": 0.167,
         "invertido": 35.35,
         "precio_actual": 225.41,
-        "valor_actual": 37.64347,
-        "utilidad": 2.29347,
-        "utilidad_pct": 0.064879,
+        "valor_actual": 38.8,
+        "utilidad": 3.45,
+        "utilidad_pct": 0.097595,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
           "monto_share": 0.25,
           "ex_dividendo": "2026-09-11",
           "proximo_pago": "2026-10-02"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "GOOGL",
@@ -5410,9 +5429,9 @@
         "qty": 0.103,
         "invertido": 38.8,
         "precio_actual": 337.59,
-        "valor_actual": 34.77177,
-        "utilidad": -4.02823,
-        "utilidad_pct": -0.10382,
+        "valor_actual": 36.36,
+        "utilidad": -2.44,
+        "utilidad_pct": -0.062887,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5420,7 +5439,9 @@
           "ex_dividendo": "2026-09-04",
           "proximo_pago": null,
           "nota": "Pago estimado unas semanas después del ex-dividendo"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "SPCX",
@@ -5431,13 +5452,15 @@
         "qty": 1.84,
         "invertido": 375.68,
         "precio_actual": 142.45,
-        "valor_actual": 262.108,
-        "utilidad": -113.572,
-        "utilidad_pct": -0.302311,
+        "valor_actual": 268.64,
+        "utilidad": -107.04,
+        "utilidad_pct": -0.284923,
         "dividendo": {
           "paga": false,
           "nota": "Empresa privada, no cotiza en bolsa pública"
-        }
+        },
+        "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
+        "fecha_compra": "17/06/2026"
       },
       {
         "ticker": "YPF",
@@ -5453,7 +5476,8 @@
         "utilidad_pct": 0.054706,
         "dividendo": {
           "paga": false
-        }
+        },
+        "fecha_compra": "16/07/2026"
       },
       {
         "ticker": "SPY",
@@ -5474,7 +5498,8 @@
           "nota": "Distribuye los dividendos acumulados del S&P 500"
         },
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "fecha_compra": "26/06/2026"
       },
       {
         "ticker": "NU",
@@ -5492,7 +5517,8 @@
           "paga": false
         },
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "fecha_compra": "27/08/2026"
       },
       {
         "ticker": "XOM",
@@ -5514,7 +5540,8 @@
           "proximo_pago": "2026-09-10"
         },
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "fecha_compra": "26/06/2026"
       },
       {
         "ticker": "VIST",
@@ -5532,7 +5559,8 @@
           "paga": false
         },
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "fecha_compra": "26/06/2026"
       },
       {
         "ticker": "LLY",
@@ -5554,7 +5582,8 @@
           "proximo_pago": "2026-09-10"
         },
         "split_gr": 0.7,
-        "split_ji": 0.3
+        "split_ji": 0.3,
+        "fecha_compra": "30/06/2026"
       },
       {
         "ticker": "NEE",
@@ -5574,7 +5603,8 @@
           "monto_share": 0.6232,
           "ex_dividendo": "2026-08-28",
           "proximo_pago": "2026-09-15"
-        }
+        },
+        "fecha_compra": "02/07/2026"
       },
       {
         "ticker": "NVO",
@@ -5594,7 +5624,65 @@
           "monto_share": null,
           "proximo_pago": "2026-08-25",
           "nota": "Pago interino agosto; siguiente pago principios de 2027"
-        }
+        },
+        "fecha_compra": "02/07/2026"
+      },
+      {
+        "ticker": "GGAL",
+        "empresa": "Grupo Financiero Galicia",
+        "rubro": "Banco (Argentina)",
+        "sector": "Financiero",
+        "titular": "JI",
+        "qty": 2.0,
+        "invertido": 10.0,
+        "precio_actual": 4.68,
+        "valor_actual": 9.351828,
+        "utilidad": -0.648172,
+        "utilidad_pct": -0.064817,
+        "dividendo": {
+          "paga": false
+        },
+        "nota_valuacion": "Costo base y valor actual según resumen de cuenta Balanz (03/09/2026)."
+      },
+      {
+        "ticker": "MCD",
+        "empresa": "McDonald's Corporation",
+        "rubro": "Consumo",
+        "sector": "Consumo",
+        "titular": "JI",
+        "qty": 8.0,
+        "invertido": 94.0,
+        "precio_actual": 11.3,
+        "valor_actual": 90.36188,
+        "utilidad": -3.63812,
+        "utilidad_pct": -0.038703,
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral",
+          "monto_share": null,
+          "nota": "CEDEAR — dividendo sujeto a retención/conversión"
+        },
+        "nota_valuacion": "Costo base y valor actual según resumen de cuenta Balanz (03/09/2026)."
+      },
+      {
+        "ticker": "SPY (Balanz)",
+        "empresa": "SPDR S&P 500 ETF - CEDEAR",
+        "rubro": "ETF - S&P 500",
+        "sector": "ETF diversificado",
+        "titular": "JI",
+        "qty": 20.0,
+        "invertido": 259.0,
+        "precio_actual": 13.26,
+        "valor_actual": 265.29454,
+        "utilidad": 6.29454,
+        "utilidad_pct": 0.024303,
+        "dividendo": {
+          "paga": true,
+          "frecuencia": "Trimestral (ETF)",
+          "monto_share": null,
+          "nota": "Distribuye dividendos del S&P 500, vía CEDEAR"
+        },
+        "nota_valuacion": "Costo base y valor actual según resumen de cuenta Balanz (03/09/2026)."
       }
     ],
     "crypto": {
@@ -5613,11 +5701,11 @@
     "resumen": [
       {
         "clase": "Fondos Mutuos",
-        "valor_usd": 8005.347066
+        "valor_usd": 6113.388386
       },
       {
         "clase": "Acciones / ETFs / Cedears",
-        "valor_usd": 2835.27916
+        "valor_usd": 3223.506078
       },
       {
         "clase": "Criptomonedas",
@@ -5628,8 +5716,8 @@
         "valor_usd": 671.502655
       }
     ],
-    "total_usd": 12913.481002,
-    "total_gs": 76646158.6,
+    "total_usd": 11409.74924,
+    "total_gs": 67720969.25,
     "fx_usdpyg": 5935.36,
     "fx_usdars": 1514.75
   },
@@ -5702,12 +5790,12 @@
   },
   "PATRIMONIO_DATA": {
     "fx_usdpyg": 5935.36,
-    "ji_total_usd": 11693.651139,
+    "ji_total_usd": 10189.919377,
     "gr_total_usd": 33363.046787,
-    "combined_total_usd": 45056.697926,
+    "combined_total_usd": 43552.966164,
     "ji_breakdown": {
-      "Fondos Mutuos": 8005.347066,
-      "Acciones/ETFs/Cedears (part. JI)": 1615.449297,
+      "Fondos Mutuos": 6113.388386,
+      "Acciones/ETFs/Cedears (part. JI)": 2003.676215,
       "Criptomonedas": 1401.352121,
       "Otras (Sudameris + Ah.Prog.)": 671.502655
     },
@@ -5721,7 +5809,7 @@
       "bosque_lago_paid_gs": 85788864,
       "fortaleza_paid_gs": 44660000
     },
-    "fecha_actualizacion": "2026-09-02"
+    "fecha_actualizacion": "2026-09-03"
   },
   "HISTORIAL_INVERSIONES": [
     {
@@ -5796,6 +5884,11 @@
       "fecha": "2026-09-02",
       "total_usd": 12913,
       "combinado_usd": 45057
+    },
+    {
+      "fecha": "2026-09-03",
+      "total_usd": 11410,
+      "combinado_usd": 43553
     }
   ],
   "PRESUPUESTOS": {

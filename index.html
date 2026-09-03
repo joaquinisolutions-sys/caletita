@@ -132,29 +132,25 @@
   .sub-amount { font-size: 13px; font-weight: 600; min-width: 90px; text-align: right; font-variant-numeric: tabular-nums; }
   .sub-amount.pending { color: var(--muted); font-weight: 400; font-style: italic; }
 
-  /* Stock holdings — app-style hero + segmented bar + card list */
-  .stock-hero-value { font-size: 34px; font-weight: 800; letter-spacing: -.01em; }
-  .stock-hero-gain { font-size: 14px; font-weight: 600; margin-top: 4px; }
-  .stock-hero-gain.pos { color: var(--accent); }
-  .stock-hero-gain.neg { color: #e2607a; }
-  .seg-bar-track { display: flex; width: 100%; height: 10px; border-radius: 6px; overflow: hidden; margin: 14px 0 10px; background: var(--panel2); }
-  .seg-bar-seg { height: 100%; }
-  .seg-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; margin-bottom: 18px; }
-  .seg-legend-item { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+  /* Stock holdings — lista simple por rubro: fecha/valor compra, cantidad, valor actual, % */
   .stock-sector-group { margin-bottom: 16px; }
   .stock-sector-title { font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 8px; }
   .stock-card-list { display: flex; flex-direction: column; gap: 8px; }
-  .stock-card { display: flex; align-items: center; justify-content: space-between; background: var(--panel2); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+  .stock-card { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: var(--panel2); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
   .stock-card-left { display: flex; align-items: center; gap: 12px; }
   .stock-icon { width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #111; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 10.5px; flex-shrink: 0; }
   .stock-card-name { display: flex; flex-direction: column; }
   .stock-card-ticker { font-weight: 700; font-size: 14px; }
   .stock-card-empresa { font-size: 11.5px; color: var(--muted); }
-  .stock-card-right { text-align: right; }
-  .stock-card-value { font-size: 14px; font-weight: 700; }
-  .stock-card-gain { font-size: 12px; margin-top: 2px; }
-  .stock-card-gain.pos { color: var(--accent); }
-  .stock-card-gain.neg { color: #e2607a; }
+  .stock-card-mid { display: flex; gap: 18px; flex-wrap: wrap; }
+  .stock-card-mid div { display: flex; flex-direction: column; min-width: 68px; }
+  .stock-card-mid .l { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+  .stock-card-mid .v { font-size: 12.5px; font-weight: 600; margin-top: 2px; }
+  .split-badge { font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 8px; background: var(--panel); color: var(--muted); margin-left: 8px; white-space: nowrap; }
+  .split-badge.shared { color: #f0a860; background: rgba(240,168,96,0.14); }
+  .pct-badge { font-size: 13.5px; font-weight: 700; padding: 4px 12px; border-radius: 8px; white-space: nowrap; }
+  .pct-badge.pos { color: #4dd4ac; background: rgba(77,212,172,0.14); }
+  .pct-badge.neg { color: #e2607a; background: rgba(226,96,122,0.14); }
 
   /* Budget alerts, semáforo de completitud, vencimientos unificados */
   .alert-banner { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
@@ -327,10 +323,7 @@
 <div class="grid" style="grid-template-columns: 1fr;">
   <div class="card">
     <h2>Acciones</h2>
-    <div class="stock-hero-value" id="stockHeroValue">-</div>
-    <div class="stock-hero-gain" id="stockHeroGain">-</div>
-    <div class="seg-bar-track" id="stockSegBar"></div>
-    <div class="seg-legend" id="stockSegLegend"></div>
+    <div class="hint">Por rubro · fecha y valor de compra, cantidad, valor actual y rendimiento %</div>
     <div id="stockCardGroups"></div>
   </div>
 </div>
@@ -519,7 +512,8 @@ function renderInstallments() {
 }
 
 function renderSubscriptions() {
-  const subs = RAW_DATA.filter(d => d.categoria === 'Suscripciones');
+  // Excluimos cargos marcados como "unico" (compra puntual, no suscripción recurrente)
+  const subs = RAW_DATA.filter(d => d.categoria === 'Suscripciones' && !d.unico);
   const byConcept = {};
   subs.forEach(d => {
     if (!byConcept[d.concepto] || d.mes > byConcept[d.concepto].mes) byConcept[d.concepto] = d;
@@ -803,40 +797,17 @@ function renderInversiones() {
     }
   });
 
-  // Acciones — vista tipo app (hero + barra segmentada + tarjetas por sector)
-  const accGain = D.acciones.reduce((s,a) => s + a.utilidad, 0);
-  document.getElementById('stockHeroValue').textContent = '$' + fmt.format(accTotal);
-  const heroGainEl = document.getElementById('stockHeroGain');
-  heroGainEl.textContent = (accGain >= 0 ? '+$' : '-$') + fmt.format(Math.abs(accGain)) + ' rendimiento actual';
-  heroGainEl.className = 'stock-hero-gain ' + (accGain >= 0 ? 'pos' : 'neg');
-
+  // Acciones — lista simple por rubro: fecha/valor de compra, cantidad, valor actual, % y titularidad
   const stockSectorTotals = {};
   D.acciones.forEach(a => {
     const s = a.sector || 'Otros';
     stockSectorTotals[s] = (stockSectorTotals[s] || 0) + a.valor_actual;
   });
   const stockSectorLabels = Object.keys(stockSectorTotals).sort((a,b) => stockSectorTotals[b]-stockSectorTotals[a]);
-  const stockSectorColors = ['#4dd4ac','#5b8def','#f0a860','#8f6bd8','#c9d94a','#e2607a','#6bc7d8','#d8a6f0'];
-  const segBar = document.getElementById('stockSegBar');
-  segBar.innerHTML = '';
-  const segLegend = document.getElementById('stockSegLegend');
-  segLegend.innerHTML = '';
-  stockSectorLabels.forEach((s, i) => {
-    const pct = stockSectorTotals[s] / accTotal * 100;
-    const seg = document.createElement('div');
-    seg.className = 'seg-bar-seg';
-    seg.style.width = pct + '%';
-    seg.style.background = stockSectorColors[i % stockSectorColors.length];
-    segBar.appendChild(seg);
-    const leg = document.createElement('div');
-    leg.className = 'seg-legend-item';
-    leg.innerHTML = `<span class="legend-dot" style="background:${stockSectorColors[i % stockSectorColors.length]}"></span>${s} ${Math.round(pct)}%`;
-    segLegend.appendChild(leg);
-  });
 
   const groupsEl = document.getElementById('stockCardGroups');
   groupsEl.innerHTML = '';
-  stockSectorLabels.forEach((s, i) => {
+  stockSectorLabels.forEach(s => {
     const group = document.createElement('div');
     group.className = 'stock-sector-group';
     const title = document.createElement('div');
@@ -849,19 +820,25 @@ function renderInversiones() {
     stocksInSector.forEach(a => {
       const card = document.createElement('div');
       card.className = 'stock-card';
-      const gainPos = a.utilidad >= 0;
+      const pctPos = a.utilidad_pct >= 0;
+      const splitBadge = (a.split_ji !== undefined)
+        ? `<span class="split-badge shared">${Math.round(a.split_gr*100)}% GR / ${Math.round(a.split_ji*100)}% JI</span>`
+        : `<span class="split-badge">100% tuyo</span>`;
       card.innerHTML = `
         <div class="stock-card-left">
           <div class="stock-icon">${a.ticker.slice(0,4)}</div>
           <div class="stock-card-name">
-            <span class="stock-card-ticker">${a.ticker}</span>
+            <span class="stock-card-ticker">${a.ticker}${splitBadge}</span>
             <span class="stock-card-empresa">${a.empresa}</span>
           </div>
         </div>
-        <div class="stock-card-right">
-          <div class="stock-card-value">$${fmt.format(a.valor_actual)}</div>
-          <div class="stock-card-gain ${gainPos ? 'pos' : 'neg'}">${gainPos ? '+' : '-'}$${fmt.format(Math.abs(a.utilidad))}</div>
-        </div>`;
+        <div class="stock-card-mid">
+          <div><span class="l">Fecha compra</span><span class="v">${a.fecha_compra || 'N/D'}</span></div>
+          <div><span class="l">Cantidad</span><span class="v">${a.qty !== undefined && a.qty !== null ? a.qty : 'N/D'}</span></div>
+          <div><span class="l">V. compra</span><span class="v">$${fmt.format(a.invertido)}</span></div>
+          <div><span class="l">V. actual</span><span class="v">$${fmt.format(a.valor_actual)}</span></div>
+        </div>
+        <div class="pct-badge ${pctPos ? 'pos' : 'neg'}">${pctPos ? '+' : ''}${(a.utilidad_pct*100).toFixed(1)}%</div>`;
       list.appendChild(card);
     });
     group.appendChild(list);
