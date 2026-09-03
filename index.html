@@ -334,7 +334,7 @@
     <div class="hint" id="invFondosTotalHint" style="font-size:15px;color:var(--text);font-weight:600;">Total: -</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Entidad</th><th>Concepto</th><th>Moneda</th><th>Monto</th><th>Tasa Anual</th></tr></thead>
+        <thead><tr><th>Entidad</th><th>Invertido</th><th>% Anual estimado</th></tr></thead>
         <tbody id="invFondosBody"></tbody>
       </table>
     </div>
@@ -348,6 +348,19 @@
         <tbody id="invDividendosBody"></tbody>
       </table>
     </div>
+  </div>
+</div>
+
+<div class="grid even">
+  <div class="card">
+    <h2>Sudameris</h2>
+    <div class="hint">Acciones preferidas (Banco Sudameris)</div>
+    <div id="sudameresBox"></div>
+  </div>
+  <div class="card">
+    <h2>Ahorro Programado</h2>
+    <div class="hint">Cuánto pongo en total y cuánto recibo, por entidad</div>
+    <div id="ahorroProgramadoBox"></div>
   </div>
 </div>
 
@@ -871,16 +884,41 @@ function renderInversiones() {
     dBody.appendChild(tr);
   });
 
-  // Fondos Mutuos table (con total arriba en USD equivalente)
+  // Fondos Mutuos table (simple: entidad, invertido, % anual estimado — con total arriba en USD equivalente)
   document.getElementById('invFondosTotalHint').textContent = 'Total: $ ' + fmt.format(fondosTotal) + ' equivalente';
   const fBody = document.getElementById('invFondosBody');
   fBody.innerHTML = '';
   D.fondos.forEach(f => {
     const tr = document.createElement('tr');
     const montoStr = f.moneda === 'USD' ? ('$ ' + fmt.format(f.monto)) : (fmt.format(f.monto) + ' Gs.');
-    tr.innerHTML = `<td>${f.entidad}</td><td>${f.concepto}</td><td>${f.moneda}</td><td style="text-align:right">${montoStr}</td><td style="text-align:right">${f.tasa}</td>`;
+    tr.innerHTML = `<td>${f.entidad}</td><td style="text-align:right">${montoStr}</td><td style="text-align:right">${f.tasa}</td>`;
     fBody.appendChild(tr);
   });
+
+  // Sudameris (simple: invertido y dividendo)
+  const sudBox = document.getElementById('sudameresBox');
+  if (sudBox && D.otras && D.otras.sudameris) {
+    const s = D.otras.sudameris;
+    sudBox.innerHTML = `
+      <div class="installment-stats">
+        <div><div class="l">Invertido</div><div class="v">${money(s.invertido_gs)}</div></div>
+        <div><div class="l">Dividendo cobrado</div><div class="v">${money(s.dividendo_gs)}</div></div>
+      </div>`;
+  }
+
+  // Ahorro Programado (simple: total aportado, cuánto recibo y fecha, por entidad)
+  const apBox = document.getElementById('ahorroProgramadoBox');
+  if (apBox && D.otras && D.otras.ahorro_programado) {
+    let html = '';
+    D.otras.ahorro_programado.forEach(a => {
+      html += `<div class="venc-item">
+        <span class="venc-badge">${a.entidad}</span>
+        <span>Aporto <b>${money(a.total_aportado_gs)}</b> → recibo <b>${money(a.recibis_gs)}</b></span>
+        <span class="venc-days">${a.fecha}</span>
+      </div>`;
+    });
+    apBox.innerHTML = html;
+  }
 
   // Inversiones GR (Guada)
   const GR = INVERSIONES_GR_DATA;

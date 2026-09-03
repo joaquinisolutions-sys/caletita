@@ -5201,6 +5201,36 @@
       "tipo": "Variable",
       "monto": 32400,
       "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-09-03",
+      "concepto": "Comida afuera",
+      "tipo": "Variable",
+      "monto": 40000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-09-03",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 30200,
+      "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Ropa",
+      "fecha": "2026-09-03",
+      "concepto": "Ropa Rufi",
+      "tipo": "Variable",
+      "monto": 135700,
+      "metodo": "Tarjeta de crédito"
     }
   ],
   "INVERSIONES_DATA": {
@@ -5210,25 +5240,25 @@
         "entidad": "Itaú",
         "concepto": "IAM Low Volatility",
         "moneda": "USD",
-        "monto": 5201.61,
-        "monto_usd": 5201.61,
-        "tasa": "3,86%"
+        "monto": 5190.84,
+        "monto_usd": 5190.84,
+        "tasa": "3,50%"
       },
       {
         "entidad": "Itaú",
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
-        "monto": 2067045,
-        "monto_usd": 348.259414,
-        "tasa": "6,34%"
+        "monto": 2068073,
+        "monto_usd": 348.432614,
+        "tasa": "6,50%"
       },
       {
         "entidad": "Investor",
         "concepto": "Fondo Mutuo",
         "moneda": "PYG",
-        "monto": 2092327,
-        "monto_usd": 352.518972,
-        "tasa": "9,25%"
+        "monto": 10094796,
+        "monto_usd": 1700.789169,
+        "tasa": "9,00%"
       },
       {
         "entidad": "Balanz",
@@ -5257,11 +5287,11 @@
         "sector": "ETF diversificado",
         "titular": "JI",
         "qty": 0.153,
-        "invertido": 105.47,
+        "invertido": 508.16,
         "precio_actual": 708.13,
-        "valor_actual": 110.55,
+        "valor_actual": 513.24,
         "utilidad": 5.08,
-        "utilidad_pct": 0.048165,
+        "utilidad_pct": 0.009997,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5269,7 +5299,7 @@
           "nota": "Distribuye los dividendos acumulados del Nasdaq 100"
         },
         "nota_valuacion": "Valor real según resumen de cuenta Balanz (03/09/2026), no precio de mercado estimado.",
-        "fecha_compra": "03/08/2026"
+        "fecha_compra": "03/09/2026"
       },
       {
         "ticker": "URA",
@@ -5486,11 +5516,11 @@
         "sector": "ETF diversificado",
         "titular": "Compartido",
         "qty": 0.699,
-        "invertido": 513.0,
+        "invertido": 633.0,
         "precio_actual": 764.46,
-        "valor_actual": 534.35754,
+        "valor_actual": 654.35754,
         "utilidad": 21.35754,
-        "utilidad_pct": 0.041633,
+        "utilidad_pct": 0.03374,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5499,7 +5529,7 @@
         },
         "split_gr": 0.7,
         "split_ji": 0.3,
-        "fecha_compra": "26/06/2026"
+        "fecha_compra": "03/09/2026"
       },
       {
         "ticker": "NU",
@@ -5508,17 +5538,17 @@
         "sector": "Financiero",
         "titular": "Compartido",
         "qty": 20.587,
-        "invertido": 274.0,
+        "invertido": 674.0,
         "precio_actual": 15.31,
-        "valor_actual": 315.18697,
+        "valor_actual": 715.18697,
         "utilidad": 41.18697,
-        "utilidad_pct": 0.150317,
+        "utilidad_pct": 0.061108,
         "dividendo": {
           "paga": false
         },
         "split_gr": 0.7,
         "split_ji": 0.3,
-        "fecha_compra": "27/08/2026"
+        "fecha_compra": "03/09/2026"
       },
       {
         "ticker": "XOM",
@@ -5687,37 +5717,53 @@
     ],
     "crypto": {
       "activo": "Bitcoin (BTC, Ledger)",
-      "cantidad": 0.0181713,
-      "precio": 77118.98,
-      "valor_usd": 1401.352121,
-      "valor_gs": 8317529
+      "cantidad": 0.0209395,
+      "precio": 78768.41,
+      "valor_usd": 1649.371121,
+      "valor_gs": 9789611
     },
     "otras": {
       "entidad": "Sudameris + Ahorro Programado",
-      "concepto": "Acciones Sudameris + Ah. Programado (Itaú+Ueno)",
-      "monto_gs": 3985610,
-      "dividendos_gs": 245773
+      "sudameris": {
+        "invertido_gs": 2485610,
+        "dividendo_gs": 245000
+      },
+      "ahorro_programado": [
+        {
+          "entidad": "Ueno",
+          "total_aportado_gs": 300000,
+          "recibis_gs": 307406,
+          "fecha": "2027-01-04"
+        },
+        {
+          "entidad": "Itaú",
+          "total_aportado_gs": 1200000,
+          "recibis_gs": 1248000,
+          "fecha": "2027-08-31"
+        }
+      ],
+      "monto_gs": 3985610
     },
     "resumen": [
       {
         "clase": "Fondos Mutuos",
-        "valor_usd": 6113.388386
+        "valor_usd": 7451.061783
       },
       {
         "clase": "Acciones / ETFs / Cedears",
-        "valor_usd": 3223.506078
+        "valor_usd": 4146.196078
       },
       {
         "clase": "Criptomonedas",
-        "valor_usd": 1401.352121
+        "valor_usd": 1649.371121
       },
       {
         "clase": "Otras (local, Gs.)",
         "valor_usd": 671.502655
       }
     ],
-    "total_usd": 11409.74924,
-    "total_gs": 67720969.25,
+    "total_usd": 13918.131637,
+    "total_gs": 82609121.79,
     "fx_usdpyg": 5935.36,
     "fx_usdars": 1514.75
   },
@@ -5790,20 +5836,20 @@
   },
   "PATRIMONIO_DATA": {
     "fx_usdpyg": 5935.36,
-    "ji_total_usd": 10189.919377,
-    "gr_total_usd": 33363.046787,
-    "combined_total_usd": 43552.966164,
+    "ji_total_usd": 12334.301774,
+    "gr_total_usd": 33727.046787,
+    "combined_total_usd": 46061.348561,
     "ji_breakdown": {
-      "Fondos Mutuos": 6113.388386,
-      "Acciones/ETFs/Cedears (part. JI)": 2003.676215,
-      "Criptomonedas": 1401.352121,
+      "Fondos Mutuos": 7451.061783,
+      "Acciones/ETFs/Cedears (part. JI)": 2562.366215,
+      "Criptomonedas": 1649.371121,
       "Otras (Sudameris + Ah.Prog.)": 671.502655
     },
     "gr_breakdown": {
       "Bienes Raíces (capital pagado)": 21978.25641578607,
       "Depósitos a plazo": 8424.088850549924,
       "Bono Cadiem": 1740.8716573215443,
-      "Acciones/ETFs (part. GR)": 1219.829863
+      "Acciones/ETFs (part. GR)": 1583.829863
     },
     "gr_real_estate_detail": {
       "bosque_lago_paid_gs": 85788864,
@@ -5887,8 +5933,8 @@
     },
     {
       "fecha": "2026-09-03",
-      "total_usd": 11410,
-      "combinado_usd": 43553
+      "total_usd": 13918,
+      "combinado_usd": 46061
     }
   ],
   "PRESUPUESTOS": {
