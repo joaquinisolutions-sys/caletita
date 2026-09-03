@@ -5231,6 +5231,16 @@
       "tipo": "Variable",
       "monto": 135700,
       "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Supermercado",
+      "fecha": "2026-09-03",
+      "concepto": "Supermercado",
+      "tipo": "Variable",
+      "monto": 79350,
+      "metodo": "Tarjeta de crédito"
     }
   ],
   "INVERSIONES_DATA": {
