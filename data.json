@@ -5241,10 +5241,50 @@
       "tipo": "Variable",
       "monto": 79350,
       "metodo": "Tarjeta de crédito"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Delivery",
+      "fecha": "2026-09-03",
+      "concepto": "Delivery (cena invitada en casa)",
+      "tipo": "Variable",
+      "monto": 304000,
+      "metodo": "Tarjeta de crédito (Ueno)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-09-04",
+      "concepto": "Limpieza",
+      "tipo": "Variable",
+      "monto": 120000,
+      "metodo": "Transferencia"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Comida afuera",
+      "fecha": "2026-09-04",
+      "concepto": "Comida afuera",
+      "tipo": "Variable",
+      "monto": 165000,
+      "metodo": "Transferencia (personal)"
+    },
+    {
+      "mes": "2026-09",
+      "categoria": "Día a día",
+      "subcategoria": "Limpieza",
+      "fecha": "2026-09-04",
+      "concepto": "Limpieza (adelanto, se descuenta 50.000 en próximos 2 pagos)",
+      "tipo": "Variable",
+      "monto": 100000,
+      "metodo": "Transferencia"
     }
   ],
   "INVERSIONES_DATA": {
-    "fecha_actualizacion": "2026-09-03",
+    "fecha_actualizacion": "2026-09-04",
     "fondos": [
       {
         "entidad": "Itaú",
@@ -5287,6 +5327,14 @@
         "monto_usd": 206.0,
         "tasa": "N/D",
         "fecha_compra": "17/06/2026"
+      },
+      {
+        "entidad": "Investor",
+        "concepto": "Fondo Mutuo (USD)",
+        "moneda": "USD",
+        "monto": 1000.0,
+        "tasa": "5,94%",
+        "monto_usd": 1000.0
       }
     ],
     "acciones": [
@@ -5298,10 +5346,10 @@
         "titular": "JI",
         "qty": 0.153,
         "invertido": 508.16,
-        "precio_actual": 708.13,
-        "valor_actual": 513.24,
-        "utilidad": 5.08,
-        "utilidad_pct": 0.009997,
+        "precio_actual": 717.67,
+        "valor_actual": 520.1544219281769,
+        "utilidad": 11.994421928176905,
+        "utilidad_pct": 0.023603632572766264,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5508,16 +5556,17 @@
         "rubro": "Petrolera (Argentina)",
         "sector": "Energía",
         "titular": "JI",
-        "qty": 4.144,
-        "invertido": 208.24,
-        "precio_actual": 53.0,
-        "valor_actual": 219.632,
-        "utilidad": 11.392,
-        "utilidad_pct": 0.054706,
+        "qty": 6.893289299,
+        "invertido": 362.13,
+        "precio_actual": 52.5337,
+        "valor_actual": 362.13,
+        "utilidad": 0.0,
+        "utilidad_pct": 0.0,
         "dividendo": {
           "paga": false
         },
-        "fecha_compra": "16/07/2026"
+        "fecha_compra": "04/09/2026",
+        "nota_valuacion": "Posición recomprada en Lemon (04/09/2026); reemplaza la posición anterior vendida para consolidar en USDT."
       },
       {
         "ticker": "SPY",
@@ -5527,10 +5576,10 @@
         "titular": "Compartido",
         "qty": 0.699,
         "invertido": 633.0,
-        "precio_actual": 764.46,
-        "valor_actual": 654.35754,
-        "utilidad": 21.35754,
-        "utilidad_pct": 0.03374,
+        "precio_actual": 773.17,
+        "valor_actual": 661.8130696201239,
+        "utilidad": 28.813069620123883,
+        "utilidad_pct": 0.045518277440954005,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5549,10 +5598,10 @@
         "titular": "Compartido",
         "qty": 20.587,
         "invertido": 674.0,
-        "precio_actual": 15.31,
-        "valor_actual": 715.18697,
-        "utilidad": 41.18697,
-        "utilidad_pct": 0.061108,
+        "precio_actual": 15.68,
+        "valor_actual": 732.471044389288,
+        "utilidad": 58.471044389287954,
+        "utilidad_pct": 0.08675229137876551,
         "dividendo": {
           "paga": false
         },
@@ -5566,12 +5615,12 @@
         "rubro": "Petrolera",
         "sector": "Energía",
         "titular": "Compartido",
-        "qty": 2.001,
-        "invertido": 274.0,
+        "qty": 2.622929,
+        "invertido": 374.0,
         "precio_actual": 163.28,
-        "valor_actual": 326.72328,
-        "utilidad": 52.72328,
-        "utilidad_pct": 0.192421,
+        "valor_actual": 426.72328,
+        "utilidad": 52.72327999999999,
+        "utilidad_pct": 0.1409713368983957,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5581,7 +5630,7 @@
         },
         "split_gr": 0.7,
         "split_ji": 0.3,
-        "fecha_compra": "26/06/2026"
+        "fecha_compra": "04/09/2026"
       },
       {
         "ticker": "VIST",
@@ -5723,6 +5772,75 @@
           "nota": "Distribuye dividendos del S&P 500, vía CEDEAR"
         },
         "nota_valuacion": "Costo base y valor actual según resumen de cuenta Balanz (03/09/2026)."
+      },
+      {
+        "ticker": "PAM",
+        "empresa": "Pampa Energía",
+        "rubro": "Energía integrada (Argentina)",
+        "sector": "Energía",
+        "titular": "JI",
+        "qty": 0.580170755,
+        "invertido": 49.7,
+        "precio_actual": 85.6644,
+        "valor_actual": 49.7,
+        "utilidad": 0.0,
+        "utilidad_pct": 0.0,
+        "dividendo": {
+          "paga": false
+        },
+        "fecha_compra": "04/09/2026"
+      },
+      {
+        "ticker": "MELI",
+        "empresa": "MercadoLibre",
+        "rubro": "E-commerce (Argentina)",
+        "sector": "Consumo discrecional",
+        "titular": "JI",
+        "qty": 0.031104465,
+        "invertido": 62.13,
+        "precio_actual": 1997.4624,
+        "valor_actual": 62.13,
+        "utilidad": 0.0,
+        "utilidad_pct": 0.0,
+        "dividendo": {
+          "paga": false
+        },
+        "fecha_compra": "04/09/2026"
+      },
+      {
+        "ticker": "LOMA",
+        "empresa": "Loma Negra",
+        "rubro": "Cementera (Argentina)",
+        "sector": "Materiales",
+        "titular": "JI",
+        "qty": 2.429483715,
+        "invertido": 24.85,
+        "precio_actual": 10.2285,
+        "valor_actual": 24.85,
+        "utilidad": 0.0,
+        "utilidad_pct": 0.0,
+        "dividendo": {
+          "paga": false
+        },
+        "fecha_compra": "04/09/2026"
+      },
+      {
+        "ticker": "GGAL (Lemon)",
+        "empresa": "Grupo Financiero Galicia",
+        "rubro": "Banco (Argentina)",
+        "sector": "Financiero",
+        "titular": "JI",
+        "qty": 1.103748326,
+        "invertido": 49.7,
+        "precio_actual": 45.0284,
+        "valor_actual": 49.7,
+        "utilidad": 0.0,
+        "utilidad_pct": 0.0,
+        "dividendo": {
+          "paga": false
+        },
+        "fecha_compra": "04/09/2026",
+        "nota_valuacion": "Posición distinta al GGAL de Balanz (CEDEAR); esta es acción/ADR comprada en Lemon."
       }
     ],
     "crypto": {
@@ -5757,11 +5875,11 @@
     "resumen": [
       {
         "clase": "Fondos Mutuos",
-        "valor_usd": 7451.061783
+        "valor_usd": 8451.061782671986
       },
       {
         "clase": "Acciones / ETFs / Cedears",
-        "valor_usd": 4146.196078
+        "valor_usd": 4606.728103937589
       },
       {
         "clase": "Criptomonedas",
@@ -5769,11 +5887,11 @@
       },
       {
         "clase": "Otras (local, Gs.)",
-        "valor_usd": 671.502655
+        "valor_usd": 671.5026552728058
       }
     ],
-    "total_usd": 13918.131637,
-    "total_gs": 82609121.79,
+    "total_usd": 15378.66366288238,
+    "total_gs": 91277905.15812556,
     "fx_usdpyg": 5935.36,
     "fx_usdars": 1514.75
   },
@@ -5846,26 +5964,26 @@
   },
   "PATRIMONIO_DATA": {
     "fx_usdpyg": 5935.36,
-    "ji_total_usd": 12334.301774,
-    "gr_total_usd": 33727.046787,
-    "combined_total_usd": 46061.348561,
+    "ji_total_usd": 13707.51607707579,
+    "gr_total_usd": 33814.364509464125,
+    "combined_total_usd": 47521.88058653992,
     "ji_breakdown": {
-      "Fondos Mutuos": 7451.061783,
-      "Acciones/ETFs/Cedears (part. JI)": 2562.366215,
+      "Fondos Mutuos": 8451.061782671986,
+      "Acciones/ETFs/Cedears (part. JI)": 2935.5805181309993,
       "Criptomonedas": 1649.371121,
-      "Otras (Sudameris + Ah.Prog.)": 671.502655
+      "Otras (Sudameris + Ah.Prog.)": 671.5026552728058
     },
     "gr_breakdown": {
       "Bienes Raíces (capital pagado)": 21978.25641578607,
       "Depósitos a plazo": 8424.088850549924,
       "Bono Cadiem": 1740.8716573215443,
-      "Acciones/ETFs (part. GR)": 1583.829863
+      "Acciones/ETFs (part. GR)": 1671.147585806588
     },
     "gr_real_estate_detail": {
       "bosque_lago_paid_gs": 85788864,
       "fortaleza_paid_gs": 44660000
     },
-    "fecha_actualizacion": "2026-09-03"
+    "fecha_actualizacion": "2026-09-04"
   },
   "HISTORIAL_INVERSIONES": [
     {
@@ -5945,6 +6063,11 @@
       "fecha": "2026-09-03",
       "total_usd": 13918,
       "combinado_usd": 46061
+    },
+    {
+      "fecha": "2026-09-04",
+      "total_usd": 15379,
+      "combinado_usd": 47522
     }
   ],
   "PRESUPUESTOS": {
