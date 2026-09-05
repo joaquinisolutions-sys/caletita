@@ -167,6 +167,18 @@
   .venc-badge { font-size: 10.5px; font-weight: 700; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; background: var(--panel2); color: var(--muted); flex-shrink: 0; min-width: 60px; text-align: center; }
   .venc-days { margin-left: auto; font-weight: 600; font-size: 12.5px; white-space: nowrap; }
 
+  /* Ingresos */
+  .ing-month-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .ing-month-row:last-child { border-bottom: none; }
+  .ing-month-row.received { color: var(--text); }
+  .ing-month-row.pending { color: var(--muted); }
+  .ing-month-name { min-width: 90px; font-weight: 600; }
+  .ing-month-concepto { flex: 1; font-size: 12px; color: var(--muted); }
+  .ing-month-monto { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .ing-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .ing-dot.received { background: var(--accent); }
+  .ing-dot.pending { background: var(--border); }
+
   @media (max-width: 900px) {
     .grid, .grid.even { grid-template-columns: 1fr; }
   }
@@ -192,6 +204,7 @@
 <div class="tabbar">
   <button class="tab active" id="tabBtnGastos" onclick="switchView('gastos')">Gastos</button>
   <button class="tab" id="tabBtnInversiones" onclick="switchView('inversiones')">Inversiones</button>
+  <button class="tab" id="tabBtnIngresos" onclick="switchView('ingresos')">Ingresos</button>
 </div>
 
 <div id="viewGastos" class="view">
@@ -383,8 +396,66 @@
 
 </div><!-- /viewInversiones -->
 
+<div id="viewIngresos" class="view hidden">
+
+<div class="subtitle" id="ingSubtitle" style="margin-bottom:18px;">Cargando...</div>
+
+<div class="kpis">
+  <div class="kpi total">
+    <div class="label">Ingresos a la fecha</div>
+    <div class="value" id="ingKpiTotalUsd">-</div>
+    <div class="sub" id="ingKpiTotalGs">-</div>
+  </div>
+  <div class="kpi fijo">
+    <div class="label">Salario a la fecha</div>
+    <div class="value" id="ingKpiSalario">-</div>
+    <div class="sub" id="ingKpiSalarioGs">-</div>
+  </div>
+  <div class="kpi variable">
+    <div class="label">Extras a la fecha</div>
+    <div class="value" id="ingKpiExtras">-</div>
+    <div class="sub" id="ingKpiExtrasGs">-</div>
+  </div>
+</div>
+
+<div class="grid" style="grid-template-columns: 1fr;">
+  <div class="card">
+    <h2>Objetivo de ingresos extra (consultoría, ventas, etc.)</h2>
+    <div class="hint" id="ingObjetivoHint">-</div>
+    <div class="installment">
+      <div class="installment-top"><span>Logrado</span><span id="ingObjetivoPct">-</span></div>
+      <div class="progress-track"><div class="progress-fill" id="ingObjetivoFill" style="width:0%"></div></div>
+    </div>
+    <div class="installment-stats">
+      <div><div class="l">Objetivo</div><div class="v" id="ingObjetivoTotal">-</div></div>
+      <div><div class="l">Logrado</div><div class="v" id="ingObjetivoLogrado">-</div></div>
+      <div><div class="l">Restante</div><div class="v" id="ingObjetivoRestante">-</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="grid even">
+  <div class="card">
+    <h2>Salario mensual</h2>
+    <div class="hint" id="ingSalarioHint">Neto luego de IPS</div>
+    <div id="ingSalarioBox"></div>
+  </div>
+  <div class="card">
+    <h2>Ingresos extra</h2>
+    <div class="hint">Consultoría, ventas puntuales, etc.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fecha</th><th>Concepto</th><th style="text-align:right">Monto (Gs.)</th><th style="text-align:right">Monto (USD)</th></tr></thead>
+        <tbody id="ingExtrasBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div><!-- /viewIngresos -->
+
 <script>
-let RAW_DATA, INVERSIONES_DATA, INVERSIONES_GR_DATA, PATRIMONIO_DATA, HISTORIAL_INVERSIONES, PRESUPUESTOS, BALANCE_KIYOSAKI, PLAN_ACTIVOS, TARJETAS_CIERRE;
+let RAW_DATA, INVERSIONES_DATA, INVERSIONES_GR_DATA, PATRIMONIO_DATA, HISTORIAL_INVERSIONES, PRESUPUESTOS, BALANCE_KIYOSAKI, PLAN_ACTIVOS, TARJETAS_CIERRE, INGRESOS_DATA;
 
 
 const fmt = new Intl.NumberFormat('es-PY', { maximumFractionDigits: 0 });
@@ -687,17 +758,27 @@ function render() {
 function switchView(view) {
   const gastos = document.getElementById('viewGastos');
   const inversiones = document.getElementById('viewInversiones');
+  const ingresos = document.getElementById('viewIngresos');
   const btnG = document.getElementById('tabBtnGastos');
   const btnI = document.getElementById('tabBtnInversiones');
+  const btnIn = document.getElementById('tabBtnIngresos');
+
+  gastos.classList.add('hidden');
+  inversiones.classList.add('hidden');
+  ingresos.classList.add('hidden');
+  btnG.classList.remove('active');
+  btnI.classList.remove('active');
+  btnIn.classList.remove('active');
+
   if (view === 'gastos') {
     gastos.classList.remove('hidden');
-    inversiones.classList.add('hidden');
     btnG.classList.add('active');
-    btnI.classList.remove('active');
+  } else if (view === 'ingresos') {
+    ingresos.classList.remove('hidden');
+    btnIn.classList.add('active');
+    renderIngresos();
   } else {
-    gastos.classList.add('hidden');
     inversiones.classList.remove('hidden');
-    btnG.classList.remove('active');
     btnI.classList.add('active');
     renderInversiones();
   }
@@ -968,6 +1049,71 @@ function showLoadError(msg) {
   document.body.insertBefore(banner, document.body.firstChild.nextSibling);
 }
 
+let ingRendered = false;
+
+function renderIngresos() {
+  if (ingRendered) return;
+  if (!INGRESOS_DATA) return;
+  ingRendered = true;
+
+  const D = INGRESOS_DATA;
+  const fx = D.fx_referencia;
+  const meses = D.salario.meses;
+  const recibidos = D.salario.meses_recibidos;
+
+  document.getElementById('ingSubtitle').textContent = D.anio + ' · TC referencia USD/PYG ' + fmt.format(fx);
+
+  const salarioYtdGs = meses.slice(0, recibidos).reduce((s, m) => s + m.monto_gs, 0);
+  const salarioYtdUsd = salarioYtdGs / fx;
+  const extrasTotalUsd = D.extras.reduce((s, e) => s + e.monto_usd, 0);
+  const extrasTotalGs = D.extras.reduce((s, e) => s + e.monto_gs, 0);
+  const totalGs = salarioYtdGs + extrasTotalGs;
+  const totalUsd = salarioYtdUsd + extrasTotalUsd;
+
+  document.getElementById('ingKpiTotalUsd').textContent = '$ ' + fmt.format(totalUsd);
+  document.getElementById('ingKpiTotalGs').textContent = money(totalGs);
+  document.getElementById('ingKpiSalario').textContent = '$ ' + fmt.format(salarioYtdUsd);
+  document.getElementById('ingKpiSalarioGs').textContent = money(salarioYtdGs);
+  document.getElementById('ingKpiExtras').textContent = '$ ' + fmt.format(extrasTotalUsd);
+  document.getElementById('ingKpiExtrasGs').textContent = money(extrasTotalGs);
+
+  // Objetivo extra
+  const objetivo = D.objetivo_extra_usd;
+  const restante = objetivo - extrasTotalUsd;
+  const pct = Math.max(0, Math.min(100, Math.round((extrasTotalUsd / objetivo) * 100)));
+  document.getElementById('ingObjetivoHint').textContent = 'Objetivo ' + D.anio + ': $ ' + fmt.format(objetivo);
+  document.getElementById('ingObjetivoPct').textContent = pct + '%';
+  document.getElementById('ingObjetivoFill').style.width = pct + '%';
+  document.getElementById('ingObjetivoTotal').textContent = '$ ' + fmt.format(objetivo);
+  document.getElementById('ingObjetivoLogrado').textContent = '$ ' + fmt.format(extrasTotalUsd);
+  const restEl = document.getElementById('ingObjetivoRestante');
+  restEl.textContent = (restante >= 0 ? '$ ' + fmt.format(restante) : '+$ ' + fmt.format(Math.abs(restante)) + ' sobre el objetivo');
+
+  // Salario mensual — lista
+  const salBox = document.getElementById('ingSalarioBox');
+  let salHtml = '';
+  meses.forEach((m, i) => {
+    const received = i < recibidos;
+    salHtml += `
+      <div class="ing-month-row ${received ? 'received' : 'pending'}">
+        <span class="ing-dot ${received ? 'received' : 'pending'}"></span>
+        <span class="ing-month-name">${m.mes}</span>
+        <span class="ing-month-concepto">${m.concepto}</span>
+        <span class="ing-month-monto">${money(m.monto_gs)}</span>
+      </div>`;
+  });
+  salBox.innerHTML = salHtml;
+  document.getElementById('ingSalarioHint').textContent = 'Neto luego de IPS · recibido hasta ' + meses[recibidos - 1].mes;
+
+  // Extras — tabla
+  const extrasBody = document.getElementById('ingExtrasBody');
+  let extHtml = '';
+  D.extras.forEach(e => {
+    extHtml += `<tr><td>${e.fecha}</td><td>${e.concepto}</td><td class="monto">${money(e.monto_gs)}</td><td class="monto">$ ${fmt.format(e.monto_usd)}</td></tr>`;
+  });
+  extrasBody.innerHTML = extHtml;
+}
+
 fetch('data.json')
   .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(data => {
@@ -980,6 +1126,7 @@ fetch('data.json')
     BALANCE_KIYOSAKI = data.BALANCE_KIYOSAKI || null;
     PLAN_ACTIVOS = data.PLAN_ACTIVOS || null;
     TARJETAS_CIERRE = data.TARJETAS_CIERRE || null;
+    INGRESOS_DATA = data.INGRESOS_DATA || null;
     initFilters();
     safeRender();
   })

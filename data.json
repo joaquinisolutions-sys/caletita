@@ -5346,10 +5346,10 @@
         "titular": "JI",
         "qty": 0.153,
         "invertido": 508.16,
-        "precio_actual": 717.67,
-        "valor_actual": 520.1544219281769,
-        "utilidad": 11.994421928176905,
-        "utilidad_pct": 0.023603632572766264,
+        "precio_actual": 718.96,
+        "valor_actual": 521.0893909310437,
+        "utilidad": 12.929390931043656,
+        "utilidad_pct": 0.02544354323646815,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5558,10 +5558,10 @@
         "titular": "JI",
         "qty": 6.893289299,
         "invertido": 362.13,
-        "precio_actual": 52.5337,
-        "valor_actual": 362.13,
-        "utilidad": 0.0,
-        "utilidad_pct": 0.0,
+        "precio_actual": 52.62,
+        "valor_actual": 362.7248908795687,
+        "utilidad": 0.5948908795687089,
+        "utilidad_pct": 0.001642755031532071,
         "dividendo": {
           "paga": false
         },
@@ -5576,10 +5576,10 @@
         "titular": "Compartido",
         "qty": 0.699,
         "invertido": 633.0,
-        "precio_actual": 773.17,
-        "valor_actual": 661.8130696201239,
-        "utilidad": 28.813069620123883,
-        "utilidad_pct": 0.045518277440954005,
+        "precio_actual": 770.19,
+        "valor_actual": 659.2622684412526,
+        "utilidad": 26.26226844125256,
+        "utilidad_pct": 0.041488575736575925,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral (ETF)",
@@ -5598,10 +5598,10 @@
         "titular": "Compartido",
         "qty": 20.587,
         "invertido": 674.0,
-        "precio_actual": 15.68,
-        "valor_actual": 732.471044389288,
-        "utilidad": 58.471044389287954,
-        "utilidad_pct": 0.08675229137876551,
+        "precio_actual": 15.37,
+        "valor_actual": 717.9897928739384,
+        "utilidad": 43.98979287393843,
+        "utilidad_pct": 0.06526675500584336,
         "dividendo": {
           "paga": false
         },
@@ -5617,10 +5617,10 @@
         "titular": "Compartido",
         "qty": 2.622929,
         "invertido": 374.0,
-        "precio_actual": 163.28,
-        "valor_actual": 426.72328,
-        "utilidad": 52.72327999999999,
-        "utilidad_pct": 0.1409713368983957,
+        "precio_actual": 159.47,
+        "valor_actual": 416.76605500734934,
+        "utilidad": 42.76605500734934,
+        "utilidad_pct": 0.11434774066136186,
         "dividendo": {
           "paga": true,
           "frecuencia": "Trimestral",
@@ -5781,10 +5781,10 @@
         "titular": "JI",
         "qty": 0.580170755,
         "invertido": 49.7,
-        "precio_actual": 85.6644,
-        "valor_actual": 49.7,
-        "utilidad": 0.0,
-        "utilidad_pct": 0.0,
+        "precio_actual": 84.8,
+        "valor_actual": 49.198500193779445,
+        "utilidad": -0.5014998062205578,
+        "utilidad_pct": -0.010090539360574602,
         "dividendo": {
           "paga": false
         },
@@ -5798,10 +5798,10 @@
         "titular": "JI",
         "qty": 0.031104465,
         "invertido": 62.13,
-        "precio_actual": 1997.4624,
-        "valor_actual": 62.13,
-        "utilidad": 0.0,
-        "utilidad_pct": 0.0,
+        "precio_actual": 1978.36,
+        "valor_actual": 61.535830061181635,
+        "utilidad": -0.5941699388183679,
+        "utilidad_pct": -0.009563333958125992,
         "dividendo": {
           "paga": false
         },
@@ -5815,10 +5815,10 @@
         "titular": "JI",
         "qty": 2.429483715,
         "invertido": 24.85,
-        "precio_actual": 10.2285,
-        "valor_actual": 24.85,
-        "utilidad": 0.0,
-        "utilidad_pct": 0.0,
+        "precio_actual": 10.27,
+        "valor_actual": 24.950823678936302,
+        "utilidad": 0.10082367893630106,
+        "utilidad_pct": 0.0040572909028692575,
         "dividendo": {
           "paga": false
         },
@@ -5832,10 +5832,10 @@
         "titular": "JI",
         "qty": 1.103748326,
         "invertido": 49.7,
-        "precio_actual": 45.0284,
-        "valor_actual": 49.7,
-        "utilidad": 0.0,
-        "utilidad_pct": 0.0,
+        "precio_actual": 44.36,
+        "valor_actual": 48.96225493244264,
+        "utilidad": -0.7377450675573627,
+        "utilidad_pct": -0.014843965141999248,
         "dividendo": {
           "paga": false
         },
@@ -5879,7 +5879,7 @@
       },
       {
         "clase": "Acciones / ETFs / Cedears",
-        "valor_usd": 4606.728103937589
+        "valor_usd": 4579.536094999491
       },
       {
         "clase": "Criptomonedas",
@@ -5890,8 +5890,8 @@
         "valor_usd": 671.5026552728058
       }
     ],
-    "total_usd": 15378.66366288238,
-    "total_gs": 91277905.15812556,
+    "total_usd": 15351.471653944282,
+    "total_gs": 91116510.79595472,
     "fx_usdpyg": 5935.36,
     "fx_usdars": 1514.75
   },
@@ -5964,12 +5964,12 @@
   },
   "PATRIMONIO_DATA": {
     "fx_usdpyg": 5935.36,
-    "ji_total_usd": 13707.51607707579,
-    "gr_total_usd": 33814.364509464125,
-    "combined_total_usd": 47521.88058653992,
+    "ji_total_usd": 13699.216562518504,
+    "gr_total_usd": 33795.47201508332,
+    "combined_total_usd": 47494.68857760182,
     "ji_breakdown": {
       "Fondos Mutuos": 8451.061782671986,
-      "Acciones/ETFs/Cedears (part. JI)": 2935.5805181309993,
+      "Acciones/ETFs/Cedears (part. JI)": 2927.281003573714,
       "Criptomonedas": 1649.371121,
       "Otras (Sudameris + Ah.Prog.)": 671.5026552728058
     },
@@ -5977,7 +5977,7 @@
       "Bienes Raíces (capital pagado)": 21978.25641578607,
       "Depósitos a plazo": 8424.088850549924,
       "Bono Cadiem": 1740.8716573215443,
-      "Acciones/ETFs (part. GR)": 1671.147585806588
+      "Acciones/ETFs (part. GR)": 1652.255091425778
     },
     "gr_real_estate_detail": {
       "bosque_lago_paid_gs": 85788864,
@@ -6066,8 +6066,8 @@
     },
     {
       "fecha": "2026-09-04",
-      "total_usd": 15379,
-      "combinado_usd": 47522
+      "total_usd": 15351,
+      "combinado_usd": 47495
     }
   ],
   "PRESUPUESTOS": {
@@ -6213,5 +6213,104 @@
       "ultimo_pago": "2026-09-02",
       "monto_ultimo_pago_gs": 2387501
     }
-  ]
+  ],
+  "INGRESOS_DATA": {
+    "anio": 2026,
+    "fx_referencia": 5982.88,
+    "salario": {
+      "bruto_gs": 16500000,
+      "ips_pct": 0.09,
+      "neto_gs": 15015000,
+      "meses": [
+        {
+          "mes": "Enero",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Febrero",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Marzo",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Abril",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Mayo",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Junio",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Julio",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Agosto",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Septiembre",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Octubre",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Noviembre",
+          "concepto": "Salario",
+          "monto_gs": 15015000
+        },
+        {
+          "mes": "Diciembre",
+          "concepto": "Salario + aguinaldo",
+          "monto_gs": 31515000
+        }
+      ],
+      "meses_recibidos": 8
+    },
+    "extras": [
+      {
+        "fecha": "2026-03",
+        "concepto": "NCL+Tatakua",
+        "monto_gs": 1208541,
+        "monto_usd": 202.0
+      },
+      {
+        "fecha": "2026-06",
+        "concepto": "Arizmendi",
+        "monto_gs": 9814600,
+        "monto_usd": 1583.0
+      },
+      {
+        "fecha": "2026-07",
+        "concepto": "Pendiente NCL",
+        "monto_gs": 1652944,
+        "monto_usd": 272.0
+      },
+      {
+        "fecha": "2026-08",
+        "concepto": "FuentePY",
+        "monto_gs": 1525000,
+        "monto_usd": 254.89
+      }
+    ],
+    "objetivo_extra_usd": 2400.0
+  }
 }
